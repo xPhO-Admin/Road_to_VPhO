@@ -1,0 +1,155 @@
+\textbf{a,} Chọn hệ tọa độ trụ ($r$, $\phi$, $z$) sao cho chiều tăng của $\phi$ trùng với chiều dòng điện qua trụ.
+
+Ta có từ trường bên trong trụ là đều và bằng:
+\begin{equation} \label{eq1_p3_d2}
+\vec{B} = \mu_0 \frac{i}{H} \hat{z},
+\end{equation}
+với $i$ là dòng điện tức thời trên trụ.
+
+Do đối xứng, khi từ trường tăng lên khi dòng điện tăng, sẽ có điện trường xoáy theo phương $\hat{\boldsymbol{\phi}}$. 
+Điện trường này sẽ gây một xung lượng lên các hạt điện tích trong khoảng không bên trong trụ.
+
+Theo định luật Faraday
+\begin{equation} \label{eq2_p3_d2}
+\begin{split}
+2\pi r E(r) = \pi r^2 \frac{\partial B}{\partial t}\\
+\Rightarrow E = \frac{\mu_0 r}{2 H} \frac{\partial i}{\partial t}.
+\end{split}
+\end{equation}
+
+Theo định luật Lenz, $E$ hướng ngược chiều $\hat{\boldsymbol{\phi}}$ (là chiều dòng điện gây ra biến thiên từ trường) (giả sử $\displaystyle \frac{\partial i}{\partial t} > 0$).
+
+Có tốc độ mà một hạt tích điện nhận được
+\begin{equation} \label{eq3_p3_d2}
+\begin{split}
+\vec{v}_0 &= \lim_{\Delta t \to 0} \int_0^{\Delta t} \frac{\vec{F}}{m} dt \\
+&= - \lim_{\Delta t \to 0} \int_{0}^{I} \frac{\mu_0 qr}{2mH}\hat{\boldsymbol{\phi}} di\\
+&= -\frac{\mu_0 qrI}{2mH}\hat{\boldsymbol{\phi}}.
+\end{split}
+\end{equation}
+
+\textbf{b,} Khi dòng điện đã ổn định, các điện tích chỉ chuyển động trong từ trường.
+Do đó tốc độ từng hạt được bảo toàn.
+
+Do từ trường hướng theo trục $\hat{z}$, vận tốc đầu vuông góc với trục $\hat{z}$ nên chuyển động sau đó của hạt nằm trong mặt phẳng vuông góc với $\hat{z}$.
+
+Ký hiệu $R_0$ là tọa độ $r$ ban đầu của hạt ta đang xét.
+
+Như vậy
+\begin{equation} \label{eq4_p3_d2}
+\begin{split}
+\vec{v} &= \dot{r} \hat{r} + r\dot{\phi} \hat{\boldsymbol{\phi}}\\
+\Rightarrow |\vec{v}| &= \sqrt{\dot{r}^2 + r^2 \dot{\phi}^2} = v_0.
+\end{split}
+\end{equation}
+
+Ta nhận thấy trong trường hợp này, momen động lượng của một hạt tích điện (so với trục $z$) không được bảo toàn.
+Theo đó
+\begin{equation} \label{eq5_p3_d2}
+\begin{split}
+\frac{d \vec{L}}{d t} &= \vec{r} \times (q \vec{v} \times \vec{B})= q[(\vec{r} \cdot \vec{B})\vec{v} - (\vec{r} \cdot \vec{v})\vec{B}]= -\frac{q\vec{B}}{2} \frac{\partial (r^2)}{\partial t}.
+\end{split}
+\end{equation}
+
+\begin{equation} \label{eq6_p3_d2}
+\begin{split}
+\Rightarrow \vec{L} + \frac{qr^2 \vec{B}}{2} &= \mathrm{const}\\
+&= -mR_0 v_0 \hat{z} + \frac{qR_0^2 B}{2} \hat{z}\\
+&= 0.
+\end{split}
+\end{equation}
+Từ đó tìm được vận tốc $v_{\phi}$ theo phương tiếp tuyến (không xét chiều)
+\begin{equation} \label{eq7_p3_d2}
+\begin{split}
+    v_{\phi} &= \frac{qr^2 B}{2mr}\\
+&= \frac{qB}{2m}r.
+\end{split}
+\end{equation}
+Do đó vận tốc theo phương tiếp tuyến $\dot{r}$
+\begin{equation} \label{eq8_p3_d2}
+\begin{split}
+|\dot{r}| &= \sqrt{v_0^2 - \left(\frac{qB}{2m}\right)^2 r^2} \\
+&= \frac{qB}{2m} \sqrt{R_0^2 - r^2}.
+\end{split}
+\end{equation}
+Dễ dàng nhận thấy để biểu thức có nghĩa, $r < R_0$ trong suốt quá trình chuyển động. Do đó $\dot{r}$ mang dấu âm.\\
+Khoảng thời gian từ khi dòng điện được bật lên cho đến khi vật đang xét đập vào thành trong của ống trụ là
+\begin{equation} \label{eq9_p3_d2}
+\begin{split}
+\tau &= \int_{R_0}^{R_1} -\frac{2m}{qB} \frac{d r}{\sqrt{R_0^2 - r^2}}\\
+&= \frac{2m}{qB} \arccos \left(\frac{R_1}{R_0}\right).
+\end{split}
+\end{equation}
+
+\textbf{c,} Chú ý rằng với $t$ nhỏ, tác động do các hạt có khối lượng bé hơn sẽ là chủ đạo (khối lượng electron nhỏ hơn proton khoảng 2000 lần).\\
+Tại thời điểm $t$, các hạt tới từ lớp $r = R(t)$ sẽ đập vào thành trong trụ với $R(t)$ bằng
+\begin{equation} \label{eq10_p3_d2}
+R(t) = \frac{R_1}{\cos\left(\dfrac{qBt}{2m}\right)}.
+\end{equation}
+Động lượng mà một hạt truyền cho thành trong trụ khi đập vào là
+\begin{equation} \label{eq11_p3_d2}
+\begin{split}
+p_1 &= m \dot{r}= \frac{qB}{2} \sqrt{R_1^2 \left(\frac{1}{\cos^2 \left(\frac{qBt}{2m}\right)}-1\right)}\\
+&= \frac{qBR_1}{2} \tan\left( \dfrac{qBt}{2m}\right).
+\end{split}
+\end{equation}
+
+Áp suất tác dụng lên thành trong của trụ
+\begin{equation} \label{eq12_p3_d2}
+\begin{split}
+p &= \frac{1}{2\pi R_1 l} \frac{qBR_1}{2} \tan \left(\frac{qBt}{2m}\right) n \cdot 2\pi R(t) \frac{d R}{d t},
+\end{split}
+\end{equation}
+với $R(t)$ là hàm được định nghĩa ở trên.
+Đặt $\displaystyle \omega = \frac{qB}{2m}$. 
+
+Ta tìm được áp suất là
+\begin{equation} \label{eq13_p3_d2}
+p = nm \omega^2 R_1^2 \frac{\sin^2(\omega t)}{\cos^4(\omega t)}.
+\end{equation}
+
+\textbf{d,} Ta thấy $p$ là hàm đồng biến theo $t$ (khi $\displaystyle \omega t < \frac{\pi}{2}$).
+\begin{equation} \label{eq14_p3_d2}
+\begin{split}
+p_{max} &= nm \omega ^2 R_2^2 \left[\left(\frac{R_2}{R_1}\right)^2 - 1\right]\\
+\Rightarrow \beta &= \frac{p_{max}}{\omega_B} = \frac{\mu_0 n e^2}{2m} R_2^2 \left[\left(\frac{R_2}{R_1}\right)^2 - 1\right].   
+\end{split}
+\end{equation}
+Thế số, ta được $\beta = 1.77 > 1$.
+
+\textbf{Biểu điểm} 
+\begin{center}
+\begin{tabular}{|>{\centering\arraybackslash}m{1cm}|>{\raggedright\arraybackslash}m{14cm}| >{\centering\arraybackslash}m{1cm}|}
+    \hline
+    \textbf{Phần} & \textbf{Nội dung} & \textbf{Điểm} \\
+    \hline
+    \textbf{a} & Tìm được từ trường bên trong trụ (\ref{eq1_p3_d2})  & 0.10\\   
+    \cline{2-3}
+    &  Tìm được điện trường bên trong trụ theo định luật Faraday (\ref{eq2_p3_d2}) & 0.10 \\
+    \cline{2-3}
+    & Chú ý rằng vẫn truyền một xung lượng cho hạt tích điện khi $\Delta t \to 0$ & 0.10\\
+    \cline{2-3}
+    & Tìm được vận tốc truyền cho hạt tích điện (\ref{eq3_p3_d2}) & 0.20\\
+    \hline
+    \textbf{b} & Nhận ra rằng tốc độ hạt là không đổi và tìm được thành phần vận tốc theo phương bán kính & 0.25\\
+    \cline{2-3}
+    & Đạo hàm momen động lượng và đưa ra phương trình (\ref{eq6_p3_d2}) (dạng vector hoặc vô hướng) & 0.75\\
+    \cline{2-3}
+    & Đưa về dạng phương trình vi phân tại (\ref{eq8_p3_d2}) & 0.25 \\
+    \cline{2-3}
+    & Tích phân để tìm được khoảng thời gian hạt đập vào thành trong (\ref{eq9_p3_d2}) & 0.25 \\
+    \hline
+    \textbf{c} & Tìm được bán kính đầu của các hạt đập vào thành trong trụ tại thời điểm $t$ (\ref{eq10_p3_d2}) & 0.25\\
+    \cline{2-3}
+    & Tìm được động lượng mà hạt truyền cho trụ (\ref{eq11_p3_d2}) & 0.50\\
+    \cline{2-3}
+    & Tìm được dạng cơ bản của áp suất tác dụng lên thành trong trụ (\ref{eq12_p3_d2}) & 0.50 \\
+    \cline{2-3}
+    & Khai triển và đưa về dạng hoàn chính (\ref{eq13_p3_d2}) & 0.25\\
+    \hline
+    \textbf{d} & Tìm được $P_{max}$ theo $R_2 / R_1$ (\ref{eq14_p3_d2}) & 0.25\\
+    \cline{2-3}
+    & Tìm được giá trị (bằng số và biểu thức) của $\beta$ & 0.25\\
+    \hline
+\end{tabular}
+\end{center}

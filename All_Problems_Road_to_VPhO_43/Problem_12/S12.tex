@@ -1,0 +1,200 @@
+\begin{enumerate}
+\item Xét một lớp vỏ cầu bán kính $r$ dày $dr$, khối lượng của lớp vỏ cầu này là
+\begin{equation}
+    dm=\rho 4 \pi r^2 dr .\label{mgrad}
+\end{equation}
+Do lực do áp suất gây ra cân bằng với lực hấp dẫn nên
+\begin{equation}
+    \dfrac{dp}{dr}= -\dfrac{Gm \rho}{r^2} .
+    \label{pgrad}
+\end{equation}
+
+\item Lấy tích phân biểu thức \eqref{pgrad}, ta được
+\begin{equation}
+    P_\text{sur}= \int_{R}^{\infty} -\dfrac{GM\rho}{r^2} dr = \dfrac{GM}{R^2} \int_{R}^{\infty} \rho dr = \dfrac{GM}{\kappa R^2} \tau(R) =\dfrac{2GM}{3\kappa R^2}.\label{psur}
+\end{equation}
+
+Từ hàm $\rho$ thay $x=0.001$ ta tính được $\rho \approx 154 \si{g\cdot cm^{-3}}$.
+
+Theo \eqref{pgrad}
+
+\begin{equation}
+    \dfrac{dp}{dr}= -\dfrac{GM \rho}{r^2}.\label{pcore}
+\end{equation}
+
+Thế hàm $\rho$ và tích phân ta được $p\approx 28.9 Pa$.
+
+\item Từ phương trình khí lý tưởng
+
+\begin{equation}
+    p =\dfrac{\rho R T}{\mu} \Longrightarrow T= \dfrac{p \mu}{R \rho}.\label{tempcore}
+\end{equation}
+
+
+Thay số tính được $T \approx 14$ triệu độ.
+
+\item Lực gây ra là do photon va chạm với môi trường truyền làm mất một phần động lượng và chuyển thành lực. Do góc khối phát bức xạ là như nhau nên $I\sim E$
+\begin{equation}
+    \Delta F_r =\dfrac{dp}{dt} = \dfrac{dE}{cdt}=\dfrac{l}{c} = \dfrac{l_0 [1-\exp{(\kappa \rho \Delta r)} ] }{c} \approx -\dfrac{l(r)}{c} \kappa \rho \Delta r \Longrightarrow dF_r = -\dfrac{l(r)}{c} \kappa \rho dr.\label{dfrad}
+\end{equation}
+\item Từ $dF_r$ vừa tìm được ở trên, chúng ta có thể tìm gradient áp suất trên tại bề mặt, kết hợp với điều kiện cân bằng thuỷ tĩnh \eqref{pgrad}, ta tìm được
+\begin{equation}
+    L_{Ed}=\dfrac{4\pi Gc}{\langle \kappa \rangle} M.\label{leddington}
+\end{equation}
+\item Thông qua áp suất bức xạ ta có
+
+\begin{equation}
+    dF_r =4\pi r^2 dp =4 \pi r^2 \dfrac{4aT^3}{3}dT =\dfrac{16a\pi r^2 T^3}{3}dT.
+\end{equation}
+
+Từ 2 phương trình trên ta có
+
+\begin{equation}
+    dF_r=\dfrac{16a\pi r^2 T^3}{3}dT=-\dfrac{l(r)}{c} \kappa \rho dr \Longrightarrow l(r) = -\dfrac{16ca\pi r^2 T^3}{3\kappa \rho}\dfrac{dT}{dr}. \label{eq_9_12}
+\end{equation}
+
+\item Ta tìm được gradient độ trưng năng lượng từ định nghĩa
+\begin{equation}
+    \dfrac{dl(r)}{dr}=4\pi r^2 \rho \varepsilon.\label{eq_10_12}
+\end{equation}
+
+Xuất phát từ \eqref{pgrad}
+\begin{equation}
+    \begin{split}
+    \dfrac{dp}{dr}&= -\dfrac{GM \rho}{r^2}.
+\end{split}
+\end{equation}
+
+Lưu ý rằng $\rho \sim \dfrac{M}{R^3}$.
+
+Ta được
+
+\begin{equation}
+    p \sim -\dfrac{M^2}{R^4}.
+\end{equation}
+
+Từ phương trình khí lý tưởng ta có $p \sim \rho T$.
+
+Ta được 
+\begin{equation}
+    T \sim M/R.
+\end{equation}
+
+Từ $l(r)=-\dfrac{16ca\pi r^2 T^3}{3\kappa \rho}\dfrac{dT}{dr}$ tìm được
+
+\begin{equation}
+    L \sim M^3.\label{eq_14_12}
+\end{equation}
+
+Từ định luật Stefan-Boltzmann $L=4\pi r^2 \sigma T^2_e$ ta được
+\begin{equation}
+    L \sim R^2T^4 = (TR)^2T^2 \Rightarrow M^3 \sim M^2T^2 \Rightarrow M \sim T^2. 
+\end{equation}
+
+
+Vậy $L \sim T^6$ và $\tau \sim M^{-2}$.
+
+8. Từ điều kiện cân bằng thuỷ tĩnh
+\begin{equation}
+    \dfrac{dp}{dm}=-\dfrac{Gm}{4\pi r^4} \Rightarrow 4\pi r^3\dfrac{dp}{dm}=-\dfrac{Gm}{r}.
+\end{equation}
+Xét vế trái, sử dụng phương trình khối lượng
+\begin{equation}
+    4\pi r^3\dfrac{dp}{dm} =\dfrac{d(4\pi r^3 p)}{dm}-12\pi r^2 p\dfrac{dr}{dm} =\dfrac{d(4\pi r^3 p)}{dm}-\dfrac{3p}{\rho}.\label{eq_17_12}
+\end{equation}
+Tích phân phương trình 1 trên toàn bộ khối lượng lõi Heli
+\begin{equation}
+    \int_0^{M_c}\dfrac{d(4\pi r^3 p)}{dm}dm-\int_0^{M_c}\dfrac{3p}{\rho}dm=\int_0^{M_c}-\dfrac{Gm}{r}dm.
+    \label{cdh}
+\end{equation}
+Từ phương trình khí lí tưởng $\dfrac{P}{\rho}=\dfrac{RT}{\mu}$, do lõi Heli đẳng nhiệt nên
+\begin{equation}
+    \int_0^{M_c}\dfrac{3p}{\rho}dm = \dfrac{3M_cRT_c}{\mu_c}=2U_c ,
+\end{equation}
+ở đó $K_c$ là nội năng của khí He trong lõi.
+
+Thành phần bên trái phương trình \eqref{cdh} là thế năng hấp dẫn của lõi
+\begin{equation}
+    \int_0^{M_c}-\dfrac{Gm}{r}dm = -\frac35 \dfrac{GM^2_c}{R_c}.\label{eq_20_12}
+\end{equation}
+Thế vào phương trình \eqref{cdh} và hoàn thành tích phân còn lại, ta được
+\begin{equation}
+    4\pi R^3_cP_c-3 \dfrac{M_cRT_c}{\mu_c}=-\frac35 \dfrac{GM_c^2}{R_c} \Longrightarrow P_c=\dfrac{3}{4\pi R^3_c}\left(\dfrac{M_cRT_c}{\mu_c}-\frac15 \dfrac{GM^2_c}{R_c}\right).
+\end{equation}
+Từ phương trình trên, với giá trị $R_c$ xác định, ta thấy rằng khi khối lượng lõi tăng lên thì năng lượng nhiệt sẽ tăng áp suất ở bề mặt của lõi, trong khi thế năng hấp dẫn gây giảm áp suất. Ta tìm được áp suất lớn nhất trên bề mặt lõi
+\begin{equation}
+    P_{c,max} = \dfrac{375}{64\pi}\dfrac{1}{G^3M_c^2}\left(\dfrac{RT_c}{\mu_c}\right)^4 .\label{eq_22_12}
+\end{equation}
+
+Dễ dàng thấy được khi $M_c$ tăng thì áp suất trên giảm. Do đó, ở một giá trị khối lượng của lõi, cân bằng thuỷ tĩnh sẽ bị phá vỡ.
+
+Chúng ta sẽ tìm áp suất tác dụng lên bề mặt lõi bởi lớp vỏ.
+Từ điều kiện cân bằng thuỷ tĩnh
+\begin{equation}
+    \dfrac{dp}{dm}=-\dfrac{Gm}{4\pi r^4} \Longrightarrow P_s \approx \dfrac{G}{8\pi\langle r^4 \rangle} (M^2-M_c^2) \approx \dfrac{G}{4\pi} \dfrac{M^2}{R^4} .
+\end{equation}
+Thông qua $\rho_s$ và phương trình khí lí tưởng, ta tìm được:
+\begin{equation}
+    P_s \approx \dfrac{81}{4\pi}\dfrac{1}{G^3M^3}\left(\dfrac{RT_c}{\mu_s}\right)^4 .\label{eq_24_12}
+\end{equation}
+Như vậy, ta tìm được giới hạn S-C khi mà lõi còn có thể duy trì được cân bằng thuỷ tĩnh:
+\begin{equation}
+    \dfrac{M_c}{M} \approx 0.537 \left(\dfrac{\mu_s}{\mu_c}\right)^2 .\label{eq_25_12}
+\end{equation}
+
+\end{enumerate}
+\textbf{Biểu điểm}
+\begin{center}
+\begin{tabular}{|>{\centering\arraybackslash}m{1cm}|>{\raggedright\arraybackslash}m{14cm}| >{\centering\arraybackslash}m{1cm}|}
+    \hline
+    \textbf{Phần} & \textbf{Nội dung} & \textbf{Điểm} \\
+    \hline
+    \textbf{1} & Tìm được gradient khối lượng \eqref{mgrad} & $0.50$ \\
+    \cline{2-3}
+    & Tìm được gradient áp suất \eqref{pgrad} & $0.50$ \\
+    \hline
+    \textbf{2} & Tìm được áp suất bề mặt \eqref{psur} & $0.50$ \\
+    \cline{2-3}
+    & Tìm được áp suất tại tâm \eqref{pcore} & $0.50$ \\
+    \hline
+    \textbf{3} & Tìm được nhiệt độ tại tâm \eqref{tempcore} & $0.50$ \\
+    \hline
+    \textbf{4} & Dẫn ra được lực do áp suất bức xạ gây ra trên lớp cầu \eqref{dfrad} & $0.50$ \\
+    \hline
+    \textbf{5}
+    & Tìm được độ trưng Eddington của Mặt Trời \eqref{leddington} & $0.50$ \\
+    \hline
+    \textbf{6}
+    & Tìm ra được hàm độ trưng năng lượng \eqref{eq_9_12} & $0.50$ \\ 
+    \hline
+    \textbf{7}
+    & Tìm ra được hàm độ trưng năng lượng theo định nghĩa \eqref{eq_10_12} & $0.50$ \\
+    \cline{2-3}
+    & Tìm ra được quan hệ tỉ lệ giữa $L$ và $M$ & $0.50$\\
+    \cline{2-3}
+    & Tìm ra được quan hệ tỉ lệ giữa $L$ và $T$ và giữa $\tau$ và $M$ & $0.50$\\
+    \hline
+    \textbf{8}
+    & Dẫn ra được phương trình \eqref{eq_17_12} & $0.50$ \\
+    \cline{2-3}
+    & Tính được thế năng hấp dẫn của lõi \eqref{eq_20_12} & $0.50$\\
+    \cline{2-3}
+    & Tìm ra được áp suất lớn nhất trên bề mặt lõi \eqref{eq_22_12} & $0.50$\\
+    \cline{2-3}
+    & Tìm ra được áp suất tác dụng lên bề mặt lõi bởi lớp vỏ ngoài \eqref{eq_24_12} & $0.50$\\
+    \cline{2-3}
+    & Tìm ra được giới hạn S-C \eqref{eq_25_12} & $0.50$\\
+    
+    
+    \hline
+\end{tabular}
+\end{center}  
+
+
+\bibliographystyle{plain}
+\begin{thebibliography}{}
+\bibitem{JphO} \href{http://www.jpho.jp/syllabus.html}{JPhO 2022 Theory Problems}.
+\bibitem{carroll} Bradley W.Carroll, Dale A.Ostlie. \textit{An Introduction to Modern Astrophysics}
+\end{thebibliography}
+
+

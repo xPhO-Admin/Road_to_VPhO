@@ -1,0 +1,99 @@
+\textbf{a,}
+Khi hình trụ ổn định nhiệt, công suất tỏa nhiệt Joule khi dòng điện chạy qua bằng công suất tỏa nhiệt ra môi trường.
+
+
+Công suất tỏa nhiệt Joule trên toàn bộ dây dẫn là
+\begin{equation} \label{eq1_p2_d2}
+\begin{split}
+P_j = I^2 R &= I^2 \frac{\rho l}{\pi r^2}\\
+&= I^2 \frac{\rho_0 l_0}{\pi r_0^2} [1 + (\beta - \alpha) (T-T_0)].
+\end{split}
+\end{equation}
+Ở đây ta sử dụng liên tiếp các bước xấp xỉ tuyến tính (v.d $(1 + \beta)(1 + \alpha) \approx 1 + \beta+\alpha$ với $\beta$ và $\alpha$ nhỏ).
+
+
+Công suất tỏa nhiệt ra môi trường trên toàn dây dẫn là
+\begin{equation} \label{eq2_p2_d2}
+\begin{split}
+P_l &= \lambda S (T-T_0)\\
+&= \lambda \cdot 2\pi rl (T-T_0)\\
+&= 2\pi\lambda r_0 l_0 (T-T_0) [1 + 2\alpha (T - T_0)].
+\end{split}
+\end{equation}
+
+Điều kiện cân bằng nhiệt
+\begin{equation} \label{eq3_p2_d2}
+I^2 \frac{\rho_0 l_0}{\pi r_0^2}\frac{1 + (\beta - \alpha)(T-T_0)}{1 + 2\alpha (T-T_0)} = 2\pi\lambda r_0 l_0 (T-T_0).
+\end{equation}
+
+Bỏ qua thành phần bậc 2 của $\beta$ và $\alpha$ có được
+\begin{align} \label{eq4_p2_d2}
+T_f = T_0 + \frac{I^2 \rho_0}{2\pi^2 \lambda r_0^3} \left(1 + \frac{I^2 \rho_0}{2\pi^2 \lambda r_0^3} (\beta - 3 \alpha) \right)
+\end{align}
+
+\textbf{b, }
+Ký hiệu dòng nhiệt là $\vec{j} = j \hat{x}$.
+
+Phương trình truyền nhiệt theo định luật Fourier
+\begin{align}
+j = - k \frac{\partial T}{\partial x}.
+\end{align}
+
+Ở đây ta xét một lát cắt của hình trụ có chiều dài $dx$ tại tọa độ $x$.
+Thông lượng nhiệt đi ra khỏi lát cắt này là
+\begin{equation} \label{eq5_p2_d2}
+\begin{split}
+d P_{loss} &= \lambda \cdot 2\pi r_0 d x (T - T_0) + j(x + dx) \pi r_0^2 - j(x) \pi r_0^2\\
+&= \left[2\pi\lambda r_0 (T-T_0) + \pi r_0^2 \frac{\partial j}{\partial x}\right] dx.
+\end{split}
+\end{equation}
+
+Nhiệt năng Joule tỏa ra tại lát cắt này là
+\begin{equation} \label{eq6_p2_d2}
+d P_j = I^2 \frac{\rho d x}{\pi r_0^2}.
+\end{equation}
+
+Tại chế độ dừng, hai lượng nhiệt này phải bằng nhau. Khi đó
+\begin{equation} \label{eq7_p2_d2}
+\begin{split}
+2\pi\lambda r_0 (T-T_0) + \pi r_0^2 \frac{\partial ^2 (T-T_0)}{\partial x^2} = I^2 \frac{\rho}{\pi r_0^2}\\
+\Rightarrow \frac{\partial ^2}{\partial x^2} (T-T_0) - \frac{2\lambda}{kr_0} (T-T_0) + \frac{I^2 \rho_0}{k\pi^2 r_0^4} = 0.
+\end{split}
+\end{equation}
+
+Phương trình này có nghiệm tổng quát là
+\begin{equation} \label{eq8_p2_d2}
+T(x)= T_0 + \frac{I^2 \rho_0}{2\lambda\pi^2 r_0^3}\left(1 + C_1 e^{\mu (x-x_0)} + C_2 e^{-\mu (x-x_0)}\right).
+\end{equation}
+Với $\lambda = \sqrt{\frac{2\lambda}{kr_0}}$, $C_1, C_2$ là các đại lượng không thứ nguyên, $x_0$ là một hằng số phụ thuộc vào điều kiện đầu.
+
+Giải hệ phương trình điều kiện biên $ T(0)=T(l)=T_{0} $, ta sẽ thu được giá trị của $ C_{1},C_{2} $. Từ đó ta có nghiệm
+\begin{equation} \label{eq9_p2_d2}
+T(x)= T_0 + \frac{I^2 \rho_0}{2\lambda\pi^2 r_0^3}\left(1 - \frac{\cosh[\mu (x-x_0)]}{\cosh(\mu l_0/2)}\right),
+\end{equation}
+với $\cosh$ là hàm cos hyperbolic, $\displaystyle \cosh x = \frac{e^{x} + e^{-x}}{2}$. 
+
+
+\textbf{Biểu điểm} 
+\begin{center}
+\begin{tabular}{|>{\centering\arraybackslash}m{1cm}|>{\raggedright\arraybackslash}m{14cm}| >{\centering\arraybackslash}m{1cm}|}
+    \hline
+    \textbf{Phần} & \textbf{Nội dung} & \textbf{Điểm} \\
+    \hline
+    \textbf{a} & Tìm được công suất tỏa nhiệt Joule (\ref{eq1_p2_d2})  & 0.50\\   
+    \cline{2-3}
+    &  Tìm được công suất tỏa nhiệt (\ref{eq2_p2_d2}) & 0.50 \\
+    \cline{2-3}
+    & Khai triển tìm được $T - T_0$ (\ref{eq4_p2_d2}) & 0.50\\
+    \hline
+    \textbf{b} & Tìm được thông lượng nhiệt tại vi phân thể tích (\ref{eq5_p2_d2}) & 0.50\\
+    \cline{2-3}
+    & Tìm được nhiệt lượng tỏa ra tại vi phân thể tích (\ref{eq6_p2_d2}) & 0.25\\
+    \cline{2-3}
+    & Đưa về dạng phương trình vi phân và đưa ra dạng nghiệm tổng quát (\ref{eq7_p2_d2}) & 1.00 \\
+    \cline{2-3}
+    & Tìm được nghiệm riêng phù hợp điều kiện biên (\ref{eq9_p2_d2}) & 0.75 \\
+    \hline
+\end{tabular}
+\end{center}
+

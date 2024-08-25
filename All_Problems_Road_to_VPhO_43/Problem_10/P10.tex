@@ -1,0 +1,83 @@
+\textbf{Tâm sai quỹ đạo trái đất} \\
+Quỹ đạo Trái Đất quanh Mặt Trời không phải là một hình tròn hoàn hảo mà là một hình ellipse với tâm sai \(\varepsilon\). Chính vì vậy, thời gian giữa các sự kiện Xuân phân, Hạ chí, Thu phân và Đông chí là không đều nhau. Trong bài tập này, chúng ta sẽ đưa ra một mô hình tính toán tâm sai của trái đất với sai số cỡ $9 \%$ thông qua các thông tin về những ngày đặc biệt trong năm (như bảng dưới). \\
+% Một số thông tin cơ bản về hình ellipse: %(em cần ký hiệu bán trục lớn, nhỏ, bán tiêu cự, trục x, y, r và góc của 1 điểm bất kỳ)
+% \(a\): Bán trục lớn \\
+% \(b\): Bán trục nhỏ \\
+% \(c\): Bán tiêu cự \\
+% \(\varepsilon\): Tâm sai \\
+% Công thức tâm sai:
+% \begin{equation*}
+%     \varepsilon = \frac{c}{a} = \sqrt{1 - \frac{b^2}{a^2}}
+% \end{equation*}
+% Phương trình ellipse trong hệ tọa độ Descartes: 
+% \begin{equation*}
+%     \frac{x^2}{a^2} + \frac{y^2}{b^2} = 1 
+% \end{equation*}
+% Phương trình ellipse trong hệ tọa độ cực: 
+% \begin{equation*}
+%     r = \frac{a(1-e^2)}{1 - \varepsilon \cos{\phi}}
+% \end{equation*}
+\vspace{-0.5cm}
+\begin{center}
+\footnotesize{
+\begin{tabular}{|>{\centering\arraybackslash}m{4cm}|>{\centering\arraybackslash}m{4cm}|>{\centering\arraybackslash}m{3cm}|>{\centering\arraybackslash}m{3cm}|}
+    \hline
+    Sự kiện & Thời điểm & Thời gian kể từ sự kiện trước (ngày) & Số ngày trôi qua \\
+    \hline
+    Xuân phân 2022 (VE) & 20/03/2022, 15h33 & - & - \\
+    \hline
+    Hạ chí 2022 (SS) & 21/06/2022, 09h14 & 92.7368 & 93 \\
+    \hline
+    Thu phân 2022 (AE) & 23/09/2022, 01h04 & 93.6597 & 93 \\
+    \hline
+    Đông chí 2022 (WS) & 21/12/2022, 21h48 & 89.8939 & 90 \\
+    \hline
+    Xuân phân 2023 (VE) & 20/03/2023, 21h24 & 88.9833 & 89 \\
+    \hline
+\end{tabular} }
+\end{center}
+\begin{enumerate}[label=\textbf{\arabic*,}]\itemsep0em 
+        \item \textbf{Định luật 2 Kepler} \\
+        Biểu diễn vận tốc quét \(dS/dt\) theo moment động lượng của Trái Đất \(L_E\) và khối lượng Trái Đất \(m_E\), trong đó \(S\) là diện tích quét được của đường nối Mặt Trời và Trái Đất. Từ đó kiểm nghiệm lại quan sát của Kepler: Diện tích quét được của đường nối hành tinh và Mặt Trời là như nhau trong khoảng thời gian bằng nhau.
+        \item \textbf{Xác định tâm sai quỹ đạo Trái Đất}
+\vspace{-0.8cm}
+\begin{center}
+\begin{minipage}{\textwidth}
+\centering
+\begin{tikzpicture}[scale=0.8]
+    \draw[thick] (0,0) ellipse (4 and 2.5);
+    \draw[thick, gray] (-8,0) to (8,0);
+    \draw[fill=red!60, thick] (-1,0) circle (0.25);
+    \draw[dashed, thick, gray] 
+    (-4.5,-1.17) to (4.5,1.83)
+    (0,-3) to (-2,3);
+    \draw[thick, magenta, -Stealth] (-0.4,0) arc (0:290:0.6);
+    \draw 
+    (-6,0) node[above]{Điểm cận nhật} 
+    (6,0) node[below]{Điểm viễn nhật}
+    (-1.8,0.7) node{$\phi_{VE}$}
+    (-5,-1.4) node{WS}
+    (4.8,2) node{SS}
+    (-2,3) node[above]{AE}
+    (0,-3) node[below]{VE};
+\end{tikzpicture}
+\end{minipage} \\
+\vspace{2mm}
+Hình 1: Vị trí bốn sự kiện đặc biệt trong năm.
+\end{center}
+% \vspace{-0.5cm}
+Kí hiệu \(\phi_1\), \(\phi_2\) (\(\phi_2 > \phi_1\)) là góc lượng giác hợp bởi điểm viễn nhật và 2 điểm 1, 2 bất kỳ trên quỹ đạo. Thời gian đi từ 1 đến 2 \(t_{1 \rightarrow 2}\) được cho bởi tích phân sau:
+\begin{equation*}
+    t_{1 \rightarrow 2} = A \int_{\phi_1}^{\phi_2} \frac{d\phi}{(1-\varepsilon \cos{\phi})^2}.
+\end{equation*}
+\textbf{a,} Biểu diễn \(A\) theo chu kỳ \(T\) và tâm sai \(\varepsilon\) của trái đất. \\
+\textbf{b,} Tâm sai quỹ đạo Trái Đất là nhỏ. Từ phương trình đề bài cho, hãy rút ra xấp xỉ sau:
+\begin{equation*}
+    t_{1 \rightarrow 2} \approx A[(\phi_2 - \phi_1) + 2\varepsilon(\sin{\phi_2} - \sin{\phi_1})].
+\end{equation*}
+\textbf{c,} Sử dụng các số liệu cho trong bảng, xử lý và đưa ra tâm sai của quỹ đạo Trái Đất \(\varepsilon\).
+\end{enumerate}
+
+\begin{flushright}
+    (Biên soạn bởi manhducnmd và Log)
+\end{flushright}

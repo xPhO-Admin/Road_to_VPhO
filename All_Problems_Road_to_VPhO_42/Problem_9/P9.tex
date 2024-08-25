@@ -1,0 +1,87 @@
+Giao thoa kế Fabri-Perot là một bản thuỷ tinh mỏng hai mặt song song có bề dày $e$, chiết suất $n$ đặt trong không khí có chiết suất $1$. Chiếu sáng bản bằng một nguồn điểm $S$ phát ánh sáng đơn sắc bước sóng $\lambda$ và được đặt cách bản ở khoảng cách xa và chiếu tới bản mỏng, chỉ xét những tia gần vuông góc với bản mỏng. Hình ảnh giao thoa truyền qua được quan sát trên màn $E$ đặt tại tiêu diện ảnh của một thấu kính hội tụ $L$ có tiêu cự $f$ được đặt sát mặt sau của bản (tính theo chiều truyền sáng) sao cho trục chính của thấu kính vuông góc với các mặt phản xạ và S nằm trên trục chính của thấu kính. Cho $R$ là hệ số phản xạ của các mặt (là tỉ số giữa cường độ sóng phản xạ và cường độ sóng tới).
+
+
+\tdplotsetmaincoords{0}{0}
+%
+\pgfmathsetmacro{\rvec}{1}
+\pgfmathsetmacro{\thetavec}{35}
+\pgfmathsetmacro{\phivec}{60}
+%
+\begin{center}
+\begin{tikzpicture}[scale=4.2,tdplot_main_coords]
+\coordinate (O) at (0,0,0);
+;
+\tdplotsetcoord{P}{\rvec}{\thetavec}{\phivec}
+
+
+
+\draw[thick] (-1,0.5)--(1,0.5);
+\fill[blue!10,fill opacity = .4] (-1,0.5)--(1,0.5)--(1,0)--(-1,0);
+\draw (-0.6,1) node[left]{$S$};
+\draw[thick,-stealth, orange, line width=0.5mm] (-0.6,1)--(-0.4,0.5);
+\draw[thick,-stealth, blue, line width=0.5mm] (-0.4,0.5)--(-0.3,0);
+
+\draw[thick,-stealth, red!80, line width=0.5mm] (-0.4,0.5)--(-0.2,1);
+
+\draw[thick,-stealth, blue!80, line width=0.5mm] (-0.3,0)--(-0.2,0.5);
+
+
+
+\draw[thick,-stealth, blue!64, line width=0.5mm] (-0.2,0.5)--(-0.1,0);
+
+\draw[thick,-stealth, blue!51.2, line width=0.5mm] (-0.1,0)--(0,0.5);
+
+\draw[thick,-stealth, blue!40.96, line width=0.5mm] (0,0.5)--(0.1,0);
+
+\draw[thick,-stealth, blue!32.768, line width=0.5mm] (0.1,0)--(0.2,0.5);
+
+\draw[thick,-stealth, red!70, line width=0.5mm] (-0.2,0.5)--(0,1);
+\draw[thick,-stealth, red!56, line width=0.5mm] (0,0.5)--(0.2,1);
+\draw[thick,-stealth, red!44.8, line width=0.5mm] (0.2,0.5)--(0.4,1);
+
+
+\draw[thick,-stealth, green!80, line width=0.5mm] (-0.3,0)--(-0.25,-0.125);
+\draw[thick] (-0.25,-0.125)--(0.14,-0.6);
+\draw[dashed](-0.3,0)--(-0.3,-0.125);
+\draw[dashed](-0.1,0)--(-0.1,-0.125);
+\draw[dashed](0.1,0)--(0.1,-0.125);
+
+\draw[thick,-stealth, green!64, line width=0.5mm] (-0.1,0)--(-0.05,-0.125);
+\draw[thick] (-0.05,-0.125)--(0.14,-0.6);
+
+\draw[thick,-stealth, green!51.2, line width=0.5mm] (0.1,0)--(0.15,-0.125);
+\draw[thick] (0.15,-0.125)--(0.14,-0.6);
+
+\draw[dashed, line width=0.3mm](-0.4,0.5)--(-0.4,1);
+\draw (-0.38,0.62) node[above left]{$\theta$};
+
+\draw[thick,stealth-stealth] (0.5,0)--(0.5,0.5);
+\draw (0.5,0.25) node[right]{$e$};
+\draw (-0.7,0.5) node[below]{$n$};
+\draw (-0.7,0.5) node[above]{$1$};
+\draw[thick] (-1,0)--(1,0);
+\draw[thick,stealth-stealth] (-0.75,-0.125)--(0.75,-0.125) node[right]{$L$};
+\draw[thick] (-0.8,-0.6)--(0.8,-0.6) node[right]{$E$};
+
+
+\end{tikzpicture}
+\end{center}
+
+
+\begin{enumerate}[label=\textbf{\alph*,}]\itemsep0em
+    \item Chứng minh rằng cường độ của ánh sáng trên màn được xác định bằng biểu thức
+    $$I(\theta) = \frac{I(0)}{1 + a \sin^2 \frac{\Phi}{2}}.$$
+    Với $I(0)$ là cường độ của ánh sáng với góc chiếu $\theta=0$. Hãy xác định $a$ và $\Phi$ theo $e$, $R$, $\lambda$, $n$ và góc tới $\theta$. 
+    \item Tìm độ rộng vân trung tâm.
+    \item Độ tương phản của hình ảnh giao thoa trên màn được đặc trưng bởi đại lượng $\Gamma$, xác định bởi
+    $$\Gamma = \frac{I_{\text{max}} - I_{\text{min}}}{I_{\text{max}}+ I_{\text{min}}}.$$
+    Trong đó $I_{\text{max}}$, $I_{\text{min}}$ tương ứng là cường độ sáng cực đại và cực tiểu. Hãy xác định $\Gamma$ theo $R$.
+\end{enumerate}
+
+\textit{Có thể sử dụng công thức tổng chuỗi sau: khi $|R|<1$, ta có}
+$$\sum_{n=0}^\infty R^n \cos (n \delta) = \frac{1 - R\cos \delta}{1 + R^2 - 2R\cos \delta}; \hspace{0.5em}
+\sum_{n=0}^\infty R^n \sin (n \delta) = \frac{R\sin \delta}{1 + R^2 - 2R\cos \delta}.$$
+
+\begin{flushright}
+    (Biên soạn bởi Zinc)
+\end{flushright}

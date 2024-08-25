@@ -1,0 +1,254 @@
+%% Road to VPhO 2023 Template
+
+\documentclass[12pt]{article}
+\usepackage[utf8]{vietnam}
+%\usepackage[english]{babel}
+\usepackage[T5]{fontenc}
+\usepackage[top=2cm, bottom=2cm, left=2cm,right=2cm]{geometry} %%%% Margin %%%%%
+\usepackage[dvipsnames]{xcolor}
+\usepackage[pdftex]{graphicx}
+\usepackage{wrapfig}
+\usepackage{tcolorbox}
+\usepackage{mathtools}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{eqnarray}
+\usepackage{siunitx}
+\usepackage{subcaption}
+\usepackage{array, lipsum, bibentry,fancyhdr}
+\usepackage{hyperref}
+\usepackage{natbib}
+\setlength{\parindent}{0pt}
+\usepackage{enumitem}
+\usepackage[noframe]{showframe}
+\usepackage{framed}
+\usepackage{titling}
+\usepackage{float}
+\usepackage{multicol}
+\usepackage{url}
+\usepackage{authblk}
+\usepackage{sectsty}
+\usepackage{eqparbox}
+\usepackage{ulem} 
+
+%%%%%%%%%% Pictures drawing %%%%%%%%%%%%%
+
+\usepackage{pgfplots} %%%%%% Regression %%%%
+\pgfplotsset{compat = newest}
+\usepackage{pgfplotstable}
+\usepackage{tikz}
+\usepackage{tikz-3dplot} %%%%%% Draw %%%%%%
+\usepackage{tikz,tkz-euclide}
+\usetikzlibrary{arrows,calc,patterns}
+\usetikzlibrary{quotes,angles}
+\usetikzlibrary{shapes.geometric}
+\usepackage{circuitikz} %%%%% Circuit %%%%
+\usetikzlibrary{decorations.pathmorphing,patterns}
+
+\setlength{\unitlength}{1cm}
+
+%%%%%%%%%% Hyperlink %%%%%%%%%%%%%
+
+\hypersetup{
+	colorlinks=true,
+	linkcolor=black,
+	filecolor=mangeta,      
+	urlcolor=blue,
+	pdftitle={Overleaf Example},
+	pdfpagemode=FullScreen,
+}
+
+
+%%%%%%%%%% Set Counter and Reference Equation %%%%%%%%%%
+
+\usepackage{xassoccnt}
+\newcounter{totalequations}
+\DeclareAssociatedCounters{equation}{totalequations}
+\let\theOldHequation\theHequation
+\renewcommand{\theHequation}{\theOldHequation::\number\value{totalequations}}
+
+
+%%%%%%%%%% Header & Footer %%%%%%%%%%%%%
+
+\setlength{\headheight}{10mm}
+\RequirePackage{fancyhdr}  % Needed to define custom headers/footers
+\RequirePackage{lastpage}  % Number of pages in the document
+\pagestyle{fancy}          % Enables the custom headers/footers
+% Headers
+\lhead{\includegraphics[width=.8in]{xPhO.png}}%
+\chead{}%
+\rhead{\small\sffamily\bfseries{Đề hướng tới VPhO 43} --- \thepage/\pageref{LastPage}}
+% Footers
+\lfoot{}%
+\cfoot{}%
+\rfoot{}%
+\renewcommand{\headrulewidth}{1pt}% % header rule
+\renewcommand{\footrulewidth}{1pt}% % footer rule
+
+% \pagestyle{fancy}
+% 	\fancyhead[L]{\empty}
+% 	\fancyhead[R]{\empty}
+% 	\fancyhead[C]{\empty}
+% 	\fancyfoot[C]{\empty}
+% 	\fancyfoot[L]{\empty}
+% 	\renewcommand{\headrulewidth}{0pt}
+% 	\fancyfoot[C]{\normalcolor{\thepage/\pageref{LastPage}}}
+% 	\setcounter{page}{1}
+
+%%%%%%%%%% Color setup %%%%%%%%%%%%%
+
+\RequirePackage{xcolor}
+\definecolor{wsdred}{HTML}{8E1728}
+\definecolor{wsdgrey}{HTML}{75787B}
+\definecolor{battleshipgrey}{rgb}{0.52, 0.52, 0.51}
+\renewcommand{\normalcolor}{\color{wsdred}}
+\colorlet{ColorOr}{white}
+
+\begin{document}
+
+%% Title %%
+{\fontsize{50}{24}\fontfamily{phv}\fontseries{b}
+\LARGE \normalcolor{ \textbf{Đề hướng tới VPhO 43} } }
+
+\textcolor{blue}{\textbf{\textit{Câu lạc bộ vật lý xPhO}}}
+%%%%
+\vspace{5mm}
+
+{\normalcolor\textbf{CÂU 1}}\vspace{1.5mm}
+
+\setcounter{equation}{0}
+\input{Problem_1/P1}
+
+\newpage
+{\normalcolor \textbf{CÂU 2}}\vspace{1.5mm}
+
+\setcounter{equation}{0}
+\input{Problem_2/P2}
+
+\newpage
+{\normalcolor \textbf{CÂU 3}}\vspace{1.5mm}
+
+\setcounter{equation}{0}
+\input{Problem_3/P3}
+
+\newpage
+{\normalcolor \textbf{CÂU 4}}\vspace{1.5mm}
+
+\setcounter{equation}{0}
+\input{Problem_4/P4}
+
+\newpage
+{\normalcolor \textbf{CÂU 5}}\vspace{1.5mm}
+
+\setcounter{equation}{0}
+\input{Problem_5/P5}
+
+\newpage
+{\normalcolor \textbf{CÂU 6}}\vspace{1.5mm}
+
+\setcounter{equation}{0}
+\input{Problem_6/P6}
+
+\newpage
+{\normalcolor \textbf{CÂU 7}}\vspace{1.5mm}
+
+\setcounter{equation}{0}
+\input{Problem_7/P7}
+
+\newpage
+{\normalcolor \textbf{CÂU 8}}\vspace{1.5mm}
+
+\setcounter{equation}{0}
+\input{Problem_8/P8}
+
+\newpage
+{\normalcolor \textbf{CÂU 9}}\vspace{1.5mm}
+
+\setcounter{equation}{0}
+\input{Problem_9/P9}
+
+\newpage
+{\normalcolor \textbf{CÂU 10}}\vspace{1.5mm}
+
+\setcounter{equation}{0}
+\input{Problem_10/P10}
+
+\newpage
+{\normalcolor \textbf{CÂU 11}}\vspace{1.5mm}
+
+\setcounter{equation}{0}
+\input{Problem_11/P11}
+
+\newpage
+{\normalcolor \textbf{CÂU 12}}\vspace{1.5mm}
+
+\setcounter{equation}{0}
+\input{Problem_12/P12}
+
+\newpage
+{\normalcolor \textbf{CÂU 13}}\vspace{1.5mm}
+
+\setcounter{equation}{0}
+\input{Problem_13/P13}
+
+% \newpage
+% {\normalcolor \textbf{CÂU 14}}\vspace{1.5mm}
+
+% \setcounter{equation}{0}
+% \input{Problem_14/P14}
+% \setcounter{equation}{0}
+% \begin{center}
+%     \normalcolor{\textbf{Bài giải}}
+% \end{center}
+% \input{Problem_14/S14}
+
+\newpage
+{\normalcolor \textbf{CÂU 14+15}}\vspace{1.5mm}
+
+\setcounter{equation}{0}
+\input{Problem_15/P15}
+
+\newpage
+{\normalcolor \textbf{CÂU 16}}\vspace{1.5mm}
+
+\setcounter{equation}{0}
+\input{Problem_16/P16}
+
+\newpage
+{\normalcolor \textbf{CÂU 17}}\vspace{1.5mm}
+
+\setcounter{equation}{0}
+\input{Problem_17/P17}
+
+\newpage
+{\normalcolor \textbf{CÂU 18}}\vspace{1.5mm}
+
+\setcounter{equation}{0}
+\input{Problem_18/P18}
+
+% \newpage
+% {\normalcolor \textbf{CÂU 19}}\vspace{1.5mm}
+
+% \setcounter{equation}{0}
+% \input{Problem_19/P19}
+% \setcounter{equation}{0}
+% \begin{center}
+%     \normalcolor{\textbf{Bài giải}}
+% \end{center}
+% \input{Problem_19/S19}
+
+\newpage
+{\normalcolor \textbf{CÂU 19+20}}\vspace{1.5mm}
+
+\setcounter{equation}{0}
+\input{Problem_20/P20}
+
+
+\begin{center}
+    \normalcolor{------------------------------------------------ HẾT ------------------------------------------------}
+\end{center}
+
+\newpage
+\input{Acknowledgement}
+
+\end{document}

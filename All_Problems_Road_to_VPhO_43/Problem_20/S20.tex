@@ -1,0 +1,121 @@
+\textbf{Lý thuyết dây cho tương tác mạnh}
+
+\begin{enumerate}
+    \item \textbf{Quỹ đạo Regge của họ các hạt meson}\\
+    Từ đồ thị trong hình \ref{fig01}, ta ước tính được $S/M^2 \approx 1$ theo đơn vị $($GeV$/c^2)^{-2}$, tức $\alpha \approx 3.15 \times 10^{53} \si{kg^{-2}}$. 
+    
+    \item \textbf{Mô hình dây tương đối tính của meson}\\
+    Đây là một bài tập rất khó, yêu cầu bạn phải biết về liên hệ giữa lực và biến đổi chuyển động trong lý thuyết tương đối hẹp, cũng như áp dụng sự tương đương năng - khối lượng -- dây dự trữ mật độ năng lượng nghỉ $\lambda$ trên đơn vị chiều dài, tức nó cũng sở hữu khối lượng nghỉ $\lambda/c^2$ trên đơn vị chiều dài.
+    
+    a/ Gọi vận tốc của các quark là $\vec{v}$, đặt $\beta = v/c$ và $\gamma =  \left(1-\beta^2\right)^{-1/2}$. Dây dự trữ mật độ năng lượng nghỉ $\lambda$ trên đơn vị chiều dài, tức ý nghĩa Vật Lý của $\lambda$ chính là lực căng dây trong hệ quy chiếu nghỉ. Lực căng dây trong hệ quy chiếu quan sát tại vị trí đầu dây nối với các quark là $\lambda/\gamma$, gây nên biến thiên động lượng $\vec{p} =  \gamma m \vec{v}$ các quark:
+    \begin{equation} \label{eq1_String_theory}
+        \frac{\lambda}{\gamma} = \left| \ \frac{d}{dt} \vec{p} \ \right| = \frac{\gamma m v^2}{R} \ \ \Longrightarrow \  \ L  = \gamma^2 \beta^2 \frac{2mc^2}{\lambda} .
+    \end{equation}
+    Ở đây, $R$ là bán kính đường tròn, có độ dài bằng một nửa chiều dài dây $L$ (là đường kính đường tròn). Đóng góp năng lượng $E_{2q}$ và momen động lượng $J_{2q}$ của hai quark là:
+    \begin{equation} \label{eq2_String_theory}
+       E_{2q} = 2\gamma mc^2 \ , \ J_{2q} = 2 |\vec{p}| R = \gamma \beta m c L  \ .
+    \end{equation}
+    Đóng góp năng lượng $E_{d}$ và momen động lượng $J_{d}$ của ống dòng trường gluon là:
+    \begin{equation} \label{eq3_String_theory}
+    \begin{split}
+       E_{g} & = 2 \int_0^R dr \left[ 1 - \left( \frac{r}{R}\beta \right)^2 \right]^{-1/2} \lambda = \left[ \frac{\arcsin(\beta)}{\beta} \right] \lambda L  \ ,
+       \\
+       J_{g} & = 2 \int_0^R dr \left\{ \left[ 1 - \left( \frac{r}{R}\beta \right)^2 \right]^{-1/2} \frac{\lambda}{c^2} \left( \frac{r}{R}\beta c \right) \right\} r = \left[ \frac{\arcsin(\beta) - \beta \left( 1-\beta^2 \right)^{1/2}}{4\beta^2} \right] \frac{\lambda L^2}{c} \ .
+       \end{split}
+    \end{equation}
+    Tổng hợp lại, ta có năng lượng $E$ và momen động lượng $J$ của dây:
+    \begin{equation} \label{eq4_String_theory}
+    \begin{split}
+    E &= E_{2q} + E_{g} =  \gamma \left[ 1 + \gamma \beta \arcsin(\beta) \right] 2 mc^2 \ ,
+    \\
+    J &= J_{2q} + J_{g} = \gamma \beta \left\{ 1 + 
+ \frac12 \gamma^3 \beta \left[ \arcsin(\beta) - \beta \left( 1-\beta^2 \right)^{1/2} \right] \right\} \frac{2m^2c^3}{\lambda} \ ,
+    \end{split}
+    \end{equation}
+    với giá trị của $L$ được thế bằng công thức tìm được ở \eqref{eq1_String_theory}. Khi $m \rightarrow 0$, vận tốc hai quark sẽ tiến gần tới giá trị vận tốc ánh sáng $\beta \rightarrow 1$ và $\gamma \rightarrow \infty$, nên vì vậy ta có xấp xỉ ở bậc cao nhất theo khai triển $\gamma$:
+    \begin{equation} \label{eq5_String_theory}
+       E \approx \pi \gamma^2 m c^2 + \mathcal{O}(\gamma) \ \ , \ \ J  \approx \frac{\pi}{2} \gamma^4 \frac{m^2 c^3}{\lambda} + \mathcal{O}(\gamma^3) \ .
+    \end{equation}
+    Từ đây ta thu được gần đúng liên hệ tỉ lệ tuyến tính giữa năng lượng bình phương $E^2$ và momen động lượng $J$:
+    \begin{equation} \label{eq6_String_theory}
+        \left(2\pi \lambda c\right)^{-1} E^2 \approx J \ \ \Longrightarrow \ \ E = \left[ \left(2\pi \lambda c\right) J \right]^{1/2} \ .
+    \end{equation}
+
+    b/ Với $E=Mc^2$ và $J=S \hbar$, công thức \eqref{eq6_String_theory} trở thành:
+    \begin{equation} \label{eq7_String_theory}
+        \frac{c^3}{2\pi \lambda} M^2 \approx S \hbar \ \ \Longrightarrow \ \ \lambda = \frac{c^3}{2\pi \hbar \alpha} \ .
+    \end{equation}
+
+    c/ Để liên hệ $L$ với $J$, chúng ta sử dụng công thức \eqref{eq1_String_theory} và công thức \eqref{eq4_String_theory}:
+    \begin{equation} \label{eq8_String_theory}
+    L \xrightarrow{\gamma \rightarrow \infty} \gamma^2 \frac{2mc^2}{\lambda} \approx \left( \frac{8}{\pi}\frac{c}{\lambda} J \right)^{1/2} = \left( \frac{16\hbar^2 \alpha}{c^2} J \right)^{1/2}
+    \end{equation}
+    
+    \item \textbf{Nhiệt độ Hagedorn}\\
+    a/ $\mathcal{N}[5]=7$, do $5$ có thể được biểu diễn theo tổng $1+1+1+1+1$, $1+1+1+2$, $1+1+3$, $1+2+2$,$1+4$, $2+3$, và $5$. 
+    
+    $\mathcal{N}[6]=11$, do $6$ có thể được biểu diễn theo tổng $1+1+1+1+1+1$, $1+1+1+1+2$, $1+1+1+3$, $1+1+2+2$,$1+1+4$, $1+2+3$, $1+5$, $2+2+2$, $2+4$, $3+3$, và $6$. 
+    
+    $\mathcal{N}[7]=15$, do $7$ có thể được biểu diễn theo tổng $1+1+1+1+1+1+1$, $1+1+1+1+1+2$, $1+1+1+1+3$, $1+1+1+2+2$,$1+1+1+4$, $1+1+2+3$, $1+1+5$, $1+2+2+2$, $1+2+4$, $1+3+3$, $1+6$, $2+2+3$, $2+5$, $3+4$, và $7$.
+
+    b/ Với công thức ở ý 2a là $E(\alpha,J/\hbar)$ và ở ý 2c là $L(\alpha,J/\hbar)$, thế thì ta có thể tính chiều dài dây trung bình $\langle L \rangle$ ở nhiệt độ cân bằng thống kê $T$ như sau:
+    \begin{equation} \label{eq9_String_theory}
+        \langle L \rangle = \frac{\displaystyle \sum_{J/\hbar=0}^{\infty} \mathcal{N}[J/\hbar] \exp\left[ - \frac{E(\alpha,J/\hbar)}{k_B T} \right] L(\alpha,J/\hbar)}{\displaystyle \sum_{J/\hbar=0}^{\infty} \mathcal{N}[J/\hbar] \exp\left[ - \frac{E(\alpha,J/\hbar)
+        }{k_B T} \right]} \ .
+    \end{equation}
+    Cụ thể hơn:
+    \begin{equation} \label{eq10_String_theory}
+        E(\alpha,J/\hbar) = \left[ \frac{c^4}{\alpha} (J/\hbar) \right]^{1/2} \ \ , \ \ L(\alpha,J/\hbar) = \left[ \frac{16 \hbar^2 \alpha}{c^2} (J/\hbar) \right]^{1/2}  \ .
+    \end{equation}
+
+    c/ Áp dụng công thức Hardy-Ramanujan, xác suất dây có chiều dài $L(\alpha,J/\hbar) \propto (J/\hbar)^{1/2}$ khi $J/\hbar \gg 1$ là tỉ lệ với:
+    \begin{equation} \label{eq11_String_theory}
+    \mathcal{N}[J/\hbar] \exp\left[ - \frac{E(\alpha,J/\hbar)}{k_B T} \right] \approx \exp \left\{ \left[ \left(\frac{2\pi^2}{3}\right)^{1/2} - \frac1{k_B T} \left( \frac{c^4}{\alpha} \right)^{1/2} \right] (J/\hbar)^{1/2}\right\} \ ,
+    \end{equation}
+    tăng theo hàm mũ theo chiều dài khi bên vế phải sở hữu $[...]>0$:
+    \begin{equation} \label{eq12_String_theory}
+        T > \frac1{k_B} \left( \frac{3}{2\pi^2} \frac{c^4}{\alpha} \right)^{1/2} \equiv T_* \ .
+    \end{equation}
+    Nói cách khác, chiều dài trung bình của dây tiến tới vô cùng khi $T>T_*$. Dây dài vô hạn tức hai quark có thể cách xa nhau tùy ý, không còn giam cầm bởi lực tương tác mạnh nữa! Ước tính này cho ta kết quả $T_* \approx 4.5 \times 10^{12} \si{K} $, cùng bậc độ lớn với nhiệt độ Hagedorn, nhiệt độ mà các hadron sẽ ``tan chảy''.
+\end{enumerate}
+
+\textbf{Biểu điểm}
+\begin{center}
+\begin{tabular}{|>{\centering\arraybackslash}m{1cm}|>{\raggedright\arraybackslash}m{14cm}| >{\centering\arraybackslash}m{1cm}|}
+    \hline
+    \textbf{Phần} & \textbf{Nội dung} & \textbf{Điểm} \\
+    \hline
+    \textbf{1} & Xác định hệ số $\alpha$ từ đồ thị & $4.00$ \\
+    \hline
+    \textbf{2a} & Tìm chiều dài dây theo vận tốc \eqref{eq1_String_theory} & $1.00$ \\
+    \cline{2-3}
+    & Xác định đóng góp năng lượng và momen động lượng của hai quark \eqref{eq2_String_theory} & $0.50$ \\
+    \cline{2-3}
+    & Xác định đóng góp năng lượng và momen động lượng của dây \eqref{eq3_String_theory} & $1.00$ \\
+    \cline{2-3}
+    & Khảo sát các đại lượng khi khối lượng quark rất bé \eqref{eq5_String_theory} & $1.00$ \\
+    \cline{2-3}
+    & Đưa ra mối liên hệ giữa năng lượng và moment động lượng \eqref{eq6_String_theory} & $0.50$ \\
+    \hline
+    \textbf{2b} & Xác định $\lambda$ theo $\alpha$ \eqref{eq7_String_theory} & $1.00$ \\
+    \hline
+    \textbf{2c} & Xác định chiều dài $L$ của dây theo $J$ và $\alpha$ \eqref{eq8_String_theory} & $1.00$ \\
+    \hline
+    \textbf{3a} & Xác định giá trị $\mathcal{N}[5]$, $\mathcal{N}[6]$, và $\mathcal{N}[7]$ & $2.00$ \\
+    \hline
+    \textbf{3b} & Tính chiều dài trung bình của dây \eqref{eq9_String_theory} & $2.00$ \\
+    \hline
+    \textbf{3c} & Áp dụng công thức Hardy-Ramnujan xác định xác suất độ dài dây \eqref{eq11_String_theory} & $1.00$ \\
+    \cline{2-3}
+    & Đánh giá về nhiệt độ và biện luận \eqref{eq12_String_theory} & $1.00$ \\
+    \hline
+\end{tabular}
+\end{center}
+
+%% Reference %%
+\bibliographystyle{plain}
+\begin{thebibliography}{}
+\bibitem{refId0} P. Desgrolard, M. Giffon, E. Martynov, and E. Predazzi. Exchange-degenerate regge trajectories: A fresh look from resonance and forward scattering regions. \textit{Eur. Phys. J. C}, 18(3):555–561, 2001.
+\bibitem{LondonMathematical} \textit{Proceedings of the London Mathematical Society 2.1 (1918): 75-115.}
+\bibitem{hadrons} \textit{Melting hadrons, boiling quarks: from Hagedorn temperature to ultra-relativistic heavy-ion collisions at CERN: with a tribute to Rolf Hagedorn. Springer Nature; 2016.}
+\end{thebibliography}

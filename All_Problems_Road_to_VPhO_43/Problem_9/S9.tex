@@ -1,0 +1,114 @@
+\begin{enumerate}
+\item 
+\begin{enumerate}
+    \item 
+    Công suất bức xạ của dây
+    \begin{equation} \label{eq1_far_field}
+        P(t) = \int_0^\pi S \cdot 2 \pi r^2 \sin \theta d \theta = \omega^2 (\varepsilon \mu) \sqrt{ \dfrac{\mu}{\varepsilon} } \dfrac{(I_0 l_1)^2}{6 \pi} \sin^2 \left( \omega t - \dfrac{2 \pi r}{\lambda} \right).
+    \end{equation}
+    Lấy trung bình theo thời gian
+    \begin{equation} \label{eq2_far_field}
+        \left< P \right> = \dfrac{\omega^2}{12 \pi c^2} \sqrt{ \dfrac{\mu}{\varepsilon} } (I_0 l_1)^2.
+    \end{equation}
+    \item Công suất bức xạ của một đoạn dây có dạng $\left< P \right> = \dfrac{1}{2} I_0^2 R_r$, đồng nhất hệ thức này với kết quả tính toán phần trên, ta được
+    \begin{equation} \label{eq3_far_field}
+        R_r = \dfrac{\omega^2}{6 \pi c^2} \sqrt{\dfrac{\mu}{\varepsilon}} l_1^2 = \dfrac{2 \pi}{3} \sqrt{\dfrac{\mu}{\varepsilon}} \left( \dfrac{l_1}{\lambda} \right)^2.
+        \end{equation}
+    \end{enumerate}
+\item Ở khoảng cách khá xa, biên độ các sóng điện từ gây ra bởi từng phần tử trên dây dẫn có thể xem là như nhau và tỷ lệ với $\sin \theta$.
+\begin{center}
+\begin{minipage}{0.4\textwidth}
+\centering
+\begin{tikzpicture}[scale=1]
+    \draw[-Stealth] (0,-3) to (0,3);
+    \draw[-Stealth] (0,0) to (3,0);
+    \draw[ultra thick, -Stealth] (0,-2) to (0,2);
+    \draw (0,0) to (4,3);
+    \draw (0,0.5) arc(90:37:0.5);
+        \draw[fill=black] (4,3) circle (0.05);
+    \draw[-Stealth] (4,3) to (4.3,2.6);
+    \draw[white] (0,4.9) to (0.1,4.9); % Để căn hình.
+    \draw 
+    (0.2,0.8) node{$\theta$}
+    (0,2.8) node[left]{$z$}
+    (2.8,0) node[below]{$\rho$}
+    (0,0) node[left]{$O$}
+    (0,-2) node[left]{$-l_2/2$}
+    (0,2) node[left]{$l_2/2$}
+    (3.9,2.6) node{$\Vec{E}$}
+    (2,1.2) node{$r$};
+\end{tikzpicture}
+\end{minipage}
+\hspace{0.1\textwidth}
+\begin{minipage}{0.4\textwidth}
+\centering
+\begin{tikzpicture}[scale=1]
+    \draw[-Stealth] (0,-3) to (0,3);
+    % \draw[-Stealth] (0,0) to (3,0);
+    \draw[ultra thick, -Stealth] (0,-2) to (0,2);
+    \draw (0,0) to (4,3);
+    \draw (0,0.5) arc(90:37:0.5);
+    \draw[dashed] (5.2,1.4) to (2.8,4.6);
+    \draw (0,-1.5) to (4.9,1.8);
+    \draw[dashed] (0,0) to (0.75,-1.0);
+    \draw (0,-1.) arc(90:37:0.5);
+    \draw 
+    (0.2,0.8) node{$\theta$}
+    (0,2.8) node[left]{$z$}
+    % (2.8,0) node[below]{$\rho$}
+    (0,0) node[left]{$O$}
+    % (3.1,3.6) node{$\Vec{E}$}
+    (2,1.2) node{$r$}
+    (2.7,-0.4) node{$r- z \cos \theta$}
+    (0,-1.5) node[left]{$z$}
+    % (1.0,-0.1) node{$-z \cos \theta$}
+    (0.2,-0.7) node{$\theta$};
+\end{tikzpicture}
+\end{minipage} \\
+\vspace{3mm}
+Hình 2: Giao thoa sóng điện từ gây ra bởi dây theo các phương diện tọa độ, hướng của điện trường (hình bên trái) và hiệu quang trình (hình bên phải).
+\end{center}
+        Tức là nếu chọn mốc thời gian phù hợp, điện trường gây ra bởi một phần tử dây nằm từ $z$ đến $z+dz$ có dạng 
+    \begin{equation} \label{eq4_far_field}
+        dE = A \sin \theta \sin \left( \omega t + \dfrac{2\pi z \cos \theta}{\lambda} \right) dz,
+    \end{equation}
+    trong đó $A$ là một hằng số không phụ thuộc vào thời gian và thay đổi ít theo không gian ở khoảng cách xa (theo hàm $1/r$). Ở đây, ta có thể xác định giá trị của hằng số này là $A= - \omega \mu I_0/(4 \pi r)$, song do việc đo lường và quan sát sóng điện từ tương đối phức tạp và hầu hết ta chỉ quan tâm đến sự khác biệt của điện từ trường theo các vị trí nên giá trị của hằng số A này không thực sự quan trọng khi khảo sát.
+    
+    Theo nguyên lý chồng chập điện trường
+    \begin{equation} \label{eq5_far_field}
+        E = \int_{-l_2/2}^{l_2/2} A \sin \theta \sin \left( \omega t + \dfrac{2\pi z \cos \theta}{\lambda} \right) dz = A \sin \theta \left[ \dfrac{ \sin \left( \dfrac{\pi l_2}{\lambda} \cos \theta \right)}{\dfrac{\pi l_2}{\lambda} \cos \theta} \right] \sin (\omega t).
+    \end{equation}
+    Cường độ sóng điện từ, hay trung bình năng lượng sóng điện từ truyền qua một đơn vị diện tích trong một đơn vị thời gian tỷ lệ với bình phương biên độ sóng điện từ nên
+    \begin{equation} \label{eq6_far_field}
+        \dfrac{\left< S \right>}{\left< S_0 \right>} = \sin^2 \theta \left[ \dfrac{ \sin \left( \dfrac{\pi l_2}{\lambda} \cos \theta \right)}{\dfrac{\pi l_2}{\lambda} \cos \theta} \right]^2.
+    \end{equation}
+    Anten ngắn lý tưởng này là một trong những mô hình đơn giản nhất của truyền sóng điện từ ở vùng xa. Ở các mô hình thực tế và phức tạp hơn, dòng điện trên dây có thể sẽ không đều, nó có thể xuất hiện dưới dạng hàm tuyến tính hoặc hàm sin tùy theo độ dài của anten. Không khó để có thể nhận thấy, cường độ sáng ở đây tỷ lệ với bình phương biên độ của điện trường tổng hợp, đó là một kết quả mà ta thường xuyên áp dụng trong quang học sóng.
+\end{enumerate}
+
+\textbf{Biểu điểm}
+\begin{center}
+\begin{tabular}{|>{\centering\arraybackslash}m{1cm}|>{\raggedright\arraybackslash}m{14cm}| >{\centering\arraybackslash}m{1cm}|}
+    \hline
+    \textbf{Phần} & \textbf{Nội dung} & \textbf{Điểm} \\
+    \hline
+    \textbf{1a} & Tính công suất bức xạ tức thời (\ref{eq1_far_field}) & $0.50$ \\
+    \cline{2-3}
+    & Tính công suất bức xạ trung bình (\ref{eq2_far_field}) & $0.50$ \\
+    \hline
+    \textbf{1b} & Rút ra biểu thức điện trở tương đương (\ref{eq3_far_field}) & $1.00$ \\
+    \hline
+    \textbf{2} & Tính điện trường gây ra bởi một vi phân đoạn dây (\ref{eq4_far_field})  & $0.50$ \\
+    \cline{2-3}
+    & Tính tổng điện trường gây bởi toàn dây (\ref{eq5_far_field}) & $1.00$ \\
+    \cline{2-3}
+    & Tìm tỷ số cường độ sáng (\ref{eq6_far_field}) & $0.50$ \\
+    \hline
+\end{tabular}
+\end{center}
+
+%% Reference %%
+\bibliographystyle{plain}
+\begin{thebibliography}{}
+\bibitem{Stutzman} W.L. Stutzman and G.A. Thiele. \textit{Antenna Theory and Design}. Wiley, 2012.
+\bibitem{Balanis} Constantine A. Balanis. \textit{Antenna Theory: Analysis and Design}. John Wiley Sons, second edition, 1997.
+\end{thebibliography}

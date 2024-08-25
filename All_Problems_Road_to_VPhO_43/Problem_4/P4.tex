@@ -1,0 +1,131 @@
+\textbf{Khuếch đại thuật toán}
+
+Bộ khuếch đại thuật toán (OPerational AMPlifier), hay còn gọi là OPAMP là một linh kiện điện tử dùng để thực hiện một số phép toán như cộng, trừ, nhân, chia, tích phân, đạo hàm,... khi nó kết hợp với các linh kiện bên ngoài.
+
+Một OPAMP cơ bản có cấu tạo gồm 8 chân, nhưng trong khuôn khổ bài này, chúng ta chỉ xét một OPAMP như hình vẽ
+
+
+\begin{figure}[h]
+\centering
+\begin{subfigure}[t]{0.3\textwidth}
+\centering
+\begin{circuitikz} 
+    \draw
+     (0,0) node[op amp] (opamp) {}
+     (opamp.+) node[left] {$v_+$}
+     (opamp.-) node[left] {$v_-$}
+     (opamp.out) node[right] {$v_o$}
+     (opamp.up) --++(0,0.5) node[vcc]{$V_+$}
+     (opamp.down) --++(0,-0.5) node[vee]{$V_-$};
+    \end{circuitikz}
+ \caption{Ký hiệu OPAMP}
+ \end{subfigure}
+ %
+\begin{subfigure}[t]{0.6\textwidth}
+ \centering
+ \begin{circuitikz}[american,scale=0.73,font=\footnotesize]
+ \ctikzset{bipoles/length=11mm} 
+    \draw
+        (0,4) to[short, -o] ++(-1.7,0) node[shift={(-0.4,0)}] {$v_-$}
+        (-1.7, 3.6) to [short, -*] (-1.7, 3.6) node[ground]{}
+        (0,0) to[short, -o] ++(-1.7,0) node[shift={(-0.4,0)}] {$v_+$}
+        (-1.7,-0.4) to [short, -*] (-1.7,-0.4) node[ground]{}
+        (0,4) to[resistor, l=$R_\text{in}$] (0,0)
+        (1.5,0.5) to [short,-*] (1.5,0.5) node[ground]{} to [cV, invert, l_=$A(v_+ - v_-)$] ++(0,1.5) to [resistor, l=$R_\text{out}$] ++(5.5,0) to [short, -o] ++(0.1,0) node[shift={(0.4,0)}] {$v_\text{o}$}
+        (-1,-2) to [short] ++(0,8) to [short] (6.5,2) to [short] (-1,-2) 
+        (-1.7, 3) node[below,shift={(-0.,0)} ] {$v_G=0$}
+    ;\end{circuitikz}
+ \caption{Mạch tương đương của OPAMP}\label{opampcircuit}
+ \end{subfigure}
+ \caption{OPAMP}
+ \end{figure}
+
+
+Trong đó hai chân $V_+$ và $V_-$ dùng để cấp nguồn cho thiết bị, khi có hai điện thế $v_+$ và $v_-$ được đặt lần lượt vào hai đầu vào không đảo ngược và đảo ngược thì ở đầu ra sẽ xuất hiện một điện thế $v_0$ sao cho:
+\begin{equation}
+    v_0=A(v_+-v_-) \ \ ,
+\end{equation}
+trong đó A được gọi là "độ lợi vòng lặp hở" đặc trưng với từng loại OPAMP. Thiết bị này có thể được miêu tả bằng mô hình mạch điện \subref{opampcircuit}, trong đó ký hiệu của nguồn $A(v_+ - v_-)$ gọi là nguồn áp phụ thuộc, tức là độ lớn của nó phụ thuộc vào một đại lượng khác(ở đây là hiệu điện thế giữa hai đầu vào của OPAMP). 
+
+
+
+
+Trong thực tế, OPAMP thường được kết hợp với một số linh kiện ngoài như điện trở, tụ điện hoặc cuộn cảm để phản hồi giữa đầu ra và đầu vào, giúp cho chúng ta có thể điều chỉnh được độ lợi của OPAMP bằng cách điều chỉnh các thông số thiết bị ngoài.
+\begin{enumerate}
+    \item Tìm độ lợi vòng lặp đóng $\dfrac{v_\text{o}}{v_\text{s}}$ cho mạch dưới đây. Áp dụng với LM741 có độ lợi vòng lặp mở $2 \times 10^5$, điện trở đầu vào $2 \si{M\Omega}$ và điện trở đầu ra $50 \si{\Omega}$ và $R_f=200 \si{\Omega}$, $R_1=100 \si{\Omega}$.
+\end{enumerate}
+\begin{center}
+    \begin{circuitikz}[american]\draw
+(0,0) node[op amp] (opamp) {}
+ (opamp.+)  to [short] ++ (-1.5,0) to [short] ++(0,-2) node[ground]{} 
+ (opamp.-) to [R,l_={$R_1$},i_<=$i_1$] ++(-3,0) to [V, l_=$v_\text{s}$] ++(0,-3) to [short,-o] ++(6,0) node[right]{$-$}
+ (opamp.out) to [short,-o] ++(0.62,0) node[right] {$+$}
+ (1.64,-1.3) node[right]{$v_o$}
+ (opamp.-) to [short]++(-0.5,0) to [short] ++(0,1) to [R,l={$R_f$},i>=$i_f$] ++(2.9,0) to (opamp.out)
+ (opamp.-) node[above left]{I}
+ (opamp.out) node[above right]{O}
+;\end{circuitikz}
+\end{center}
+
+Tiếp theo đây, để cho đơn giản, ta coi các OPAMP là lý tưởng, nghĩa là điện trở đầu vào rất lớn, điện trở đầu ra rất nhỏ và độ lợi vòng lặp hở rất lớn. Khi đó $v_1 \approx v_2$ và dòng điện ở hai đầu vào OPAMP $i_-=i_+=0$.
+\begin{enumerate}[resume]
+    \item Tìm tỉ số $\dfrac{v_o}{v_s}$ với mạch trên khi OPAMP là lý tưởng.    
+\end{enumerate}
+Xét ba mạch OPAMP có dạng như hình vẽ:
+\begin{figure}[h]
+\begin{subfigure}[t]{0.6\textwidth}
+\centering
+\begin{circuitikz}[american,scale=1]
+\draw
+(-2,0) node[op amp] (opamp) {}
+ (opamp.+) to [short] ++ (-1.5,0) to [short] ++(0,-2) node[ground]{} 
+ (opamp.-) to [short] ++(-4.5,0) to[R,l_={$R_2$}] ++(0,-1.5)to [V, l_=$v_\text{2}$] ++(0,-1.5)
+ (opamp.-) to [short] ++(-3,0) to[R,l_={$R_1$}] ++(0,-1.5)to [V, l_=$v_\text{1}$] ++(0,-1.5)
+ (opamp.-) to [short] ++(-6,0) to[R,l_={$R_3$}] ++(0,-1.5)to [V, l_=$v_\text{3}$] ++(0,-1.5) to [short,-o] ++(9,0) node[right]{$-$}
+ (opamp.out) to [short,-o] ++(0.62,0) node[right] {$+$}
+ (-0.5,-1.3) node[]{$v_\text{sum}$}
+ (opamp.-) to [short] ++(0,1) to [R,l={$R_f$},i>=$i_f$] ++(2.4,0) to (opamp.out)
+;\end{circuitikz}
+ \caption{Mạch cộng}
+ \end{subfigure}
+ %
+\begin{subfigure}[t]{0.4\textwidth}
+ \centering
+ \begin{circuitikz}[american,font=\small]\draw
+(0,0) node[op amp] (opamp) {}
+ (opamp.+) to [short] ++ (-1.5,0) to [V,l=$v_s$] ++(0,-2) node[ground]{} 
+ (opamp.-) to [R,l_={$R$}] ++(-3,0) to [short] ++(0,-3) to [short,-o] ++(6,0) node[right]{$-$}
+ (opamp.out) to [short,-o] ++(0.62,0) node[right] {$+$}
+ (1.64,-1.3) node[right]{$v_\text{ni}$}
+ (opamp.-) to [short] ++(0,1) to [R,l={$R_f$},i>=$i_f$] ++(2.4,0) to (opamp.out)
+ ;\end{circuitikz}
+ \caption{Mạch khuếch đại không đảo}
+ \end{subfigure}\\[1ex]
+\begin{subfigure}{\linewidth}  
+\centering
+ \begin{circuitikz}[american]\draw
+(0,0) node[op amp] (opamp) {}
+ (opamp.+) to [short] ++ (-1.5,0) to [short] ++(0,-2) node[ground]{} 
+ (opamp.-) to [R,l_={$R$}] ++(-3,0) to [V, l=$v_\text{s}$] ++(0,-3) to [short,-o] ++(6,0) node[right]{$-$}
+ (opamp.out) to [short,-o] ++(0.62,0) node[right] {$+$}
+ (1.64,-1.3) node[right]{$v_\text{int}$}
+ (opamp.-) to [short] ++(0,1) to [C,l={$C$},i>=$i_f$] ++(2.4,0) to (opamp.out)
+  ;\end{circuitikz}
+ \caption{Mạch tích phân}
+ \end{subfigure}
+ \end{figure}
+
+\begin{enumerate}[resume]
+    \item Tìm $v_\text{sum}$ ,$v_\text{int}$ và $v_\text{ni}$ ứng với ba mạch.
+    \item Từ các mạch trên, thiết lập mạch điện để giải phương trình vi phân sau:
+    \begin{equation}
+        a\dfrac{d^2x}{dt^2}+b\dfrac{dx}{dt}+cx=d ,
+    \end{equation}
+với điều kiện ban đầu $\dot{x}(0)=e$, $x(0)=f$ .
+    \item Đề xuất một cách thiết kế để tạo ra một phần tử mạch điện có giá trị "điện trở âm" ($V_{in}/I_{in} < 0$) bằng các điện trở, OPAMP và nối đất.  
+\end{enumerate}
+
+\begin{flushright}
+    (Biên soạn bởi Hiagari)
+\end{flushright}
+

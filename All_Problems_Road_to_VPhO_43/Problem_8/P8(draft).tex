@@ -1,0 +1,47 @@
+\textbf{Dòng điện dịch và định luật Ampere về lưu số của từ trường} \\
+
+Một đoạn dây dẫn thẳng dài $l$ tại một thời điểm có dòng điện đi từ đầu này sang đầu kia của dây với cường độ dòng điện $I$, tạo ra điện tích $-q$ và $q$ ở hai đầu dây.
+Gọi $(C)$ đường tròn bán kính $\rho$ đồng trục với dây dẫn có tâm đường tròn nằm cách trung điểm của dây dẫn một khoảng là $z$. 
+Gọi mặt phẳng tròn được bao bởi đường kín $(C)$ là $(S)$.
+
+\begin{center}
+\begin{tikzpicture}[scale=1]
+    \draw[very thick] (0,0) to[short, *-] (2,0) to (3,0) to[short, -*] (5,0);
+    \draw[very thick, ->] (2,0) to (3.2,0);
+    \draw (2.9,0.1) node[above]{$I$};
+    \draw (2.3,0) node[below]{$O$};
+    \draw (-0.4,0) node[above]{$-q$} (4.8,0) node[above]{$q$};
+    %%Vòng
+    \draw[red, fill=lightgray, very thick] (8,0) ellipse (1 and 2);
+    \draw[dashed, short, -*] (5,0) to (8,0);
+    \filldraw[color=black, fill=black, ultra thick](2.5,0) circle (0.05);
+    \filldraw[color=black, fill=black, ultra thick](8,0) circle (0.05);
+    \draw[dashed]
+    (0,0) to (0,1.5)
+    (5,0) to (5,1.5)
+    (2.5,0) to (2.5,-2.5)
+    (8,0) to (8,-2.5);
+    \draw[<->] (0,1.5) to (5,1.5);
+    \draw[<->] (2.5,-2.5) to (8,-2.5);
+    \draw (2.5,1.5) node[above]{$l$};
+    \draw (5.25,-2.5) node[below]{$z$};
+    \draw[->] (8,0) to (8.75,1.25);
+    \draw (8.5,0.5) node{$\rho$};
+    \draw (7,1.8) node{$(C)$} (7.7,0.4) node{$(S)$};
+\end{tikzpicture}
+\end{center}
+
+\begin{enumerate}
+    \item Sử dụng định luật Bio-Savart và cộng ảnh hưởng của từng phần từ dòng điện dẫn trên dây, tính cảm ứng từ $\Vec{B}$ do dòng điện dẫn gây ra tại một điểm thuộc đường tròn $(C)$. \\
+    Xác định lưu số \footnote{Hay còn được gọi là "hoàn lưu".} của từ trường $\Gamma=\oint_{(C)} \Vec{B} d \Vec{s}$ gây bởi dòng điện dẫn trong dây kể trên theo vòng kín $(C)$. \\
+    So sáng kết quả này với định luật Ampere về lưu số của từ trường trong ba trưởng hợp: \\
+    (a) $-L/2<z<L/2$. \\
+    (b) $z<-L/2$. \\
+    (c) $z>L/2$.
+    \item Sự mâu thuẫn với định luật Ampere trong kết quả tính toán phần trên là do ta chưa tính đến từ trường sinh ra do sự biến thiên của điện trường, hay còn được gọi là "dòng điện dịch" trong định luật Ampere. Theo đó, phương trình Ampere Maxwell dạng tích phân đầy đủ là 
+    $$\oint_{(C)} \Vec{B} d \Vec{s} = \mu_0 I + \mu_0 \varepsilon_0 \iint_{(S)} \dfrac{\partial \Vec{E}}{\partial t} d \Vec{S}.$$
+    Trong đó, $I$ là dòng điện đi qua mặt $(S)$. Xác định cảm ứng từ $B$ tại một điểm trên vòng $(C)$ thông qua phương trình Ampere-Maxwell dạng đầy đủ và so sánh với kết quả tính toán ở phần \textbf{1.} trong 3 trường hợp dưới đây: \\
+    (a) $-L/2<z<L/2$. \\
+    (b) $z<-L/2$. \\
+    (c) $z>L/2$.
+\end{enumerate}

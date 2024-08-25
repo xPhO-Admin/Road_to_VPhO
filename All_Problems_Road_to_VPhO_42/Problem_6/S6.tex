@@ -1,0 +1,258 @@
+\noindent \textbf{Lời giải chính thức:}
+
+\noindent \textbf{1.}
+Động năng của hệ khung là:
+\begin{equation} \label{eq1_P1_d2}
+    K = m l^2 \dot{\alpha}^2 \left( \dfrac{2}{3} + 4 \cos^2 \alpha \right).
+\end{equation}
+Thế năng trọng trường của hệ so với mặt đất:3
+\begin{equation} \label{eq2_P1_d2}
+    U = 6 mgl \sin \alpha.
+\end{equation}
+Công của lực $F$ và thế năng được chuyển hóa thành động năng của hệ khung, theo định lý động năng dạng vi phân:
+\begin{equation} \label{eq3_P1_d2}
+    dK = -dU + Fdx \Rightarrow \dfrac{dK}{d \alpha} = - \dfrac{dU}{d \alpha} + F \dfrac{dx}{d \alpha}.
+\end{equation}
+Thế (\ref{eq1_P1_d2}) và (\ref{eq2_P1_d2}) vào (\ref{eq3_P1_d2}), sử dụng phép đạo hàm $ \dfrac{d (\dot{\alpha}^2)}{d \alpha} =\dfrac{1}{\dot{\alpha}} \dfrac{d (\dot{\alpha}^2)}{dt} = 2 \ddot{\alpha} $ và $\dfrac{dx}{d \alpha}= 2 l \cos \alpha$, ta được
+\begin{equation} \label{eq4_P1_d2}
+    2 ml^2 \left( \dfrac{2}{3} + 4 \cos^2 \alpha \right) \ddot{\alpha} - 8 m l^2 \dot{\alpha}^2 \cos \alpha \sin \alpha  = -6mgl \cos \alpha + 2 F l \cos \alpha.
+\end{equation}
+Tại thời điểm $\dot{\alpha}=0$, ta tìm được gia tốc góc của các thanh ở bên là:
+\begin{equation} \label{eq5_P1_d2}
+    \ddot{\alpha} = \dfrac{(F-3mg) \cos \alpha}{2 ml \left( \dfrac{1}{3} + 2 \cos^2 \alpha \right) }.
+\end{equation}
+\noindent \textbf{2.} \\
+\noindent \textbf{a,} Áp dụng kết quả phần \textbf{1}, để hệ cân bằng thì tại thời điểm thả bất kì không vận tốc đầu thì ta đều có $\ddot{\alpha}=0$, tức là
+\begin{equation} \label{eq6_P1_d2}
+    F=3mg.
+\end{equation}
+Tại vị trí cân bằng, lực $F=k(x_0 - 2l \sin \alpha_0)$ nên 
+\begin{equation} \label{eq7_P1_d2}
+    x_0 = 2l \sin \alpha_0 + \dfrac{3mg}{k}.
+\end{equation} 
+\noindent \textbf{b,} Để khảo sát dao động nhỏ, ta đặt $\alpha= \alpha_0 + \delta \alpha$ với $\delta \alpha \ll \alpha_0$. Như vậy, ta có thể viết biểu thức lực $F$ theo độ lệch nhỏ $\delta \alpha$ như sau:
+\begin{equation} \label{eq8_P1_d2}
+    F = k [ x_0 - \sin (\alpha_0 + 2l \delta \alpha)] \approx 3mg - 2kl \cos \alpha_0 \delta \alpha.
+\end{equation}
+Trong dao động nhỏ, ta có thể bỏ qua các số hạng bậc 2 trong biểu thức lực gia tốc như $\dot{\alpha}^2$, tức là ta có thể sử dụng trực tiếp biểu thứ (\ref{eq5_P1_d2}) để xác định gia tốc góc:
+\begin{equation} \label{eq9_P1_d2}
+    \delta \ddot{\alpha} = \ddot{\alpha} \approx - \dfrac{k \cos^2 \alpha_0}{m \left( \dfrac{1}{3} + 2 \cos^2 \alpha_0 \right) } \delta \alpha.
+\end{equation}
+Từ đó, ta tìm được tần số dao động là
+\begin{equation} \label{eq10_P1_d2}
+    \omega = \sqrt{ \dfrac{k \cos^2 \alpha_0}{m \left( \dfrac{1}{3} + 2 \cos^2 \alpha_0 \right) } }.
+\end{equation}
+Tức là hệ dao động nhỏ với chu kỳ
+\begin{equation} \label{eq11_P1_d2}
+    T = 2 \pi \sqrt{ \dfrac{m \left( \dfrac{1}{3} + 2 \cos^2 \alpha_0 \right)}{k \cos^2 \alpha_0} }.
+\end{equation}
+\noindent \textbf{3.} Gọi $v$ là vận tốc của vật nhỏ sau va chạm. \\
+Do va chạm hoàn toàn đàn hồi và động năng của hệ được bảo toàn:
+\begin{equation} \label{eq12_P1_d2}
+    \dfrac{1}{2} M v_0^2 = \dfrac{1}{2} M v^2 + m l^2 \dot{\alpha}^2 \left( \dfrac{2}{3} + 4 \cos^2 \alpha \right).
+\end{equation}
+Ta mô hình xung lực mà vật nhỏ tác dụng lên bộ khung bằng một lực $F$ có hướng ngược lại với hướng lực $F$ ở phần \textbf{1} tác dụng trong khoảng thời gian rất ngắn $\Delta t$. Như vậy, theo định lý biến thiên động lượng với vật nhỏ, ta có
+\begin{equation} \label{eq13_P1_d2}
+    F \Delta t = M (v+v_0).
+\end{equation}
+Xem rằng ảnh hưởng của $\dot{\alpha}^2$ trong biểu thức lực trong quá trình va chạm rất nhanh là nhỏ và bỏ qua được, ta áp dụng biểu thức (\ref{eq5_P1_d2}) nhưng với chiều của lực $F$ là ngược lại, thành phần liên quan đến trọng lực ở đây có thể xem như rất nhỏ so với xung lực va chạm $F$, như vậy ta tìm được biểu thức thứ hai về liên hệ giữa $v$ và $\dot{\alpha}$ sau va chạm:
+\begin{equation} \label{eq14_P1_d2}
+    M (v+v_0) = F \Delta t = \dfrac{ ml \left( \dfrac{2}{3} + 4 \cos^2 \alpha \right) }{ \cos \alpha} \ddot{\alpha} \Delta t =  \dfrac{ ml \left( \dfrac{2}{3} + 4 \cos^2 \alpha \right) }{ \cos \alpha} \dot{\alpha}.
+\end{equation}
+Để thuận tiện, ta sẽ viết lại các phương trình (\ref{eq12_P1_d2}) và (\ref{eq14_P1_d2}) theo một cách gọn gàng hơn một chút:
+\begin{itemize}
+    \item Từ phương trình (\ref{eq14_P1_d2}), ta được:
+    \begin{equation} \label{eq15_P1_d2}
+        v+v_0 = \dfrac{ ml \left( \dfrac{2}{3} + 4 \cos^2 \alpha \right) }{ M \cos \alpha} \dot{\alpha}.
+    \end{equation}
+    \item Hệ phương trình ta có được là một hệ phương trình bậc 1 giả bậc 2, như mọi bài toán va chạm đàn hồi khác, ta sẽ viết lại phương trình (\ref{eq12_P1_d2}) như sau:
+    \begin{equation} \label{eq16_P1_d2}
+        (v_0-v)(v_0+v) = 2 \dfrac{ml^2 \dot{\alpha}^2}{M} \left( \dfrac{2}{3} + 4 \cos^2 \alpha \right).
+    \end{equation}
+    Chia (\ref{eq16_P1_d2}) cho (\ref{eq15_P1_d2}), ta được:
+    \begin{equation} \label{eq17_P1_d2}
+        v_0-v = 2l \dot{\alpha} \cos \alpha.
+    \end{equation}
+\end{itemize}
+Hệ phương trình (\ref{eq15_P1_d2}) và (\ref{eq17_P1_d2}) là hệ phương trình bậc nhất 2 ẩn, từ đó, ta dễ dàng giải được:
+
+\noindent \textbf{a,} Vận tốc góc các thanh ở bên sau va chạm:
+\begin{equation} \label{eq18_P1_d2}
+    \dot{\alpha} = \dfrac{v_0}{l} \left[ \dfrac{m}{M \cos \alpha} \left( \dfrac{1}{3} + 2 \cos^2 \alpha \right) + \cos \alpha \right]^{-1}.
+\end{equation}
+\noindent \textbf{b,} Vận tốc của vật nhỏ sau va chạm:
+\begin{equation} \label{eq19_P1_d2}
+    v = v_0 \dfrac{ \dfrac{m}{M \cos \alpha} \left( \dfrac{1}{3} + 2 \cos^2 \alpha \right) - \cos \alpha }{ \dfrac{m}{M \cos \alpha} \left( \dfrac{1}{3} + 2 \cos^2 \alpha \right) + \cos \alpha }.
+\end{equation}
+
+\vspace{6mm}
+
+\noindent \textbf{Lời giải bằng động phương pháp tách vật và lực gia tốc (với sự giúp đỡ của bạn Đinh Đức Thiện):}
+
+\noindent \textbf{1.}
+
+\begin{center}
+\begin{minipage}{0.4\textwidth}
+\hspace{0.15\textwidth}
+    \begin{tikzpicture}
+        %Sàn
+        \draw (-2.5,0)--(2.5,0);
+        \multiput(-2.5,0)(0.1,0){51}{\line(1,-3){0.12}}
+        %Thanh
+        \draw[very thick] (-1,0)--(-2,1.7)--(-1,3.4)--(1,3.4)--(2,1.7)--(1,0);
+        %Khớp nối
+        \filldraw[color=black, fill=ColorOr, ultra thick](-1,0) circle (0.1);
+        \filldraw[color=black, fill=ColorOr, ultra thick](1,0) circle (0.1);
+        \filldraw[color=black, fill=ColorOr, ultra thick](-2,1.7) circle (0.1);
+        \filldraw[color=black, fill=ColorOr, ultra thick](2,1.7) circle (0.1);
+        \filldraw[color=black, fill=ColorOr, ultra thick](-1,3.4) circle (0.1);
+        \filldraw[color=black, fill=ColorOr, ultra thick](1,3.4) circle (0.1);
+        %Ký hiệu
+        \draw[->] (2.2,3.3)--(2.2,2.3);
+        \draw (2.3,2.8) node[right]{$\vec{g}$};
+        \draw (-1.2,0.3) arc (120:180:0.3);
+        \draw (-1.8,0.2) node[right]{$\alpha$};
+        \draw[thick,->] (0,3.4)--(0,4.4);
+        \draw (0.1,3.9) node[right]{$\vec{F}$};
+        \filldraw[color=white, fill=white, ultra thick](0,4.3) circle (0.1);
+        % \draw[<->] (-2.3,0)--(-2.3,3.4);
+        % \draw (-2.3,1.7) node[left]{$x$};
+        \draw[thick,->] (0,3.4)--(0,4.4);
+        \draw (0.1,3.9) node[right]{$\vec{F}$};
+        \draw[thick,->] (-1,3.4)--(-1,4.4);
+        \draw (-1,3.9) node[right]{$\vec{N}_{1y}$};
+        \draw[thick,->] (-1,3.4)--(-2,3.4);
+        \draw (-1.7,3.4) node[below]{$\vec{N}_{1x}$};
+        \draw[thick,->] (-2,1.7)--(-2,2.5);
+        \draw (-1.8,2.1) node[right]{$\vec{N}_{2y}$};
+        \draw[thick,->] (-2,1.7)--(-2.8,1.7);
+        \draw (-2.4,1.7) node[below]{$\vec{N}_{2x}$};
+    \end{tikzpicture}
+\end{minipage}
+\end{center}
+\vspace{3mm}
+
+Gọi $N_{1x}$ và $N_{1y}$ là hình chiếu của lực một thanh ở bên tác dụng lên thanh trên cùng. $N_{2x}$ và $N_{2y}$ là hình chiếu của lực một thanh bên phía dưới tác dụng lên thanh bên phía trên (như hình vẽ).
+
+Định luật 2 Newton cho thanh trên cùng
+\begin{equation} \label{eq20_P1_d2}
+    F - mg + 2N_{1y} = m \dfrac{d^2}{dt^2} \left( 2 l \sin \alpha \right) = 2ml \left( - \dot{\alpha}^2 \sin \alpha + \ddot{\alpha} \cos \alpha \right).
+\end{equation}
+Định luật 2 Newton cho chuyển động khối tâm thanh bên phía trên theo 2 phương
+\begin{equation} \label{eq21_P1_d2}
+    -mg - N_{1y} + N_{2y} = m \dfrac{d^2}{dt^2} \left( \dfrac{3}{2} l \sin \alpha \right) = \dfrac{3}{2} ml \left( - \dot{\alpha}^2 \sin \alpha + \ddot{\alpha} \cos \alpha \right).
+\end{equation}
+Và
+\begin{equation} \label{eq22_P1_d2}
+    - N_{1x} + N_{2x} = m \dfrac{d^2}{dt^2} \left( \dfrac{1}{2} l \cos \alpha \right) = \dfrac{1}{2} ml \left( - \dot{\alpha}^2 \cos \alpha - \ddot{\alpha} \sin \alpha \right).
+\end{equation}
+Định luật 2 Newton chuyển động quay cho tâm quay khối tâm thanh bên phía trên
+\begin{equation*}
+    -\left( N_{1x} + N_{2x} \right) \dfrac{1}{2} l \cos \alpha - \left( N_{1y} + N_{2y} \right) \dfrac{1}{2} l \sin \alpha = \dfrac{1}{12} m l^2 \ddot{\alpha}.
+\end{equation*}
+Hay
+\begin{equation} \label{eq23_P1_d2}
+    -\left( N_{1x} + N_{2x} \right)\cos \alpha - \left( N_{1y} + N_{2y} \right) \sin \alpha = \dfrac{1}{6} m l \ddot{\alpha}.
+\end{equation}
+Định luật 2 Newton tâm quay cố định của thanh bên phía dưới
+\begin{equation*}
+    -mg \dfrac{1}{2} l \cos \alpha + N_{2x} l \cos \alpha - N_{2y} l \sin \alpha = \dfrac{1}{3} m l^2 \ddot{\alpha}.
+\end{equation*}
+Hay
+\begin{equation} \label{eq24_P1_d2}
+    -mg \cos \alpha + 2 N_{2x} \cos \alpha - 2 N_{2y} \sin \alpha = \dfrac{2}{3} m l \ddot{\alpha}.
+\end{equation}
+Giải hệ phương trình (\ref{eq20_P1_d2}), (\ref{eq21_P1_d2}), (\ref{eq22_P1_d2}), (\ref{eq23_P1_d2}) và (\ref{eq24_P1_d2}), với $\dot{\alpha}=0$, ta xác định được gia tốc góc các thanh ở bên là
+\begin{equation*}
+    \ddot{\alpha} = \dfrac{(F-3mg) \cos \alpha}{2 ml \left( \dfrac{1}{3} + 2 \cos^2 \alpha \right) }.
+\end{equation*}
+
+\noindent \textbf{2.} Giống như lời giải chính thức.
+
+\noindent \textbf{3.} Coi xung lực trao đổi giữa thanh và vật nhỏ là $F$ như phần \textbf{1.} nhưng ngược hướng. Giống như lời giải chính thức, ta thu được phương trình (\ref{eq13_P1_d2}).
+
+Hệ 5 phương trình  (\ref{eq20_P1_d2}), (\ref{eq21_P1_d2}), (\ref{eq22_P1_d2}), (\ref{eq23_P1_d2}) và (\ref{eq24_P1_d2}) trong phần này sẽ trở thành:
+\begin{equation} \label{eq25_P1_d2}
+    F \Delta t + 2N_{1y} \Delta t = 2ml \dot{\alpha} \cos \alpha.
+\end{equation}
+\begin{equation} \label{eq26_P1_d2}
+    - N_{1y} \Delta t + N_{2y} \Delta t = \dfrac{3}{2} ml  \dot{\alpha} \cos \alpha.
+\end{equation}
+\begin{equation} \label{eq27_P1_d2}
+    - N_{1x} \Delta t + N_{2x} \Delta t = - \dfrac{1}{2} ml \dot{\alpha} \sin \alpha.
+\end{equation}
+\begin{equation} \label{eq28_P1_d2}
+    -\left( N_{1x} \Delta t + N_{2x} \Delta t \right)\cos \alpha - \left( N_{1y} \Delta t + N_{2y} \Delta t \right) \sin \alpha = \dfrac{1}{6} m l \dot{\alpha}.
+\end{equation}
+\begin{equation} \label{eq29_P1_d2}
+    2 N_{2x} \Delta t \cos \alpha - 2 N_{2y} \Delta t \sin \alpha = \dfrac{2}{3} m l \dot{\alpha}.
+\end{equation}
+Giải hệ phương trình (\ref{eq25_P1_d2}), (\ref{eq26_P1_d2}), (\ref{eq27_P1_d2}), (\ref{eq28_P1_d2}) và (\ref{eq29_P1_d2}), ta thu được phương trình (\ref{eq14_P1_d2}). Phần còn lại của lời giải sẽ trở về như lời giải chính thức.
+
+\vspace{5mm}
+
+\textbf{Biểu điểm}
+\begin{center}
+\begin{tabular}{|>{\centering\arraybackslash}m{1cm}|>{\raggedright\arraybackslash}m{14cm}| >{\centering\arraybackslash}m{1cm}|}
+    \hline
+\textbf{Phần} & \textbf{Nội dung} & \textbf{Điểm} \\
+    \hline
+    \textbf{1} & Viết động năng $K$ (\ref{eq1_P1_d2}) & $0.25$ \\
+    \cline{2-3}
+    & Viết thế năng $U$ (\ref{eq2_P1_d2}) & $0.25$ \\
+    \cline{2-3}
+    & Áp dụng định lý biến thiên động năng (\ref{eq4_P1_d2}) & $0.25$ \\
+    \cline{2-3} 
+    & Tính được gia tốc góc $\ddot{\alpha}$ & $0.25$ \\
+    \hline
+    \textbf{2a} & Xác định điều kiện để cân bằng (\ref{eq6_P1_d2}) & $0.25$ \\
+    \cline{2-3}
+    & Tính $x_0$ (\ref{eq7_P1_d2}) & $0.25$ \\
+    \hline
+    \textbf{2b} & Viết phương trình dao động điều hòa (\ref{eq9_P1_d2}) & $0.25$ \\
+    \cline{2-3}
+    & Tìm được chu kỳ dao động (\ref{eq11_P1_d2}) & $0.25$ \\
+    \hline
+    \textbf{3a} & Viết phương trình bảo toàn năng lượng (\ref{eq12_P1_d2}) & $0.25$ \\
+    \cline{2-3}
+    & Viết được liên hệ thứ hai giữa $v$ và $\dot{\alpha}$ (\ref{eq14_P1_d2}) & $0.75$ \\ 
+    \hline
+    \textbf{3b} & Tính vận tốc góc $\dot{\alpha}$ (\ref{eq18_P1_d2}) & $0.50$ \\
+    \cline{2-3} 
+    & Tính vận tốc vật sau va chạm $v$ (\ref{eq19_P1_d2}) & $0.50$ \\
+    \hline
+\end{tabular}
+\end{center}
+
+\noindent \textbf{Mở rộng vấn đề:}
+
+\indent Đây là một bài toán có liên kết tương đối phức tạp, dù hệ khung chỉ có 1 bậc tự do nhưng việc sử dụng lực và gia tốc để giải quyết bài toán này như lời giải thứ hai được đưa ra trở nên rất phức tạp trong tính toán, đòi hỏi người giải phải vận dụng khéo léo các kiến thức ta có.
+
+\indent Ở phần \textbf{1}, sử dụng định lý động năng có thể xem là cách làm hiệu quả nhất. Việc định nghĩa ra một hàm thế năng cho lực $F$ và đưa bài toán về bảo toàn năng lượng là một cách làm không chặt chẽ vì lực $F$ không thể chắc rằng nó là một lực thế, song, cách làm này có thể chấp nhận được vì lực là một đại lượng không phụ thuộc vào lịch sử, quá trình, với bất kỳ một quá trình khác nhau nào nhưng có cùng một giá trị của lực ứng với một trạng thái xác định, các thông tin về cơ hệ tại thời điểm đó cũng là tương đương và kết quá vẫn là chính xác.
+
+\indent Phần \textbf{3} của bài toán là một phần có thể nói là rất khó về ý tưởng vật lý đối với học sinh THPT. Thường ở các bài toán va chạm, ta sẽ sử dụng các phương trình bảo toàn để lập hệ phương trình và giải. Tuy nhiên trong bài toán này, ta không thể thấy một động lượng hay một momen động lượng ứng với một trục nào được bảo toàn. Cách dẫn dắt và lời giải của bài toán cũng đã đưa ra một cách giải quyết tạm thời ổn thỏa.\\% Cho một lời giải thích tổng quát và mạnh hơn, bạn có thể tìm đọc về định lý Noether trong cơ học Lagrange.\\
+% Cho một ý tưởng dị hợm hơn để giải quyết bài toán này, ta có thể nhận ra hệ khung này có cơ cấu tương tự với một hệ khung gồm 3 thanh cứng tạo thành hình thoi, 2 thanh ở 2 bên nặng $2m$, dài $2l$ và thanh ở giữa nặng $m$, dài $l$ như hình vẽ dưới đây:
+
+% \begin{center}
+% \begin{minipage}{0.4\textwidth}
+% \hspace{0.15\textwidth}
+%     \begin{tikzpicture}
+%         %Sàn
+%         \draw (-2.5,0)--(2.5,0);
+%         \multiput(-2.5,0)(0.1,0){51}{\line(1,-3){0.12}}
+%         %Thanh
+%         \draw[very thick] (-1,0)--(-3,3.4)--(-1,3.4)--(1,0);
+%         %Khớp nối
+%         \filldraw[color=black, fill=ColorOr, ultra thick](-1,0) circle (0.1);
+%         \filldraw[color=black, fill=ColorOr, ultra thick](1,0) circle (0.1);
+%         \filldraw[color=black, fill=ColorOr, ultra thick](-3,3.4) circle (0.1);
+%         \filldraw[color=black, fill=ColorOr, ultra thick](-1,3.4) circle (0.1);
+%         %Ký hiệu
+%         \draw (-1.2,0.3) arc (120:180:0.3);
+%         \draw (-1.8,0.2) node[right]{$\alpha$};
+%     \end{tikzpicture}
+% \end{minipage}    
+% \end{center}
+
+% Hệ khung này đã được đưa vào bài 1 đề thi TST 2005 ngày 1 và có thể sử dụng bảo toàn momen động lượng để giải quyết bài toán.\\
+Bài toán này được lấy ý tưởng từ các bài: Bài cơ học TST 2016,  Bài 1 ngày 1 TST 2005, Bài 1 ngày 1 TST 2001, Bài 48 trong quyển sách "200 more puzzling Physics problems" của  Péter Gnädig , Gyula Honyek và Mate Vigh, bài 1.30 trong quyển sách "A guide to physics problems" tập 1 của Sidney B. Cahn và Boris E. Nadgorny. 

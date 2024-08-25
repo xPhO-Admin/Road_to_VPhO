@@ -1,0 +1,100 @@
+\textbf{Độ tự cảm động năng và vật liệu siêu dẫn}
+\begin{enumerate}
+    \item \textbf{Tự cảm động năng} \\
+    Khi dòng điện chạy trong các tấm kim loại, các hạt điện tích có mang động năng nhất định. Ảnh hưởng của động năng này tới mô hình mạch điện giống như một cuộn cảm có độ tự cảm $L_K$, được gọi là thành phần tự cảm động năng. Xét một dòng các điện tích chạy dọc theo một tấm kim loại hình hộp chữ nhật có chiều dài $l$, tiết diện là $A$ (Hình 1a). Biết rằng mật độ hạt mang điện (electron) trong tấm kim loại này là $n$, khối lượng của một hạt mang điện là $m$ và điện tích của nó là $e$. Hãy tính độ tự cảm động năng của tấm kim loại này.
+    \item \textbf{Độ sâu London} \\
+    Thông thường, ta coi rằng không có từ trường trong vật siêu dẫn. Đây là một hệ quả của hiệu ứng Meissner, theo đó, khi từ trường đi vào lòng của một vật siêu dẫn, chúng sẽ bị suy hao đi rất nhanh do các lớp dòng điện cảm ứng gần bề mặt. \\
+    Để khảo sát hiện tượng này, ta xét một tấm vật liệu siêu dẫn một chiều chiếm toàn bộ không gian $x>0$ trong hệ tọa độ. Biết rằng trong tấm vật liệu này có mật độ hạt mang điện tích là $n$, khối lượng mỗi hạt mang điện là $m$ và điện tích của nó là $e$. Ban đầu, trong không gian không có từ trường. Sau đó, đặt một từ trường ngoài từ phía bên ngoài vật liệu hướng dọc theo chiều dương của trục $Oz$. Các lớp dòng điện cảm ứng chạy dọc theo chiếu dương trục $Oy$ sinh ra từ trưởng cản trở lại từ trường ngoài và làm cường độ từ trường từ trường bên trong vật dẫn giảm đi theo dạng $H(x)=H_0 \exp (-x/\lambda)$, trong đó $\lambda$ được gọi là độ sâu London (Hình 1b). Hãy xác định độ sâu London $\lambda$ theo $n$, $m$, $e$ và hằng số từ $\mu_0$.
+    \item \textbf{Độ tự cảm của trụ tròn siêu dẫn} \\
+    Một ống trụ tròn siêu dẫn bán kính $a$ dài $l$ có độ sâu London $\lambda$ (với $\lambda \ll a$) có dòng điện chạy dọc theo trục độ dài của ống (Hình 1c). Theo lý thuyết London, với một phép xấp xỉ phù hợp, ta có thể viết cường độ từ trường $H$ và mật độ dòng $J$ ở gần bề mặt theo dạng
+    \begin{align*}
+        H(x) &= H_0 \exp (-x/\lambda), \\
+        J(x) &= (H_0/\lambda) \exp (-x/\lambda),
+    \end{align*}
+    với $x=a-r$ là độ sâu từ phía bán kính của một điểm và $x \ll a$. Hãy tính độ tự cảm của ống siêu dẫn này.
+\end{enumerate}
+
+\begin{center}
+\begin{minipage}{0.32\textwidth}
+\centering
+    \begin{tikzpicture}[scale=0.6]
+        \draw[ultra thick]
+        (6,0) to (8,2) to (2,2) to (0,0) to (6,0) to (6,-2) to (8,0) to (8,2) to (6,0) to (6,-2) to (0,-2) to (0,0);
+        \draw[dashed, Stealth-Stealth] (2,2.3) to (8,2.3);
+        \draw (5,2.3) node[above]{$l$} (7,0) node{$A$};
+        %%Lớp 1
+        \draw[-Stealth] (2.4,1.6) to (4.0,1.6);
+        \filldraw[color=black, fill=white, ultra thick](2.4,1.6) circle (0.1);
+        \draw[-Stealth] (2.0,1.2) to (3.6,1.2);
+        \filldraw[color=black, fill=white, ultra thick](2.0,1.2) circle (0.1);
+        \draw[-Stealth] (1.6,0.8) to (3.2,0.8);
+        \filldraw[color=black, fill=white, ultra thick](1.6,0.8) circle (0.1);
+        \draw[-Stealth] (1.2,0.4) to (2.8,0.4);
+        \filldraw[color=black, fill=white, ultra thick](1.2,0.4) circle (0.1);
+        %%Lớp 2
+        \draw[-Stealth] (5.2,1.6) to (6.8,1.6);
+        \filldraw[color=black, fill=white, ultra thick](5.2,1.6) circle (0.1);
+        \draw[-Stealth] (4.8,1.2) to (6.4,1.2);
+        \filldraw[color=black, fill=white, ultra thick](4.8,1.2) circle (0.1);
+        \draw[-Stealth] (4.4,0.8) to (6.0,0.8);
+        \filldraw[color=black, fill=white, ultra thick](4.4,0.8) circle (0.1);
+        \draw[-Stealth] (4.0,0.4) to (5.6,0.4);
+        \filldraw[color=black, fill=white, ultra thick](4.0,0.4) circle (0.1);
+        %%Lớp ngang
+        \draw[-Stealth] (1.0,-0.7) to (2.6,-0.7);
+        \filldraw[color=black, fill=white, ultra thick](1.0,-0.7) circle (0.1);
+        \draw[-Stealth] (1.0,-1.3) to (2.6,-1.3);
+        \filldraw[color=black, fill=white, ultra thick](1.0,-1.3) circle (0.1);
+        \draw[-Stealth] (4.0,-0.7) to (5.6,-0.7);
+        \filldraw[color=black, fill=white, ultra thick](4.0,-0.7) circle (0.1);
+        \draw[-Stealth] (4.0,-1.3) to (5.6,-1.3);
+        \filldraw[color=black, fill=white, ultra thick](4.0,-1.3) circle (0.1);
+        %%Note
+        \draw (1.2,0.4) to (0.4,1.6) to (0,1.6);
+        \draw (0,1.6) node[above]{$m,e$};
+        \draw (4,-3) node{\textbf{(a)}};
+    \end{tikzpicture}
+\end{minipage}
+\begin{minipage}{0.32\textwidth}
+\centering
+    \begin{tikzpicture}[scale=0.6]
+        \draw[draw=none, fill= cyan!60] (3,-2) rectangle (1,2);
+        \draw[draw=none, left color= cyan!60, right color= white] (3,-2) rectangle (6,2);
+        \draw[ultra thick] (3,-2) to (3,2.5);
+        \draw[-Stealth] (1,0) to (7.5,0);
+        \draw[-Stealth] (3,0) to (3,3);
+        \filldraw[color=black, fill=black, ultra thick](3,0) circle (0.1);
+        \draw (2.6,0) node[above]{$O$} (6.7,0) node[above]{$x$} (3,2.7) node[left]{$y$};
+        \draw (5.2,2.4) node{Vùng siêu dẫn};
+        \filldraw[color=black, fill=black, ultra thick](2,1) circle (0.05);
+        \draw[very thick] (2,1) circle (0.25);
+        \draw (1.3,1) node{$\Vec{H}$};
+        \draw (5,-3) node{\textbf{(b)}};
+    \end{tikzpicture}
+\end{minipage}
+\begin{minipage}{0.32\textwidth}
+\centering
+    \begin{tikzpicture}[scale=0.6]
+        % \draw[draw=none, fill= cyan!60] (-4,-2.5) rectangle (4,3);
+        \draw[fill=white, ultra thick] (-1,-2) rectangle (1,2);
+        \draw[draw=none, left color= cyan!60, right color= white] (-1,-2) rectangle (-0.3,2);
+        \draw[draw=none, left color= cyan!60, right color= white] (1,-2) rectangle (4,2);
+        \draw[draw=none, right color= cyan!60, left color= white] (1,-2) rectangle (0.3,2);
+        \draw[draw=none, right color= cyan!60, left color= white] (-1,-2) rectangle (-4,2);
+        \draw[ultra thick] (-1,-2) rectangle (1,2);
+        \draw[Stealth-Stealth] (-1,2.3) to (1,2.3);
+        \draw[Stealth-Stealth] (1.3,-2) to (1.3,2);
+        \draw (0,2.3) node[above]{$2a$} (1.3,0) node[right]{$l$};
+        \filldraw[color=black, fill=black, ultra thick](-2,0) circle (0.05);
+        \draw[very thick] (-2,0) circle (0.25);
+        \draw (-2.8,0.1) node{$\Vec{H}$};
+        \draw (0,-3) node{\textbf{(c)}};
+    \end{tikzpicture}
+\end{minipage}\\
+\vspace{3mm}
+Hình 1: \textbf{(a)} Khối vật liệu có các điện tích chạy qua. \textbf{(b)} Từ trường giảm dần khi đi vào vùng siêu dẫn. \textbf{(c)} Ống trụ siêu dẫn.
+\end{center}
+
+\begin{flushright}
+    (Biên soạn bởi Log)
+\end{flushright}

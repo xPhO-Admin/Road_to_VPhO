@@ -1,0 +1,150 @@
+\textbf{1.}
+\textbf{a.}
+
+Ta xét một giọt dầu, có khối lượng riêng $\rho$, được xem là dạng cầu bán kính $r$ được đưa vào khoảng không gian có điện trường $E$ (điện trường này có thể tính được bằng $V/d$, với $V$ là hiệu điện thế của tụ, $d$ là khoảng cách giữa hai bản tụ).\\
+
+Khi giọt dầu rơi đều với vận tốc $v_1$ do tác dụng của trọng lực
+\begin{align}
+\frac{4}{3}\pi r^3 (\rho - \rho_0)g = 6\pi\nu rv^1
+\end{align}
+\begin{align}
+\Rightarrow r = \sqrt{\frac{9\nu v_1}{2 (\rho-\rho_0)g}}.
+\end{align}
+
+Khi nối nguồn vào hai bản tụ song song và giọt dầu bốc lên đều với vận tốc $v_2$ do tác dụng của điện trường
+\begin{align}
+\frac{4}{3}\pi r^3 (\rho-\rho_0)g + 6\pi\nu rv_2 = qE.
+\end{align}
+Thế \textbf{(1)} và \textbf{(2)} vào \textbf{(3)} ta tìm được điện tích
+\begin{align}
+q = \frac{4}{3} \pi \left(\frac{9\nu}{2}\right)^{3/2} \sqrt{\frac{1}{(\rho-\rho_0)g}} \frac {(v_1 + v_2)\sqrt{v_1}}{E}.
+\end{align}
+
+Trên thực tế, những gì ta đo được là thời gian các giọt dầu này di chuyển từ bản kim loại này đến bản kim loại kia. Do đó, ta bố trí các cổng quang và máy đếm cách nhau các khoảng xác định ($d$) và đo thời gian giọt dầu đi qua các khoảng này. 
+
+Do điện tích của giọt dầu thay đổi trong khi rơi / bốc lên bên trong bình, ta có thể thu được nhiều số liệu về điện tích. Chú ý không thực hiện đo thời gian khi vận tốc tăng hoặc giảm đột ngột.
+Có thể thực hiện với nhiều giọt dầu hơn để thu thêm số liệu.
+
+Sau khi thu được bảng số liệu của $q$, ta thực hiện phân tích số liệu như sau:
+
+\begin{enumerate}[label=\textbf{\arabic*,}]\itemsep0em
+\item Sắp xếp các giá trị theo thứ tự tăng dần (cột II)
+\item Tìm hiệu giữa hai giá trị điện tích liên tiếp (cột III)
+\item Tìm số lần điện tích cơ bản của các giá trị tại cột 3 (cột IV). Lưu ý ta cần lấy đủ dày số liệu để các giá trị tại cột 3 đủ nhỏ. "Điện tích cơ bản" ở đây có thể xác định là giá trị nhỏ nhất (hoặc ước chung lớn nhất) của tất cả kết quả tại cột III
+\item Tính giá trị điện tích cơ bản bằng cách lấy các giá trị tương ứng tại cột III chia cho giá trị tại cột IV (cột V). Tìm giá trị trung bình của cột để lấy giá trị điện tích cơ bản cho cột tiếp theo
+\item Tính số lần điện tích cơ bản của giá trị điện tích tại cột II (cột VI)
+\item Tính giá trị điện tích cơ bản bằng cách lấy các giá trị tương ứng tại cột II chi cho giá trị tại cột VI (cột VII).
+\item Ta lấy giá trị cuối cùng và sai số từ giá trị trung bình và độ lệch chuẩn của các giá trị tại cột VII
+\end{enumerate}
+
+Các nguyên nhân gây ra sai số:
+\begin{enumerate}[label=\textbf{\arabic*,}]\itemsep0em
+\item Tác dụng của sức căng bề mặt tại giá trị nhỏ của $r$ làm ảnh hưởng đến khối lượng riêng.
+\item Giả thiết về hình dạng cầu của giọt dầu, chưa tính đến các ảnh hưởng của trọng lực và đặc biệt là của điện trường lên các điện tích bên trong giọt dầu.
+\item Chiều của điện trường có thể không trùng với chiều của trọng lực.
+\item Tác dụng của chuyển động Brown làm sai lệch biểu thức về lực cản của không khí.
+\end{enumerate}
+
+\textbf{b.}
+Ta tìm được quan hệ giữa $v_1$ và $v_2$:
+\begin{equation}
+\frac{v_1}{v_2} = \frac{mg}{qE - mg}
+\end{equation}
+
+chỉ với dạng lực cản tác dụng lên giọt dầu tỉ lệ thuận với vận tốc.
+
+Thế $m = \frac{4}{3}\pi r^3 (\rho-\rho_0)$ ta tìm được giá trị cho $r$:
+\begin{equation}
+\label{rtheov1v2}
+r = \sqrt[3]{\dfrac{3qE}{4\pi g(\rho-\rho_0)} \dfrac{v_1}{v_1 + v_2}}.
+\end{equation}
+
+Ta có giá trị của điện tích
+\begin{equation}
+\label{qthuc}
+q = \frac{4}{3} \pi \left(\dfrac{9\nu \left(1 - A \frac{l}{r}\right)}{2}\right)^{3/2} \sqrt{\frac{1}{(\rho-\rho_0)g}} \frac {(v_1 + v_2)\sqrt{v_1}}{E}.
+\end{equation}
+
+Để tìm được giá trị của điện tích, ta thực hiện đo "điện tích ảo" $q'$ theo cách tính tại câu \textbf{(a)}:
+\begin{align}
+q' = \frac{4}{3} \pi \left(\frac{9\nu}{2}\right)^{3/2} \sqrt{\frac{1}{(\rho-\rho_0)g}} \frac {(v_1 + v_2)\sqrt{v_1}}{E}.
+\end{align}
+
+Đặt $x = l/r$. Khi đó ta có (bỏ qua khai triển bậc cao của $Ax$
+\begin{align}
+q^{2/3} (1 + Ax) = q'^{2/3}.
+\end{align}
+
+Để tính đến các chỉnh sửa này, ta khảo sát số liệu như sau: 
+
+\begin{enumerate}[label=\textbf{\arabic*,}]\itemsep0em
+\item Khảo sát các số liệu trên cùng một giọt để thu được $l/r$ và $e'$, tức là giá trị của điện tích cơ bản thu được trên một giọt (bằng phương pháp của câu \textbf{(a)}).
+\item Sử dụng chức năng hồi quy tuyến tính trên máy tính cầm tay theo hai biến $q'^{2/3}$ và $x$ để tìm được giá trị của $q$. 
+\end{enumerate}
+
+\textbf{c.} 
+Sử dụng phương pháp tại câu \textbf{(a)}, ta có bảng số liệu
+\begin{center}
+    \begin{tabular}{|>{\centering\arraybackslash}m{1cm}|>{\centering\arraybackslash}m{2cm}|>{\centering\arraybackslash}m{2cm}|>{\centering\arraybackslash}m{2cm}|>{\centering\arraybackslash}m{1cm}|>{\centering\arraybackslash}m{2cm}|>{\centering\arraybackslash}m{1cm}|>{\centering\arraybackslash}m{2cm}|}
+    \hline
+    STT & q & q' & n' & e' & n & e \\
+    \hline
+    1 & 34.47 & - & - & - & 7 & 4.924\\
+    2 & 39.45 & 4.98 & 1 & 4.98 & 8 & 4.931\\
+    3 & 39.50 & 0.05 & 0 & - & 8 & 4.938\\
+    4 & 44.36 & 4.86 & 1 & 4.86 & 9 & 4.929\\
+    5 & 44.40 & 0.04 & 0 & - & 9 & 4.933\\
+    6 & 44.42 & 0.02 & 0 & - & 9 & 4.933\\
+    7 & 49.35 & 4.93 & 1 & 4.93 & 10 & 4.935\\
+    8 & 49.37 & 0.02 & 0 & - & 10 & 4.937\\
+    9 & 49.41 & 0.04 & 0 & - & 10 & 4.941\\
+    10 & 53.90 & 4.49 & 1 & 4.49 & 11 & 4.9\\
+    11 & 53.955 & 0.05 & 0 & - & 11 & 4.905\\
+    12 & 59.06 & 5.11 & 1 & 5.11 & 12 & 4.922\\
+    13 & 59.12 & 0.06 & 0 & - & 12 & 4.927\\
+    14 & 59.20 & 0.08 & 0 & - & 12 & 4.933\\
+    15 & 63.68 & 4.48 & 1 & 4.48 & 13 & 4.898\\
+    16 & 64.69 & 0.01 & 0 & - & 13 & 4.899\\
+    17 & 68.65 & 4.96 & 1 & 4.96 & 14 & 4.903\\
+    18 & 68.67 & 0.02 & 0 & - & 14 & 4.905\\
+    19 & 78.34 & 9.67 & 2 & 4.835 & 16 & 4.896\\
+    20 & 83.22 & 4.88 & 1 & 4.88 & 17 & 4.895\\
+    \hline
+     & & \textbf{TB} & & 4.836 & & 4.919 \\
+    \hline
+    \end{tabular}
+\end{center}
+
+Vậy ta thu được điện tích electron là $4.919$ esu, so với kết quả hiện đại (được định nghĩa bởi hệ SI) là $4.80$ esu.
+
+\newpage
+ \textbf{Biểu điểm} 
+\begin{center}
+\begin{tabular}{|>{\centering\arraybackslash}m{1cm}|>{\raggedright\arraybackslash}m{14cm}| >{\centering\arraybackslash}m{1cm}|}
+    \hline
+    \textbf{Phần} & \textbf{Nội dung} & \textbf{Điểm} \\
+    \hline
+    \textbf{a} & Nhận xét được rằng cần tìm vận tốc trôi tại hai thời điểm: khi bật và tắt điện trường & 0.25\\   
+    \cline{2-3}
+    &  Tính được điện tích $q$ theo hai vận tốc trôi tìm được và các dữ kiện được cho trước hoặc đo đạc được & 0.50 \\
+    \cline{2-3}
+    & Bố trí cách thực hiện thí nghiệm và đọc thông số  & 0.50\\
+    \cline{2-3}
+    & Tìm được cách sắp xếp giá trị của $q$ tăng dần và lấy hiện liên tiếp để tìm được $e$. Có thể lấy giá trị trung bình của cột VII hoặc cột V. & 0.50\\
+    \cline{2-3}
+    & Tìm hiểu được các nguyên nhân có thể gây ra sai số & 0.25\\
+    \hline
+    \textbf{b} & Tìm được giá trị của $r$ theo $v_1$ và $v_2$ \eqref{rtheov1v2} & 0.5\\
+    \cline{2-3}
+    & Tìm được giá trị thực của điện tích $q$ (có chứa tham số $A$) \eqref{qthuc} & 0.25 \\
+    \cline{2-3}
+    & Nhận xét được rằng có thể đo giá trị "điện tích ảo" $q'$ để hồi quy được giá trị thực của điện tích & 0.25\\
+    \cline{2-3}
+    & Chỉnh sửa cách lấy số liệu cho phù hợp & 0.25\\
+    \hline
+    \textbf{c} & Thu được bảng số liệu & 0.50\\
+    \cline{2-3}
+    & Kết luận được giá trị điện tích electron. Lưu ý rằng kết quả trung bình của cột $e'$ hay cột $e$ đều được. & 0.25\\
+      \hline
+\end{tabular}
+\end{center}

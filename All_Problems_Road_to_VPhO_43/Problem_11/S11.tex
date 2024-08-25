@@ -1,0 +1,114 @@
+\begin{enumerate}
+    \item Với các tầng nước có cùng vận tốc nằm trên một hình ellipse, phân bố vận tốc theo tọa độ có thể viết dưới dạng:
+    \begin{equation} \label{eq1_flow}
+        u(x,y) = A + B x^2 + C y^2.
+    \end{equation}
+    Để vận tốc này thỏa mãn điều kiện biên, các phần nước sát thành ống có vận tốc bằng $0$. Tức là, mọi điểm nằm trên đường $1-\dfrac{x^2}{a^2}-\dfrac{y^2}{b^2}=0$, đều có vận tốc bằng $0$. Đối chiếu với phân bố vận tốc trên, ta được
+    \begin{equation} \label{eq2_flow}
+        u(x,y) = A \left( 1 - \dfrac{x^2}{a^2} - \dfrac{y^2}{b^2} \right).
+    \end{equation}
+    Định luật 2 Newton với một khối nước có kích thước $\Delta x \times \Delta y \times \Delta z$:
+    \begin{equation} \label{eq3_flow}
+        \rho \Delta x \Delta y \Delta z \dfrac{\partial u}{\partial t} = ( G \Delta z) \Delta x \Delta y - \dfrac{\partial}{\partial x} \left[ \mu (\Delta y \Delta z)   \dfrac{\partial u}{\partial x} \right] \Delta x - \dfrac{\partial}{\partial y} \left[ \mu  (\Delta x \Delta z) \dfrac{\partial u}{\partial y} \right] \Delta y.
+    \end{equation}
+    hay ta thu được phương trình Navier-Stokes:
+    \begin{equation} \label{eq4_flow}
+        \rho \dfrac{\partial u}{\partial t} = G + \mu \dfrac{\partial^2 u}{\partial x^2} + \mu \dfrac{\partial^2 u}{\partial y^2}.
+    \end{equation}
+    Ở chế độ dừng, $\partial u/ \partial t =0$, nên
+    \begin{equation} \label{eq5_flow}
+        \dfrac{\partial^2 u}{\partial x^2} + \dfrac{\partial^2 u}{\partial y^2} = - \dfrac{G}{\mu}.
+    \end{equation}
+    Thay dạng hàm phân bố vận tốc theo tọa độ bên trên vào phương trình này, ta tìm được hệ số $A=\dfrac{G}{2 \mu \left( a^{-2} + b^{-2} \right)}$. Như vậy, ta xác định được phân bố vận tốc các lớp nước theo tọa độ
+    \begin{equation} \label{eq6_flow}
+        u(x,y) = \dfrac{G}{2 \mu \left( a^{-2} + b^{-2} \right)} \left( 1 - \dfrac{x^2}{a^2} - \dfrac{y^2}{b^2} \right).
+    \end{equation}
+    Thông lượng dòng qua ống
+    \begin{equation} \label{eq7_flow}
+        Q = \iint_S u(x,y) dxdy 
+    \end{equation}
+    Đặt $x=a \rho \cos \theta$ và $y=b \rho \sin \theta$, để lấy tích phân, ta tìm được thông lượng
+    \begin{equation} \label{eq8_flow}
+        Q = \int_0^1 \dfrac{G a^2 b^2}{2\mu} \left( 1 - \rho^2 \right) 2 \pi ab \rho d \rho 
+        = \dfrac{\pi G a^3 b^3}{4 \mu \left( a^2 + b^2 \right)}.
+    \end{equation}
+    \item Do ta đang khảo sát quá trình không dừng của dòng chảy, vận tốc dòng chảy thay đổi theo thời gian, nên áp dụng trực tiếp phường trình Bernoulli cho dòng chảy dừng là một lời giải sai. Ở đây, ta có 2 cách giải quyết vấn đề này: Cách thứ nhất là ta sẽ áp dụng phương pháp năng lượng và cách thứ hai là tìm lại một phương trình Bernoulli đầy đủ hơn và giải quyết được cả với dòng chảy không dừng. \\
+    \textbf{\textit{Cách 1:} Phương pháp năng lượng}\\
+    Để mực nước được giữ nguyên, lượng thế năng được cấp vào hệ trong mỗi vi phân thời gian $dt$ là
+    \begin{equation} \label{eq9_flow}
+        dU = \rho g h S v dt.
+    \end{equation}
+    Lượng biến đổi động năng hệ trong mỗi vi phân thời gian $dt$ là
+    \begin{equation} \label{eq10_flow}
+        dK = \rho L S v \dfrac{\partial v}{\partial t} dt + \dfrac{1}{2} \rho S v^3 dt.
+    \end{equation}
+    Trong đó, số hạng thứ nhất là sự biến đổi động năng gây ra bởi việc dòng nước được tăng tốc khiến động năng của nước trong ống tăng lên và số hạng thứ hai là động năng mà các phần tử nước mang ra ngoài khỏi ống. \\
+    Do thể năng nước cấp thêm vào ống gây ra biến đổi về động năng, tức là $dK=dU$, ta thu được biểu thức:
+    \begin{equation} \label{eq11_flow}
+        L \dfrac{\partial v}{\partial t} + \dfrac{v^2}{2} = \rho g h.
+    \end{equation}
+    Giải phương trình vi phân trên với điều kiện đầu $t=0$ thì $v=0$, ta được
+    \begin{equation} \label{eq12_flow}
+        v = \sqrt{2gh} \tanh \left( \dfrac{\sqrt{2gh}}{L} t \right).
+    \end{equation}
+    \textbf{\textit{Cách 2:} Bổ chính phương trình Bernoulli}\\
+    Theo phương trình Navier-Stokes:
+    \begin{equation} \label{eq13_flow}
+        \rho \dfrac{d \Vec{v}}{dt} = - \nabla p + \rho \Vec{g}.
+    \end{equation}
+    Đạo hàm toàn phần của $\Vec{v}$ theo thời gian $t$ có thể viết dưới dạng
+    \begin{equation} \label{eq14_flow}
+        \dfrac{d \Vec{v}}{dt} = \dfrac{\partial \Vec{v}}{\partial t} + \Vec{v} \left( \nabla \cdot \Vec{v} \right).
+    \end{equation}
+    Nên
+    \begin{equation} \label{eq15_flow}
+        \dfrac{\partial \Vec{v}}{\partial t} + \Vec{v} \left( \nabla \cdot \Vec{v} \right) + \dfrac{1}{\rho} \nabla p - \Vec{g}=0.
+    \end{equation}
+    Lấy tích phân đường của hai vế phương trình trên từ vị trí $A$ đến vị trí $B$ nào đó, ta thu được phương trình Bernoilli dạng đầy đủ
+    \begin{equation} \label{eq16_flow}
+        \int_A^B \dfrac{\partial \Vec{v}}{\partial t} d \Vec{s} + \left( \dfrac{v_A^2}{2} + \dfrac{p_A}{\rho} + gz_A \right) - \left( \dfrac{v_B^2}{2} + \dfrac{p_B}{\rho} + gz_B \right) =0.
+    \end{equation}
+    Có thể thấy rằng, với dòng chảy có vận tốc không đổi, ta thu được phương trình Bernoulli cho dòng chảy dừng thường thấy. Tuy nhiên, dòng chảy ở đây là một dòng chảy có sự biến đổi về vận tốc theo thời gian. Áp dụng phương trình Bernoulli dạng đầy đủ cho điểm trên đầu mực nước và điểm cuối ống, xem rằng vận tốc nước trong bình rất chậm so với trong ống, ta thu được phương trình vi phân (\ref{eq11_flow}).
+\end{enumerate}
+
+\textbf{Biểu điểm}
+\begin{center}
+\begin{tabular}{|>{\centering\arraybackslash}m{1cm}|>{\raggedright\arraybackslash}m{14cm}| >{\centering\arraybackslash}m{1cm}|}
+    \hline
+    \textbf{Phần} & \textbf{Nội dung} & \textbf{Điểm} \\
+    \hline
+    \textbf{1} & Lập luận dạng biểu thức của vận tốc dòng theo tọa độ (\ref{eq1_flow}) & $0.25$ \\
+    \cline{2-3}
+    & Xác định điều kiện biên bài toán & $0.50$ \\
+    \cline{2-3}
+    & Lập luận chỉ ra dạng phân bố vận tốc theo tọa độ (\ref{eq2_flow}) & $0.25$ \\
+    \cline{2-3}
+    & Viết phương trình động lực học ứng với vi phân khối nước (\ref{eq3_flow}) & $0.50$ \\
+    \cline{2-3}
+    & Suy ra phương trình Navier-Stokes & $0.25$ \\
+    \cline{2-3}
+    & Áp dụng phương trình Navier-Stokes ở chế độ dòng chảy dừng & $0.25$ \\
+    \cline{2-3}
+    & Xác định hằng số $A$ và suy ra biểu thức vận tốc (\ref{eq6_flow}) & $1.00$ \\
+    \cline{2-3}
+    & Viết biểu thức tính thông lượng  (\ref{eq7_flow}) & $0.25$ \\
+    \cline{2-3}
+    & Đổi biến trong tính tích phân 2 lớp & $0.25$ \\
+    \cline{2-3}
+    & Tính được thông lượng dòng (\ref{eq8_flow}) & $0.50$ \\
+    \hline
+    \textbf{2} & Áp dụng định luật bảo toàn hoặc phương trình Bernoulli, suy ra phương trình vi phân của bài toán (\ref{eq11_flow}) & $3.00$ \\
+    \cline{2-3}
+    & Giải phương trình vi phân (\ref{eq12_flow}) & $1.00$ \\
+    \hline
+\end{tabular}
+\end{center}
+
+%% Reference %%
+\bibliographystyle{plain}
+\begin{thebibliography}{}
+\bibitem{Batchelor1967} G.K. Batchelor. An Introduction to Fluid Dynamics. \textit{Cambridge Mathematical Library}. Cambridge University Press, 1967.
+\bibitem{ocw.mit.edu} \href{https://ocw.mit.edu/courses/2-25-advanced-fluid-mechanics-fall-2013/1ff7ec3782567cdcedabdfd4b95c1792_MIT2_25F13_Unstea_Bernou.pdf}{https://ocw.mit.edu/courses/2-25-advanced-fluid-mechanics-fall}
+\bibitem{Traum} Matthew J. Traum and Luis Enrique Mendoza Zambrano. \textit{A fluids experiment for remote learners to test the unsteady bernoulli equation using a burette}, 2021.
+\bibitem{PFIEVfluids} Jean Marie Brebéc, P.F.I.E.V Cơ học chất lưu.
+\end{thebibliography}

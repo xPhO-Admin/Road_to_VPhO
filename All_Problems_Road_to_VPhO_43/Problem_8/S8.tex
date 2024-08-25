@@ -1,0 +1,233 @@
+\begin{enumerate}
+    \item \textbf{ \textit{Cách 1: Tính gián tiếp qua động năng}} \\
+    Động năng của các hạt mang điện
+    \begin{equation} \label{eq1_Kinetic_Inductance}
+        K= \dfrac{1}{2} (n A l) m v^2.
+    \end{equation}
+    Cường độ dòng điện $I=nev A$, tức là $v=\dfrac{I}{neA}$. Thay lại vào biểu thức động năng của dòng electron, ta được
+    \begin{equation} \label{eq2_Kinetic_Inductance}
+        K = \dfrac{1}{2} \dfrac{m}{ne^2} \dfrac{l}{A} I^2.
+    \end{equation}
+    Như vậy, năng lượng này giống như năng lượng của một cuộn cảm có độ tự cảm
+    \begin{equation} \label{eq3_Kinetic_Inductance}
+        L_K = \dfrac{m}{ne^2} \dfrac{l}{A}.
+    \end{equation}
+    \textbf{\textit{Cách 2: Tính thông qua suất điện động cảm ứng}} \\
+    Thành phần $ma$ trong phương trình định luật 2 Newton giống như một lực quán tính ngược chiều gia tốc của hạt và tương đương với một điện trường $E=-ma/e$ hay sức điện động cảm ứng $ \mathcal{E} = -El = mal/e$. Ta nhớ rằng gia tốc $a$ có thể biểu diễn theo đạo hàm của cường độ dòng điện theo thời gian qua biểu thức $a=(dI/dt)/(neA)$. Như vậy, suất điện động cảm ứng tương đương này giống như suất điện động cảm ứng của một cuộn cảm có độ tự cảm $L_K=(m/ne^2)l/A$.
+    \item Mật độ dòng điện có thể được biểu diễn là $J=nev$ hay $v=J/(ne)$. Trong quá trình từ trường tăng dần, xuất hiện điện trường cảm ứng $E$ gia tốc cho các hạt điện tích
+    \begin{equation} \label{eq4_Kinetic_Inductance}
+        m \dfrac{dv}{dt} = e E \Rightarrow \dfrac{\partial J}{\partial t} = \dfrac{n e^2}{m} E.
+    \end{equation}
+    
+    \begin{center}
+    \begin{minipage}{0.4\textwidth}
+    \centering
+    \begin{tikzpicture}[scale=1]
+        %%Coordinate
+        \draw[-Stealth] (0,0) to (0,4);
+        \draw[-Stealth] (0,0) to (5,0);
+        \draw 
+        (0,-0.2) node[left]{$O$} 
+        (0,3.8) node[left]{$y$} 
+        (4.8,0) node[below]{$x$};
+        %%Magnetic field
+        \draw[draw=none, left color= cyan!60, right color= cyan!20] (2,1) rectangle (3,3);
+        \filldraw[color=black, fill=black, ultra thick](2.25,1.5) circle (0.02);
+        \draw[very thick] (2.25,1.5) circle (0.1);
+        \filldraw[color=black, fill=black, ultra thick](2.25,2.5) circle (0.02);
+        \draw[very thick] (2.25,2.5) circle (0.1);
+        \filldraw[color=black, fill=black, ultra thick](2.25,2) circle (0.02);
+        \draw[very thick] (2.25,2) circle (0.1);
+        \filldraw[color=black, fill=black, ultra thick](2.75,1.5) circle (0.02);
+        \draw[very thick] (2.75,1.5) circle (0.1);
+        \filldraw[color=black, fill=black, ultra thick](2.75,2.5) circle (0.02);
+        \draw[very thick] (2.75,2.5) circle (0.1);
+        \filldraw[color=black, fill=black, ultra thick](2.75,2) circle (0.02);
+        \draw[very thick] (2.75,2) circle (0.1);
+        \draw (1.7,0.8) node{$B_z$};
+        %%Circulation
+        \draw[red, thick, -Stealth] (3,1) to (3,3);
+        \draw[red, thick, -Stealth] (3,3) to (2,3);
+        \draw[red, thick, -Stealth] (2,3) to (2,1);
+        \draw[red, thick, -Stealth] (2,1) to (3,1);
+        \draw (1.3,2) node{$E_y(x)$} (4.2,2) node{$E_y(x+dx)$};
+        \draw[dashed] (2,1) to (2,0);
+        \draw[dashed] (3,1) to (3,0);
+        \draw (2.5,0) node[above]{$dx$};
+        \draw[thick, Stealth-Stealth] (2,0) to (3,0);
+        \draw[dashed] (2,1) to (0,1);
+        \draw[dashed] (2,3) to (0,3);
+        \draw (0,2) node[right]{$s$};
+        \draw[thick, Stealth-Stealth] (0,1) to (0,3);
+        \draw (2.5,-0.7) node{\textbf{(a)}};
+    \end{tikzpicture}
+    \end{minipage}
+    \hspace{0.1\textwidth}
+    \begin{minipage}{0.4\textwidth}
+    \centering
+    \begin{tikzpicture}[scale=1]
+        %%Coordinate
+        \draw[-Stealth] (0,0) to (0,4);
+        \draw[-Stealth] (0,0) to (5,0);
+        \draw 
+        (0,-0.2) node[left]{$O$} 
+        (0,3.8) node[left]{$z$} 
+        (4.8,0) node[below]{$x$};
+        %%Magnetic field
+        \draw[draw=none, left color= purple!40, right color= purple!20] (2,1) rectangle (3,3);
+        \draw[thick] 
+        (2.20,1.55) to (2.30,1.45)
+        (2.20,1.45) to (2.30,1.55);
+        \draw[very thick] (2.25,1.5) circle (0.1);
+        \draw[thick]
+        (2.20,2.55) to (2.30,2.45)
+        (2.20,2.45) to (2.30,2.55);
+        \draw[very thick] (2.25,2.5) circle (0.1);
+        \draw[thick] 
+        (2.20,2.05) to (2.30,1.95)
+        (2.20,1.95) to (2.30,2.05);
+        \draw[very thick] (2.25,2) circle (0.1);
+        \draw[thick] 
+        (2.70,1.55) to (2.80,1.45)
+        (2.70,1.45) to (2.80,1.55);
+        \draw[very thick] (2.75,1.5) circle (0.1);
+        \draw[thick]
+        (2.70,2.55) to (2.80,2.45)
+        (2.70,2.45) to (2.80,2.55);
+        \draw[very thick] (2.75,2.5) circle (0.1);
+        \draw[thick] 
+        (2.70,2.05) to (2.80,1.95)
+        (2.70,1.95) to (2.80,2.05);
+        \draw[very thick] (2.75,2) circle (0.1);
+        \draw (1.7,0.8) node{$J_y$};
+        %%Circulation
+        \draw[cyan, thick, -Stealth] (3,1) to (3,3);
+        \draw[cyan, thick, -Stealth] (3,3) to (2,3);
+        \draw[cyan, thick, -Stealth] (2,3) to (2,1);
+        \draw[cyan, thick, -Stealth] (2,1) to (3,1);
+        \draw (1.3,2) node{$H_z(x)$} (4.2,2) node{$H_z(x+dx)$};
+        \draw[dashed] (2,1) to (2,0);
+        \draw[dashed] (3,1) to (3,0);
+        \draw (2.5,0) node[above]{$dx$};
+        \draw[thick, Stealth-Stealth] (2,0) to (3,0);
+        \draw[dashed] (2,1) to (0,1);
+        \draw[dashed] (2,3) to (0,3);
+        \draw (0,2) node[right]{$s$};
+        \draw[thick, Stealth-Stealth] (0,1) to (0,3);
+        \draw (2.5,-0.7) node{\textbf{(b)}};
+    \end{tikzpicture}
+    \end{minipage}\\
+    Hình 2: \textbf{(a)} Định luật Faraday với mặt được chọn nằm trong mặt phẳng $xOy$. \textbf{(b)} Định luật Ampere đối với mặt được chọn nằm trong mặt phẳng $xOz$.
+    \end{center}
+    
+    Định luật Faraday đối với một mặt hình hộp chữ nhật có chiều rộng là $dx$ song song trục $Ox$ và chiều dài $s$ song song $Oy$ lớn hơn nhiều chiều rộng $dx$
+    \begin{equation} \label{eq5_Kinetic_Inductance}
+        \left[ E(x+dx) - E(x) \right]s = - \dfrac{\partial B}{\partial t} s dx \Rightarrow \dfrac{\partial E}{\partial x} = - \dfrac{\partial B}{\partial t} = - \mu_0 \dfrac{\partial H}{\partial t}.
+    \end{equation}
+    Đối với quá trình điện trường không biến đổi theo thời gian, định luật Ampere đối với một hình chữ nhật có độ dài $s$ song song với $Oz$ và lớn hơn nhiều chiều rộng $dx$ cho ta biểu thức
+    \begin{equation} \label{eq6_Kinetic_Inductance}
+        -[H(x+dx)-H(x)]s = J s dx \Rightarrow \dfrac{\partial H}{\partial x} = -J.
+    \end{equation}
+    Từ các phương trình trên, ta thu được \footnote{Lời giải rõ ràng hơn để đưa ra hệ thức này được trình bày ở cuối, tuy nhiên nó khá nặng toán.}
+    \begin{equation} \label{eq7_Kinetic_Inductance}
+        \dfrac{\partial}{\partial t} \left( \dfrac{\partial^2 H}{\partial x^2} - \dfrac{\mu_0 ne^2}{m} H \right)=0.
+    \end{equation}
+    Do ban đầu chưa có từ trường nên 
+    \begin{equation} \label{eq8_Kinetic_Inductance}
+        \dfrac{\partial^2 H}{\partial x^2} - \dfrac{\mu_0 ne^2}{m} H =0.
+    \end{equation}
+    Nghiệm của phương trình này là $B=C_1 \exp \left( x/\lambda \right) + C_2 \exp \left( - x/\lambda \right)$ với $\lambda = \sqrt{m/(\mu_0 n e^2)}$. Do từ trường sâu trong lòng vật dẫn bằng $0$ nên $C_1=0$, $C_2=B_0$, ta tìm được độ sâu London
+    \begin{equation} \label{eq9_Kinetic_Inductance}
+        \lambda = \sqrt{\dfrac{m}{\mu_0 n e^2}}.
+    \end{equation}
+    \item Áp dụng định luật Ampere cho một vòng tròn kín quanh ống
+    \begin{equation} \label{eq10_Kinetic_Inductance}
+        H_0 \cdot 2 \pi a = I \Rightarrow H_0 = \dfrac{I}{2 \pi a}.
+    \end{equation}
+    Ở đây, ta có 2 cách để xác định độ tự cảm của ống siêu dẫn này, đó là thông qua năng lượng và thông qua tỷ số từ thông sinh ra bởi ống và cường độ dòng điện. \\
+    \textbf{ \textit{Cách 1: Tìm độ tự cảm thông qua tỷ số từ thông và cường độ dòng điện:}} \\
+    Từ thông qua mặt tạo bởi trục ống và thành ống song song
+    \begin{equation} \label{eq11_Kinetic_Inductance}
+        \Phi = \int_0^a \mu_0 H l dr = \int_0^\infty \dfrac{\mu_0 I}{2 \pi a} \exp \left( - \dfrac{x}{\lambda} \right) l dx = \dfrac{\mu_0 l \lambda}{2 \pi a} I \Rightarrow L = \dfrac{\mu_0 l \lambda}{2 \pi a}.
+    \end{equation}
+    \textbf{ \textit{Cách 2: Tìm độ tự cảm thông qua năng lượng của hệ:}} \\
+    Năng lượng từ trường
+    \begin{equation} \label{eq12_Kinetic_Inductance}
+        E = \int_V \dfrac{1}{2} \mu_0 H^2 dV 
+        = \int_0^\infty \dfrac{1}{2} \mu_0 \left[ \left( \dfrac{I}{2 \pi a} \right) \exp \left( - \dfrac{x}{\lambda} \right) \right]^2 \cdot l 2 \pi a dx 
+        = \dfrac{1}{2} \dfrac{\mu_0 l \lambda}{4 \pi a} I^2. 
+    \end{equation}
+    Tức là độ tự cảm từ sẽ là
+    \begin{equation} \label{eq13_Kinetic_Inductance}
+        L_M = \dfrac{\mu_0 l \lambda}{4 \pi a}.
+    \end{equation}
+    Sở dĩ, sự khác biệt về kết quả giữa 2 cách làm này là do trong cách sử dụng năng lượng, ta chưa tính đến độ tự cảm động năng của hệ. Theo đó, động năng của hệ
+    \begin{equation} \label{eq14_Kinetic_Inductance}
+        K = \int_V \dfrac{1}{2} n m v^2 dV 
+        = \int_V \mu_0 \lambda^2 J^2 dV 
+        = \int_0^\infty \dfrac{1}{2} \mu_0 \lambda^2 \left[ \left( \dfrac{I}{2 \pi a \lambda} \right) \exp \left( - \dfrac{x}{\lambda} \right) \right]^2 \cdot l 2 \pi a dx
+        = \dfrac{1}{2} \dfrac{\mu_0 l \lambda}{4 \pi a} I^2. 
+    \end{equation}
+    Tức là độ tự cảm động năng là
+    \begin{equation} \label{eq15_Kinetic_Inductance}
+        L_K = \dfrac{\mu_0 l \lambda}{4 \pi a}.
+    \end{equation}
+    Tổng năng lượng của hệ gồm năng lượng từ và động năng của các hạt mang điện nên độ tự cảm toàn hệ cũng sẽ bằng tổng của hai độ tự cảm này
+    \begin{equation} \label{eq16_Kinetic_Inductance}
+        L = L_M +L_K = \dfrac{\mu_0 l \lambda}{2 \pi a}.
+    \end{equation}
+    Đây là một kết quả hoàn toàn tương đồng với cách tính thứ nhất. \\
+    Độ tự cảm động năng vốn dĩ là một thứ rất cơ bản và tự nhiên, nó đã được giới thiệu trong mô hình Drude và định luật Ohm. Tuy nhiên, do thời gian để mạch điện ổn định khi chỉ có độ tự cảm động năng là rất ngắn, trong quy mô thông thường gần như là ngay lập tức, vì vậy ta vẫn thường bỏ qua hiện tượng này. Độ tự cảm động năng do đó chỉ thường được quan tâm đến trong những trường hợp đặc biệt như các mạch cao tần hay trong các vật liệu siêu dẫn. \\
+    Cũng vì sự khác thường của nó, việc tính độ tự cảm chỉ thông qua năng lượng từ không còn là một tính toán hiển nhiên đúng, đặc biệt đối với chất siêu dẫn, độ tự cảm động năng thậm chí có thể bằng và cùng cỡ độ lớn với độ tự cảm từ.
+\end{enumerate}
+
+\textbf{ \textit{Lời giải tổng quát cho chứng minh phần 2.}}
+
+Định luật 2 Newton cho một hạt điện tích
+\begin{equation} \label{eq17_Kinetic_Inductance}
+    m\dfrac{d \Vec{v}}{dt} = e \Vec{E} \Rightarrow \dfrac{\partial \Vec{J}}{\partial t} = \dfrac{ne^2}{m} \Vec{E}.
+\end{equation}
+Phương trình Maxwell-Faraday
+\begin{equation} \label{eq18_Kinetic_Inductance}
+    \nabla \times \Vec{E} = - \dfrac{\partial \Vec{B}}{\partial t} = - \mu_0 \dfrac{\partial \Vec{H}}{\partial t}.
+\end{equation}
+Phương trình Maxwell-Ampere
+\begin{equation} \label{eq19_Kinetic_Inductance}
+    \nabla \times \Vec{H} = \Vec{J}.
+\end{equation}
+Từ đây, ta thu được
+\begin{equation} \label{eq20_Kinetic_Inductance}
+    \dfrac{\partial}{\partial t} \left( \Delta \Vec{H} \right) = - \dfrac{\partial}{\partial t} \left[ \nabla \times \left( \nabla \times \Vec{H} \right) \right] = - \nabla \times \dfrac{\partial \Vec{J}}{\partial t} =  -\dfrac{me^2}{m} \nabla \times \Vec{E} = \dfrac{\partial}{\partial t} \left( \dfrac{\mu_0 ne^2}{m} \Vec{H} \right).
+\end{equation}
+
+\textbf{Biểu điểm}
+\begin{center}
+\begin{tabular}{|>{\centering\arraybackslash}m{1cm}|>{\raggedright\arraybackslash}m{14cm}| >{\centering\arraybackslash}m{1cm}|}
+    \hline
+    \textbf{Phần} & \textbf{Nội dung} & \textbf{Điểm} \\
+    \hline
+    \textbf{1} & Viết biểu thức động năng (\ref{eq2_Kinetic_Inductance}) & $0.50$ \\
+    \cline{2-3}
+    & Xác định độ tự cảm động năng (\ref{eq3_Kinetic_Inductance}) & $0.50$ \\
+    \hline
+    \textbf{2} & Tìm liên hệ giữa $\Vec{J}$ và $\Vec{E}$ (\ref{eq4_Kinetic_Inductance}) & $0.50$ \\
+    \cline{2-3} 
+    & Viết phương trình Maxwell-Faraday (\ref{eq5_Kinetic_Inductance}) & $0.50$ \\
+    \cline{2-3}
+    & Viết phương trình Maxwell-Ampere (\ref{eq6_Kinetic_Inductance}) & $0.50$ \\
+    \cline{2-3}
+    & Giải hệ phương trình vi phân và xác định $\lambda$ (\ref{eq9_Kinetic_Inductance}) & $0.50$ \\
+    \hline
+    \textbf{3} & Xác định $H_0$ theo $I$ (\ref{eq10_Kinetic_Inductance}) & $0.25$ \\
+    \cline{2-3}
+    & Tìm độ tự cảm tổng cộng (\ref{eq11_Kinetic_Inductance}) & $0.75$ \\
+    \hline
+\end{tabular}
+\end{center}
+
+%% Reference %%
+\bibliographystyle{plain}
+\begin{thebibliography}{}
+\bibitem{Meservey} R. Meservey and P. M. Tedrow. Measurements of the Kinetic Inductance of Superconducting Linear Structures. \textit{Journal of Applied Physics}, 40(5):2028–2034, 11 2003.
+\bibitem{tinkham2004introduction} M. Tinkham. \textit{Introduction to Superconductivity}. Dover Publications, 2004.
+\end{thebibliography}

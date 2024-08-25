@@ -1,0 +1,130 @@
+\begin{enumerate}[label=\textbf{\alph*,}]\itemsep0em
+\item Theo nguyên lý 1 nhiệt động lực học:
+\begin{equation} \label{eq1_P2_d1}
+    T dS = dU + pdV.
+\end{equation}
+Ta nhớ rằng nội năng khí lý tưởng tuân theo biểu thức:
+\begin{equation} \label{eq2_P2_d1}
+    dU = C_V dT = \frac{R}{\gamma-1} dT.
+\end{equation}
+Phương trình Clapeyron-Mendeleev cho $\SI{1}{mol}$ khí lý tưởng: 
+\begin{equation} \label{eq3_P2_d1}
+    p=\frac{RT}{V}.
+\end{equation}
+Thay các phương trình (\ref{eq2_P2_d1}) và (\ref{eq3_P2_d1}) vào phương trình (\ref{eq1_P2_d1}) rồi chia hai vế cho $T$, ta được
+\begin{equation} \label{eq4_P2_d1}
+    dS = \frac{R}{\gamma-1} \frac{dT}{T} + R \frac{dV}{V}.
+\end{equation}
+Lấy nguyên hàm phương trình (\ref{eq4_P2_d1}), ta thu được hàm entropy của khối khí là một hàm trạng thái chỉ phụ thuộc vào $T$ và $V$:
+\begin{equation} \label{eq5_P2_d1}
+    S(T,V)= \frac{R}{\gamma-1} \ln (T) + R \ln (V) + S_0.
+\end{equation}
+Với $S_0$ là một hằng số.
+
+\item Ta biết rằng, các quá trình đoạn nhiệt là các quá trình đẳng entropy (entropy không đổi), chúng sẽ là những đường thẳng đứng vuông góc với trục hoành trên đồ giản đồ $T$-$S$. Còn các quá trình đẳng nhiệt sẽ là các đường nằm ngang vuông góc với trục tung $T$, mỗi đường giãn đẳng nhiệt làm thể tích tăng $n_i$ lần được biểu diễn trên giản đồ $T$-$S$ này, theo biểu thức (\ref{eq5_P2_d1} sẽ ứng với một đoạn có độ dài $\Delta S_i = R \ln (n_i)$. Như vậy ta thu được đồ thị:
+
+\begin{center}
+\begin{tikzpicture}[>=stealth]
+    %Vẽ hệ trục toạ độ 
+    \draw[->](0,2.0)--(13,2.0);
+    \draw[->](0,2.0)--(0,8.0);
+    \draw (13,2) node[above]{$S$} (0,8.0) node[left]{$T$} (0,2.0) 
+    node[below left]{$O$};
+    %Vẽ đồ thị
+    \draw[->] (3,7.0)--(4,7.0);
+    \draw[->] (4,7.0)--(4,6.5);
+    \draw[->] (4,6.5)--(5,6.5);
+    \draw[->] (5,6.5)--(5,6.0);
+    \draw[->] (5,6.0)--(6,6.0);
+    \draw[->] (6,6.0)--(6,5.5);
+    \draw[->] (6,5.5)--(7,5.5);
+    \draw[->] (7,5.5)--(7,5.0);
+    \draw[->] (7,5.0)--(8,5.0);
+    \draw[->] (8,5.0)--(8,4.5);
+    \draw[->] (8,4.5)--(9,4.5);
+    \draw[->] (9,4.5)--(9,4.0);
+    \draw[->] (9,4.0)--(10,4.0);
+    \draw[->] (10,4.0)--(10,3.5);
+    \draw[->] (10,3.5)--(3,3.5);
+    \draw[->] (3,3.5)--(3,7.0);
+    %Nhiệt độ 
+    \draw (3.5,7.0) node[above]{$T_1$};
+    \draw (4.5,6.5) node[above]{$T_2$};
+    \draw (5.5,6.0) node[above]{$T_3$};
+    \draw (6.5,5.5) node[above]{$T_4$};
+    \draw (7.5,5.0) node[above]{$T_5$};
+    \draw (8.5,4.5) node[above]{$T_6$};
+    \draw (9.5,4.0) node[above]{$T_7$};
+    \draw (6.5,3.5) node[above]{$T_8$};
+    %Ghi chú \Delta S.
+    \draw[dashed] (7,5.0)--(7,2.0);
+    \draw[dashed] (8,5.0)--(8,2.0);
+    \draw (7.5,2.0) node[below]{$\Delta S_i = R \ln (n_i)$};
+\end{tikzpicture}
+\end{center}
+
+
+\item Ta có thể xác định được hiệu entropy giữa điểm đầu và điểm cuối của quá trình nén đẳng nhiệt thông qua 2 con đường của đồ thị. Gọi tỷ số thể tích giữa trạng thái đầu và trạng thái cuối của quá trình nén đẳng nhiệt là $n_8$. Ta có thể xác định được hiệu entropy giữa điểm đầu và điểm cuối của quá trình co đẳng nhiệt thông qua 2 con đường của đồ thị:
+\begin{equation} \label{eq6_P2_d1}
+    \begin{split}
+        & R \ln (n_1) + R \ln (n_2) + ... + R \ln (n_6) + R \ln (n_7) = R \ln (n_8) \ \ \ (= \Delta S_8) \\
+        & \Rightarrow n_8 = n_1 n_2 n_3 n_4 n_5 n_6 n_7 \approx 1.60.
+    \end{split}
+\end{equation}
+
+\item Việc tính công của chu trình này thông qua việc tính tổng công của từng quá trình nhỏ tương đối phức tạp. Song, ta hoàn toàn có thể thay thế công việc này thông qua tính tổng nhiệt lượng khí nhận nhiệt $Q_1$ và tống nhiệt lượng khí nhả ra $Q_2$ rồi xác định công của khối khí thực hiện là $W'=Q_1-Q_2$.
+
+Theo định nghĩa của entropy nhiệt động lực học, ta dễ dàng có thể lấy nó ở dạng tích phân trong trường hợp này:
+\begin{equation} \label{eq7_P2_d1}
+    Q = \sum T_i \Delta S_i.
+\end{equation}
+Áp dụng công thức trên, ta tìm được:
+\begin{equation} \label{eq8_P2_d1}
+    Q_1 = T_1 R \ln (n_1) + T_2 R \ln (n_2) + T_3 R \ln (n_3) +...+ T_6 R \ln (n_6) + T_7 R \ln (n_7).
+\end{equation}
+Và 
+\begin{equation} \label{eq9_P2_d1}
+    Q_2 = T_8 R \left[ \ln (n_1) + \ln (n_2) + \ln (n_3) +...+ \ln(n_6) + \ln (n_7)  \right].
+\end{equation}
+Vậy công khí thực hiện trong quá trình là:
+\begin{equation} \label{eq10_P2_d1}
+    W'= Q_1 - Q_2 = \sum_{i=1}^7 R \left( T_i - T_8 \right) \ln (n_i) = \SI{179}{J}.
+\end{equation}
+Hiệu suất của chu trình:
+\begin{equation} \label{eq11_P2_d1}
+    H = 1 - \frac{Q_2}{Q_1} = 1 - \frac{\displaystyle T_8 \sum_{i=1}^7 \ln (n_1)}{\displaystyle \sum_{i=1}^7 T_i \ln (n_i)} = 13.1 \%.
+\end{equation}
+
+\end{enumerate}
+
+\textbf{Biểu điểm} 
+\begin{center}
+\begin{tabular}{|>{\centering\arraybackslash}m{1cm}|>{\raggedright\arraybackslash}m{14cm}| >{\centering\arraybackslash}m{1cm}|}
+    \hline
+\textbf{Phần} & \textbf{Nội dung} & \textbf{Điểm} \\
+    \hline
+    \textbf{a} & Tìm được hàm entropy $S(T,V)$ (\ref{eq5_P2_d1}) & $0.50$ \\
+    \hline
+    \textbf{b} & Vẽ phác đồ thị & $1.00$ \\
+    \hline
+    \textbf{c} & Tính được $n_8$ (\ref{eq6_P2_d1}) & $1.00$ \\
+    \hline
+    \textbf{d} & Tính $Q_1$ (\ref{eq8_P2_d1}) & $0.50$ \\
+    \cline{2-3}
+    & Tính công $W'$ (\ref{eq10_P2_d1}) & $0.50$ \\ 
+    \cline{2-3}
+    & Tính hiệu suất $H$ (\ref{eq11_P2_d1}) & $0.50$ \\
+    \hline
+\end{tabular}
+\end{center}
+
+\noindent \textbf{Mở rộng vấn đề:} \\
+Đây là một bài toán lấy ý tưởng từ bài 2 ngày 1 VPhO 2022 (một bài toán cũng thường xuất hiện trong các sách bài tập vật lý đại cương). Không khó để nhận thấy, việc mở rộng bài toán từ 3 cặp đường đẳng nhiệt và đoạn nhiệt lên thành 8 cặp đường không phải là chỉ để tăng sự phức tạp trong tính toán mà còn đòi hỏi người giải phải tìm ra được quy luật tổng quát của bài toán với số cặp đường đẳng nhiệt và đoạn nhiệt là bất kì. Phần \textbf{a} và \textbf{b} của bài toán đã được đưa vào với mục đích dẫn dắt đến một lời giải đơn giản hơn so với cách làm thường thấy. \\
+Lời giải này đưa đến 2 thủ thuật nho nhỏ:
+\begin{enumerate}
+    \item Đôi khi entropy cho phép ta đơn giản hoá các vấn đề trong tính toán (đặc biệt là trong các bài toán có các quá trình đẳng nhiệt và đoạn nhiệt).
+    \item Đôi khi, việc tính công của quá trình trở nên phức tạp hơn việc xác tìm nhiệt lượng thu $Q_1$ và nhiệt lượng toả $Q_2$.
+\end{enumerate}
+Hiển nhiên, các thủ thuật kia chỉ có thể dùng từ "đôi khi", khá nhiều khi chúng phản tác dụng và việc sử dụng chúng hiệu quả không sẽ phụ thuộc vào kinh nghiệm của người giải. Cho một số ứng dụng đơn giản, hãy thử những mẹo trên và mở rộng bài toán này cho $p$ quá trình giãn và $q$ quá trình co, giải lại các bài toán về chu trình Carnot, chu trình Otto, chu trình Atkinson, chu trình Stirling,... chúng có thể không mang đến một lời giải hoàn hảo như ở bài toán này, song chúng vẫn có những hiệu quả nhất định khi sử dụng.
+
+Đây chỉ là một bài toán mang tính giáo dục cũng như đưa ra các cách giải quyết vấn đề thú vị chưa được sử dụng nhiều trong các tài liệu Olympiad, các số liệu trong bài toán chỉ nhằm mục đích kiểm tra đáp số đơn giản hơn, không có ý nghĩa thực tế.

@@ -1,0 +1,28 @@
+Để đơn giản, trong bài toán này, ta sẽ sử dụng hệ tọa độ Gauss với $4 \pi \varepsilon_0 = 1$.
+\begin{enumerate}
+    \item Ta nhớ rằng, điện thế do một điện tích điểm $q_k$ ở $\Vec{r}_k$ gây lên điện tích $q_{k'}$ ở $\Vec{r}_{k'}$ là
+    \begin{equation}
+        \phi_{k \rightarrow k'} = \dfrac{q_k q_{k'}}{ \left| \Vec{r}_k - \Vec{r}_{k'} \right|}.
+    \end{equation}
+    Như vậy, ta có thể viết
+    \begin{equation}
+        \sum_{i=1}^m \phi_A (\Vec{r}_{ib}) q_{ib} 
+        = \sum_{i=1}^m \left( \sum_{j=1}^n \dfrac{q_{ja}}{ \left| \Vec{r}_{ja} - \Vec{r}_{ib} \right| } \right) q_{ib} 
+        = \sum_{j=1}^n \left( \sum_{i=1}^m \dfrac{q_{ib}}{ \left| \Vec{r}_{ib} - \Vec{r}_{ja} \right| } \right) q_{ja} 
+        = \sum_{j=1}^n \phi_B (\Vec{r}_{ja}) q_{ja}.
+    \end{equation}
+    \item Điện thế tại điểm $(r,z)$ gây ra bởi sợi dây:
+    \begin{equation}
+        \phi = \int_{-L}^{L} \dfrac{1}{\sqrt{r^2+(z-l)^2}} \dfrac{Q}{2L} dl = \dfrac{Q}{2L} \ln \left[ \dfrac{ \left( L + z \right) + \sqrt{\left( L + z \right)^2+r^2} }{ -\left( L - z \right) + \sqrt{\left( L - z \right)^2+r^2} } \right].
+    \end{equation}
+    Từ đây, ta thu được phương trình mặt đẳng thế hình Ellipse tròn xoay $ \left( \dfrac{z}{a} \right)^2 + \left( \dfrac{r}{b} \right)^2 = 1$ với hai bán trục của Ellipse lần lượt là $a = L \coth \left( \dfrac{L \phi}{Q} \right)$ và $b = \dfrac{L}{ \sinh \left( \dfrac{L \phi}{Q} \right)}$.
+
+    Với một vật dẫn hình ellipse tròn xoay bán kính $a$ và $b$ được tích điện $Q$, phân bố điện tích trên vật sẽ sinh ra điện trường bên ngoài tương đương với một dây dẫn dài $2L$, trong đó $L=\sqrt{a^2-b^2}$. Tức là điện dung của vật dẫn này là $C=\dfrac{Q}{\phi} = \dfrac{\sqrt{a^2-b^2}}{ \cosh^{-1} \left( \dfrac{a}{b} \right)}$.
+
+    \item Theo nguyên lý chồng chất điện trường, điện thế $\phi_1$ và điện thế $\phi_2$ sẽ phụ thuộc tuyến tính vào điện tích trên 2 vật, tức là tồn tại một bộ tham số $p_{11}$, $p_{12}$, $p_{21}$, $p_{22}$ chỉ phụ thuộc vào cấu trúc hình học thỏa mãn
+    \begin{align*}
+        \phi_1 = p_{11} Q_1 + p_{12} Q_2, \\
+        \phi_2 = p_{21} Q_1 + p_{22} Q_2.
+    \end{align*}
+    Dễ dàng tìm được
+\end{enumerate}

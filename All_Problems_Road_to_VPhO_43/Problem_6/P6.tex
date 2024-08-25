@@ -1,0 +1,93 @@
+Có hai thanh thẳng đồng chất, cứng, khối lượng $m$, dài $l$ được nối với nhau bằng một bản lề ở đầu thanh. Các đầu của hai thanh cứng này trượt không ma sát trên khung hình vuông, đặt cố định trong mặt phẳng nằm ngang, có độ dài cạnh là $L$ (với $\frac{\sqrt{3}}{2}l<L<2l$). Ta lần lượt gọi 3 điểm đầu các thanh là $A$, $B$, $C$ (như hình 1a). Góc tạo bởi thanh $AB$ và cạnh khung hình vuông có chứa đầu $A$ là $\theta$. Bỏ qua ma sát ở khung vuông, thanh trượt và các bản lề.
+
+\begin{center}
+\begin{minipage}{0.4\textwidth}
+\centering
+\begin{tikzpicture}[scale=0.8]
+    %%Khung vuông
+    \draw[thick] (0,0) rectangle (6,6);
+    \draw[dashed, thick]
+    (-1,0) to (0,0)
+    (-1,6) to (0,6)
+    (0,0) to (0,-1)
+    (6,0) to (6,-1);
+    \draw[dashed, thick, Stealth-Stealth] (-1,0) to (-1,6);
+    \draw[dashed, thick, Stealth-Stealth] (0,-1) to (6,-1);
+    \draw (3,-1) node[below]{$L$} (-1,3) node[left]{$L$};
+    \%%Các thanh
+    \draw[fill=yellow, very thick] (5.8,1.7) rectangle (6.2,2.3);
+    \draw[fill=yellow, very thick] (3.7,5.8) rectangle (4.3,6.2);
+    \draw[fill=yellow, very thick] (-0.2,3.7) rectangle (0.2,4.3);
+    \draw[ultra thick] (6,2) to (4,6) to (0,4);
+    \draw (4.7,4.3) node[left]{$m,l$} (2,4.8) node[right]{$m,l$};
+    \filldraw[color=black, fill=white, ultra thick](6,2) circle (0.1);
+    \filldraw[color=black, fill=white, ultra thick](4,6) circle (0.1);
+    \filldraw[color=black, fill=white, ultra thick](0,4) circle (0.1);
+    \draw (6.1,2) node[right]{$A$} (4,6.1) node[above]{$B$} (-0.1,4) node[left]{$C$};
+    \draw[thick] (6,3) arc (90:145:0.5);
+    \draw (6.1,3.4) node[left]{$\theta$};
+    %%1a
+    \draw[very thick, red, -Stealth] (6,2) to (6,4);
+    \draw[very thick, blue, -Stealth] (4,6) to (2,6);
+    \draw[very thick, teal, -Stealth] (0,4) to (0,2);
+    \draw (6,3) node[right]{$v_A$}
+    (3,6) node[above]{$v_B=?$} 
+    (0,3) node[right]{$v_C=?$};
+    \draw[thick,magenta, -Stealth] (5.5,3.6) arc (80:150:0.7);
+    \draw (5.1,3.0) node{$\dot{\theta}$};
+    \draw[thick, magenta, -Stealth] (1.4,5.1) arc(170:260:0.7);
+    \draw (1.5,5.5) node{$\dot{\phi}=?$};
+    \draw (3,-2.5) node{\textbf{(a)}};
+\end{tikzpicture}
+\end{minipage}
+\hspace{0.1\textwidth}
+\begin{minipage}{0.4\textwidth}
+\centering
+\begin{tikzpicture}[scale=0.8]
+    %%Khung vuông
+    \draw[thick] (0,0) rectangle (6,6);
+    \draw[dashed, thick]
+    (-1,0) to (0,0)
+    (-1,6) to (0,6)
+    (0,0) to (0,-1)
+    (6,0) to (6,-1);
+    \draw[dashed, thick, Stealth-Stealth] (-1,0) to (-1,6);
+    \draw[dashed, thick, Stealth-Stealth] (0,-1) to (6,-1);
+    \draw (3,-1) node[below]{$L$} (-1,3) node[left]{$L$};
+    \%%Các thanh
+    \draw[fill=yellow, very thick] (5.8,1.7) rectangle (6.2,2.3);
+    \draw[fill=yellow, very thick] (3.7,5.8) rectangle (4.3,6.2);
+    \draw[fill=yellow, very thick] (-0.2,3.7) rectangle (0.2,4.3);
+    \draw[ultra thick] (6,2) to (4,6) to (0,4);
+    \draw (4.7,4.3) node[left]{$m,l$} (2,4.8) node[right]{$m,l$};
+    \filldraw[color=black, fill=white, ultra thick](6,2) circle (0.1);
+    \filldraw[color=black, fill=white, ultra thick](4,6) circle (0.1);
+    \filldraw[color=black, fill=white, ultra thick](0,4) circle (0.1);
+    \draw (6.1,2) node[right]{$A$} (4,6.1) node[above]{$B$} (-0.1,4) node[left]{$C$};
+    \draw[thick] (6,3) arc (90:145:0.5);
+    \draw (6.1,3.4) node[left]{$\theta_0$};
+    \draw[thick, magenta,-Stealth] (5.5,3.6) arc (80:150:0.7);
+    \draw (4.8,2.8) node{$\dot{\theta}_0=?$};
+    %%M
+    \draw[fill=violet!30, very thick] (5.8,0.1) rectangle (6.2,0.5);
+    \filldraw[color=black, fill=white, ultra thick](6,0.3) circle (0.1);
+    \draw[very thick, purple, -Stealth] (6,0.3) to (6,1.5);
+    \draw (6,1) node[right]{$\Vec{v}_0$} (6.1,0.3) node[right]{$M$};
+    \draw (3,-2.5) node{\textbf{(b)}};
+\end{tikzpicture}
+\end{minipage} \\
+Hình 1: \textbf{(a)} Khung và các thanh cứng, con trượt. \textbf{(b)} Vật nhỏ va chạm với hệ thanh.
+\end{center}
+
+\begin{enumerate}
+    \item Khảo sát đặc tính động học của hệ:
+    \begin{enumerate}[label=\textbf{\alph*,}]\itemsep0em
+    \item Tìm vận tốc của $B$, $C$ và vận tốc góc của thanh $BC$ theo $\theta$ và vận tốc góc $\dot{\theta}$ của thanh $AB$.
+    \item Tại một thời điểm $A$ có vận tốc là $v$, gia tốc là $a$, góc $\theta=\theta_0$ thì gia tốc của $B$ là bao nhiêu?
+    \end{enumerate}
+    \item Tại thời điểm ban đầu $\theta=\theta_0$, các thanh đang đứng yên, một vật khối lượng $M$ trượt không ma sát với vận tốc $v_0$ theo cạnh khung vuông chứa điểm $A$, đi tới và va chạm vào đầu $A$ (như hình 1b). Xem rằng va chạm giữa vật $M$ và các thanh là va chạm hoàn toàn đàn hồi, xảy ra trong thời gian rất ngắn. Tìm vận tốc góc thanh $AB$ ngay sau khi va chạm theo $m$, $M$, $L$, $l$, $v_0$ và $\theta_0$.
+\end{enumerate}
+
+\begin{flushright}
+    (Biên soạn bởi Log)
+\end{flushright}

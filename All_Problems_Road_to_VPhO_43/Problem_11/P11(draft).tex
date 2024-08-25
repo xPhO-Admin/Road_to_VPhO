@@ -1,0 +1,67 @@
+\textbf{Chảy}
+
+% Trong cơ học chất lưu, ta thường phân chia các dòng chảy thành 2 chế độ chính: dòng chảy tầng và dòng chảy rối. Dòng chảy tầng thường xuất hiện khi lực cản nhớt của chất lưu tương đối lớn và làm chất lưu chảy thành các lớp, mỗi lớp sẽ có một vận tốc dòng chảy khác nhau. Còn dòng chảy rối là dòng xuất hiện khi lực cản nhớt của chất lưu nhỏ, các lớp nước trong cùng mặt cắt ngang của ống có thể xem như vận tốc đều nhau. Hai bài toán dưới đây sẽ là các ví dụ thú vị về hai dòng chảy này.
+
+\begin{enumerate}
+    \item \textbf{Dòng chảy tầng và định luật Hagen-Poiseuille.} \\
+    Định luật Hagen-Poiseuille phát biểu rằng với một dòng chảy không nén và có hệ số nhớt đồng nhất đẳng hướng ở chế độ dừng, thông lượng chất lưu chảy qua một mặt cắt ống sẽ tỷ lệ với chênh lệch áp suất hai đầu ống. \\
+    Xét một ống nước thẳng dài có tiết diện ống hình ellipse với độ dài hai bán trục lần lượt là $a$ và $b$. Có một dòng chảy không nén có độ nhớt là $\mu$. Với chênh lệch áp suất hai đầu ống là $\Delta p$ và ống dài $L$, ta có thể đặt $G=\Delta p/L$ là chênh lệch áp suất trên mỗi đơn vị độ dài ống. Ở chế độ chảy dừng ổn định, dòng chảy là dòng chảy tầng, xem rằng các tầng nước có cùng vận tốc nằm theo một đường ellipse trên mặt cắt, hãy tìm phân bố vận tốc theo tọa độ tại các lớp nước và tìm thông lượng nước $Q$ chảy qua một mặt cắt ống trong một đơn vị thời gian theo $G$, $\mu$, $a$ và $b$.
+
+    % \item \textbf{Dòng chảy rối và định luật Bernoulli với dòng không dừng.} \\
+    % Một bình nước hình nón cụt chứa đầy nước được đặt thẳng đứng, có chiều cao $z_0$, diện tích đáy dưới là $a$ và diện tích đáy trên là $A$ (với $A>a)$. Đáy trên bình nước được để hở và thông với không khí bên ngoài. Tại thời điểm ban đầu, đáy dưới được mở hoàn toàn. Gia tốc trọng trường là $g$. Bỏ qua các ma sát nhớt, hiệu ứng co hẹp được ống, các dòng chảy có phương vuông góc trục ống và xem rằng đây là dòng chảy rối, tức là vận tốc các lớp nước ở từng mặt cắt ngang của bình là như nhau. Tìm vận tốc $v$ của nước chảy ra từ đáy dưới của bình theo độ cao $z$ của mực nước còn lại trong bình. 
+\end{enumerate}
+
+\begin{center}
+\begin{minipage}{0.55\textwidth}
+    \begin{tikzpicture}[scale=0.8]
+        \draw[fill=lightgray, lightgray, ultra thick] (0,0) rectangle (6,4);
+        \draw[fill=lightgray, lightgray] (0,2) ellipse (0.5 and 2);
+        \draw[ultra thick] (6,0) arc(270:90:0.5cm and 2cm);
+        \draw[ultra thick] (6,0) arc(-90:90:0.5cm and 2cm);
+        \draw[ultra thick] (0,0) arc(270:90:0.5cm and 2cm);
+        \draw[fill=lightgray, ultra thick] (6,2) ellipse (0.5 and 2);
+        \draw[ultra thick]
+        (0,0) to (6,0)
+        (0,4) to (6,4);
+        \draw[fill=white, ultra thick] (6,2) ellipse (0.3 and 1.6);
+        \draw[dashed] (8,0) rectangle (10,4);
+        \draw[dashed] 
+        (6,0) to (8,0)
+        (6,4) to (8,4);
+        \draw[ultra thick] (9,0) arc(270:90:1cm and 2cm);
+        \draw[ultra thick] (9,0) arc(-90:90:1cm and 2cm);
+        \draw[fill=lightgray, ultra thick] (9,2) ellipse (1 and 2);
+        \draw[fill=white, ultra thick] (9,2) ellipse (0.7 and 1.6);
+        \draw[Stealth-Stealth] (7.7,0.4) to (7.7,3.6);
+        \draw (7.7,2) node[left]{$2a$};
+        \draw[Stealth-Stealth] (8.3,-0.3) to (9.7,-0.3);
+        \draw (9,-0.3) node[below]{$2b$};
+        \draw (5,-1.5) node{Hình 1};
+    \end{tikzpicture}
+\end{minipage}
+\begin{minipage}{0.35\textwidth}
+    \begin{tikzpicture}[scale=0.8]
+        \draw[fill=blue!30] (-0.5,0) to (0.5,0) to (2,3) to (-2,3) to (-0.5,0);
+        \draw[ultra thick] 
+        (0.5,0) to (2.5,4)
+        (-0.5,0) to (-2.5,4);
+        \draw[very thick, -Stealth] (0,0) to (0,-0.8);
+        \draw[very thick, -Stealth] (-0.5,0) to (-0.5,-0.8);
+        \draw[very thick, -Stealth] (-0.25,0) to (-0.25,-0.8);
+        \draw[very thick, -Stealth]
+        (0.25,0) to (0.25,-0.8);
+        \draw[very thick, -Stealth] (0.5,0) to (0.5,-0.8);
+        \draw (0.5,-0.4) node[right]{$v=?$};
+        \draw[dashed] 
+        (2.5,4) to (-3,4)
+        (-2,3) to (3,3)
+        (-3,0) to (3,0);
+        \draw[Stealth-Stealth] (-3,0) to (-3,4);
+        \draw[Stealth-Stealth] (3,0) to (3,3);
+        \draw (-3,2) node[left]{$z_0$} (3,1.5) node[right]{$z$};
+        \draw[-Stealth] (4,3.5) to (4,2.5);
+        \draw (4,3) node[right]{$g$};
+        \draw (0,-1.5) node{Hình 2};
+    \end{tikzpicture}
+\end{minipage}
+\end{center}

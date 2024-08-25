@@ -1,0 +1,81 @@
+\begin{enumerate}
+    \item Quá trình đoạn nhiệt 1-2: 
+    \begin{equation} \label{eq1_vapor_compression_cycle}
+        p^{1-\gamma}T^{\gamma}= \text{const} \implies T_2 = T_C \left(\dfrac{p_{bh}(T_H)}{p_{bh}(T_C)}\right)^\frac{\gamma-1}{\gamma}.
+    \end{equation}
+    \item Nhiệt lượng tỏa ra trong quá trình đẳng áp 2-3:
+    \begin{equation} \label{eq2_vapor_compression_cycle}
+        Q_{23} = n C_p \left(T_2 - T_H \right).
+    \end{equation}
+    Nhiệt lượng tỏa ra trong quá trình ngưng tụ 3-4 chính là ẩn nhiệt ngưng tụ của toàn bộ $n \si{mol}$ ga:
+    \begin{equation} \label{eq3_vapor_compression_cycle}
+        Q_{34} = nL.
+    \end{equation}
+    \item Trong quá trình giãn nở đột ngột, một phần ga bị hóa hơi, lấy đi enthalpy từ phần còn lại của ga và làm cho ga lạnh đi. Gọi \(n_{gas}\) là số mol ga hóa hơi trong quá trình giãn nở này.\\
+    Enthalpy tại trạng thái 4: 
+    \begin{equation} \label{eq4_vapor_compression_cycle}
+        H_4=n\cdot h(T_H).
+    \end{equation}
+    Enthalpy tại trạng thái 5:
+    \begin{equation} \label{eq5_vapor_compression_cycle}
+        H_5=n_{gas}\cdot L + n \cdot h(T_C).
+    \end{equation}
+    Bảo toàn enthalpy: 
+    \begin{equation} \label{eq6_vapor_compression_cycle}
+        H_4 = H_5 \implies \dfrac{n_{gas}}{n} = \dfrac{h(T_H)-h(T_C)}{L}.
+    \end{equation}
+    \item Lượng nhiệt lượng ga thu vào trong quá trình bay hơi chính là ẩn nhiệt hóa hơi của phần ga còn lại: 
+    \begin{equation} \label{eq7_vapor_compression_cycle}
+        Q_{51}=(n-n_{gas})\cdot L.
+    \end{equation}
+    \item Theo nguyên lý I nhiệt động lực học
+    \begin{equation} \label{eq8_vapor_compression_cycle}
+        Q_{in} + A_{gas} = Q_{out}.
+    \end{equation}
+    Quá trình giãn nở và quá trình nén đoạn nhiệt không trao đổi nhiệt với môi trường nên
+    \begin{equation} \label{eq9_vapor_compression_cycle}
+        A = Q_{23} + Q_{34} - Q_{51} = n C_p(T_2 - T_H) + n[h(T_H) - h(T_C)].
+    \end{equation}
+    \item Hiệu năng của máy lạnh 
+    \begin{equation} \label{eq10_vapor_compression_cycle}
+        \eta = \dfrac{Q_{in}}{A}.
+    \end{equation}
+    \item Áp dụng số: 
+    \begin{align*}  
+        &T_{23} = \SI{337.36}{K}. \\
+        &Q_{23} = \SI{1.47}{kJ/mol}. \\
+        &Q_{34} = \SI{16.5}{kJ/mol}. \\
+        &Q_{51} = \SI{14.05}{kJ/mol}. \\
+        &\implies A = \SI{3.92}{kJ/mol} \implies \eta = \frac{Q_{51}}{A} = 3.58.
+    \end{align*}
+    Chu trình này không thể sử dụng cho điều hòa nhiệt độ tại nhà do nhiệt độ bên ngoài có thể vượt quá nhiệt độ tới hạn của carbon dioxide, khiến cho ga này không thể hóa lỏng/hóa hơi chỉ bằng phương pháp nén đẳng nhiệt. Để hoạt động tốt ở vùng nhiệt độ này người ta sử dụng chu trình gần tới hạn (transcritical cycle), đòi hỏi kết cấu máy khác với cấu hình đã nghiên cứu trong bài.
+\end{enumerate}
+
+\textbf{Biểu điểm}
+\begin{center}
+\begin{tabular}{|>{\centering\arraybackslash}m{1cm}|>{\raggedright\arraybackslash}m{14cm}| >{\centering\arraybackslash}m{1cm}|}
+    \hline
+    \textbf{Phần} & \textbf{Nội dung} & \textbf{Điểm} \\
+    \hline
+    \textbf{1} & Tính nhiệt độ $T_2$ (\ref{eq1_vapor_compression_cycle}) & $0.25$ \\
+    \hline
+    \textbf{2} & Tính nhiệt lượng ga tỏa trong quá trình 2-3 $Q_{23}$ (\ref{eq2_vapor_compression_cycle}) & $0.25$ \\
+    \cline{2-3}
+    & Tính nhiệt lượng ga tỏa trong quá trình 3-4 $Q_{34}$ (\ref{eq3_vapor_compression_cycle}) & $0.25$ \\
+    \hline
+    \textbf{3} & Viết enthalpy tại trạng thái 4 và 5 (\ref{eq4_vapor_compression_cycle}) \& (\ref{eq5_vapor_compression_cycle}) & $0.25$ \\
+    \cline{2-3}
+    & Áp dụng bảo toàn enthalpy và tính tỷ lệ mol ga hóa hơi (\ref{eq6_vapor_compression_cycle}) & $0.50$ \\
+    \hline
+    \textbf{4} & Tính nhiệt lượng ga thu trong quá trình 5-1 (\ref{eq7_vapor_compression_cycle}) & $0.50$ \\
+    \hline
+    \textbf{5} & Chỉ ra quá trình 2-3 và 4-5 không trao đổi nhiệt & 0.25 \\
+    \cline{2-3}
+    & Tính công mà khí nhận được $A$ (\ref{eq9_vapor_compression_cycle}) & $0.50$ \\
+    \hline
+    \textbf{6} & Tính hiệu năng máy lạnh (\ref{eq10_vapor_compression_cycle}) & $0.50$ \\
+    \hline
+    \textbf{7} & Thay số và tính toán & $0.75$ \\
+    \hline
+\end{tabular}
+\end{center}

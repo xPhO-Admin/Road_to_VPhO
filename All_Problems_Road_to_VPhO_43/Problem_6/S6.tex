@@ -1,0 +1,232 @@
+\begin{enumerate}
+    \item Ta đặt các biến và hệ tọa độ như hình vẽ.
+\begin{center}
+\begin{minipage}{0.6\textwidth}
+\textbf{a,} Các tọa độ và vận tốc lần lượt được biểu diễn theo $\theta$ và $\dot{\theta}$ dưới dạng:
+\begin{align*}
+    x_A &= L - l \cos \theta \Rightarrow v_A= \dot{\theta} l \sin \theta. \\
+    x_B &= l \sin \theta \Rightarrow v_B = \dot{\theta} l \cos \theta. \\
+    \varphi &= \arccos \left( \dfrac{L - l \sin \theta}{l} \right) \Rightarrow \dot{\varphi} = \dot{\theta} \dfrac{l \cos \theta}{\sqrt{l^2 - \left( L - l \sin \theta \right)^2}}. \\
+    x_C &= \sqrt{l^2 - \left( L - l \sin \theta \right)^2} \Rightarrow v_C = \dot{\theta} \dfrac{(L-l \sin \theta) l \cos \theta}{\sqrt{l^2 - \left( L - l \sin \theta \right)^2}}.
+\end{align*}
+\end{minipage}
+\begin{minipage}{0.3\textwidth}
+\centering
+\begin{tikzpicture}[scale=0.6]
+    %%Khung vuông
+    \draw[thick] (0,0) rectangle (6,6);
+    \%%Các thanh
+    \draw[fill=yellow, very thick] (5.8,1.7) rectangle (6.2,2.3);
+    \draw[fill=yellow, very thick] (3.7,5.8) rectangle (4.3,6.2);
+    \draw[fill=yellow, very thick] (-0.2,3.7) rectangle (0.2,4.3);
+    \draw[ultra thick] (6,2) to (4,6) to (0,4);
+    \filldraw[color=black, fill=white, ultra thick](6,2) circle (0.1);
+    \filldraw[color=black, fill=white, ultra thick](4,6) circle (0.1);
+    \filldraw[color=black, fill=white, ultra thick](0,4) circle (0.1);
+    \draw (6.1,2) node[right]{$A$} (4,6.1) node[above]{$B$} (-0.1,4) node[left]{$C$};
+    %%Hệ tọa độ
+    \draw[thick] (6,3) arc (90:145:0.5);
+    \draw (6.1,3.4) node[left]{$\theta$};
+    \draw[thick] (3,6) arc (180:235:0.5);
+    \draw (2.7,6.1) node[below]{$\varphi$};
+    \draw[thick, -Stealth] (7,0) to (7,2);
+    \draw[thick, -Stealth] (6,7) to (4,7);
+    \draw[thick, -Stealth] (-1,6) to (-1,4);
+    \draw[thick] (6.7,0) to (7.3,0);
+    \draw[thick] (6,6.7) to (6,7.3);
+    \draw[thick] (-1.3,6) to (-0.7,6);
+    \draw (7,1) node[right]{$x_A$} (5,7) node[above]{$x_B$} (-1,5) node[left]{$x_C$};
+\end{tikzpicture} \\
+ \qquad Hình 2: Hệ tọa độ.
+\end{minipage}
+\end{center}
+\textbf{b,} Tại thời điểm $v_A=v$ và $a_A=a$, ta có thể tìm lại $\dot{\theta}$ và $\ddot{\theta}$ theo các bước:
+\begin{equation} \label{eq1_rectangle_collision}
+    v=\dot{\theta} l \sin \theta \Rightarrow \dot{\theta}= \dfrac{v}{l \sin \theta}.
+\end{equation}
+Đạo hàm $v=\dot{\theta} l \sin \theta$ theo thời gian, ta được
+\begin{equation} \label{eq2_rectangle_collision}
+    a = \ddot{\theta} l \sin \theta + \dot{\theta}^2 l \cos \theta = \ddot{\theta} l \sin \theta + \dfrac{v^2}{l} \dfrac{\cos \theta}{\sin^2 \theta} \Rightarrow \ddot{\theta}= \dfrac{a}{l \sin \theta} - \dfrac{v^2}{l^2} \dfrac{\cos \theta}{\sin^3 \theta}.
+\end{equation}
+Đạo hàm biểu thức $v_B$ ta tìm được ở phần \textbf{a,} theo thời gian
+\begin{equation} \label{eq3_rectangle_collision}
+    a_B = \ddot{\theta} l \cos \theta - \dot{\theta}^2 l \sin \theta.
+\end{equation}
+Thế $\dot{\theta}$ và $\ddot{\theta}$ từ phương trình trên vào, thay $\theta=\theta_0$, ta tìm được gia tốc của $B$
+\begin{equation} \label{eq4_rectangle_collision}
+    a_B = \dfrac{1}{\tan \theta_0} a - \dfrac{v^2}{l \sin^3 \theta_0}.
+\end{equation}
+
+\item Gọi $v$ là vận tốc của vật $M$ sau va chạm. 
+
+Trong một bài toán va chạm đàn hồi, ta sẽ cần phương trình liên quan đến bảo toàn động năng và các phương trình về xung lực. Đầu tiên, ta sẽ viết phương trình bảo toàn động năng của hệ trước và sau va chạm:
+
+Khối tâm thanh $AB$ quay tròn quanh góc của khung vuông với vận tốc $\dot{\theta}$ và bán kính $l/2$. Do đó động năng thanh $AB$ là
+\begin{equation} \label{eq5_rectangle_collision}
+    T_{AB} = \dfrac{1}{2} m \left( \dot{\theta} \dfrac{l}{2} \right)^2 + \dfrac{1}{2} \left( \dfrac{1}{12} m l^2 \right) \dot{\theta}^2 = \dfrac{1}{2} \dfrac{ml^2}{3} \dot{\theta}^2.
+\end{equation}
+Hoàn toàn tương tự, động năng thanh $BC$ là 
+\begin{equation} \label{eq6_rectangle_collision}
+    T_{BC} = \dfrac{1}{2} \dfrac{ml^2}{3} \dot{\varphi}^2= \dfrac{1}{2} \dfrac{ml^2}{3} \left[ \dfrac{l^2 \cos^2 \theta}{l^2 - \left( L - l \sin \theta \right)^2} \right] \dot{\theta}^2.
+\end{equation}
+Như vậy tổng động năng của hệ hai thanh $AB$ và $BC$
+\begin{equation} \label{eq7_rectangle_collision}
+    T = T_{AB} + T_{BC} = \dfrac{1}{2} J(\theta) \dot{\theta}^2. 
+\end{equation}
+Với
+\begin{equation} \label{eq8_rectangle_collision}
+    J(\theta) = \dfrac{m l^2}{3} \left[ 1 + \dfrac{l^2 \cos^2 \theta}{l^2 - \left( L - l \sin \theta \right)^2} \right].
+\end{equation}
+
+Do va chạm hoàn toàn đàn hồi nên động năng trước và sau va chạm bằng nhau
+\begin{equation} \label{eq9_rectangle_collision}
+    \dfrac{1}{2} M v_0^2 = \dfrac{1}{2} J(\theta_0) \dot{\theta}_0^2 + \dfrac{1}{2} M v^2.
+\end{equation}
+Hay
+\begin{equation} \label{eq10_rectangle_collision}
+    J(\theta) \dot{\theta}_0^2 = M(v_0-v)(v_0+v).
+\end{equation}
+
+Để xác định phương trình liên hệ còn lại giữa $v$ và $\dot{\theta}$, ta cần tìm các phương trình về xung lực tác dụng hoặc bảo toàn một số động lượng suy rộng. Lời giải này sẽ giới thiệu 2 cách để giải quyết vấn đề trên:
+
+\textbf{Cách 1:} Ta khảo sát ảnh hưởng của xung lực $X=M(v_0-v)$, gây bởi vật khối lượng $M$ lên thanh $AB$, trong khoảng thời gian vô cùng bé $\Delta t$ như một lực $F=X/\Delta t$ không đổi.
+
+Theo định lý động năng dạng vi phân
+\begin{equation} \label{eq11_rectangle_collision}
+    F dx_A = dT.
+\end{equation}
+Ở đây, ta nhớ rằng $dx_A=l \sin \theta d \theta$, lấy vi phân động năng $T$ theo $\theta$, ta được
+\begin{equation} \label{eq12_rectangle_collision}
+    F l \sin \theta = J(\theta) \ddot{\theta} + \dfrac{1}{2} \dfrac{\partial J(\theta)}{\partial \theta} \dot{\theta}^2.
+\end{equation}
+Lấy tổng 2 vế theo thời gian $\Delta t$ vô cùng ngắn mà $\theta$ thay đổi không đáng kể và có thể coi là luôn bằng $\theta_0$, khi đó số hạng thứ hai của vế trái $\dfrac{1}{2} \dfrac{\partial J(\theta)}{\partial \theta} \dot{\theta}^2$ có xuất hiện số hạng bé bậc 2 và có thể bỏ qua, ta thu được
+\begin{equation*}
+    X l \sin \theta_0 = J(\theta_0) \dot{\theta}_0,
+\end{equation*}
+tức là
+\begin{equation} \label{eq13_rectangle_collision}
+    \dfrac{J(\theta) \dot{\theta_0}}{M l \sin \theta_0} = (v_0-v).
+\end{equation}
+
+Chia hai vế của (\ref{eq10_rectangle_collision}) cho (\ref{eq13_rectangle_collision}), ta được
+\begin{equation} \label{eq14_rectangle_collision}
+    \dot{\theta}_0 l \sin \theta_0 = v + v_0.
+\end{equation}
+
+Cộng (\ref{eq10_rectangle_collision}) và (\ref{eq14_rectangle_collision}), ta triệt tiêu được $v$ và tìm được 
+\begin{equation} \label{eq15_rectangle_collision}
+    \dot{\theta}_0 = \dfrac{2v_0}{l \sin \theta_0 + \dfrac{J(\theta_0)}{M l \sin \theta_0}} = \dfrac{2v_0}{l \sin \theta_0} \left\{ 1 + \dfrac{m}{3M \sin^2 \theta_0} \left[ 1 + \dfrac{l^2 \cos^2 \theta_0}{l^2 - \left( L - l \sin \theta_0 \right)^2} \right] \right\}^{-1}.
+\end{equation}
+
+\textbf{Cách 2:} Gọi xung lực tác dụng lên hai thanh từ bản lề là $Y$. 
+
+\begin{center}
+\begin{minipage}{0.4\textwidth}
+\centering
+\begin{tikzpicture}[scale=0.8]
+    %%Khung vuông
+    \draw[thick] (0,0) rectangle (6,6);
+    \%%Các thanh
+    \draw[fill=yellow, very thick] (5.8,1.7) rectangle (6.2,2.3);
+    \draw[fill=yellow, very thick] (3.7,5.8) rectangle (4.3,6.2);
+    \draw[ultra thick] (6,2) to (4,6);
+    \filldraw[color=black, fill=white, ultra thick](6,2) circle (0.1);
+    \filldraw[color=black, fill=white, ultra thick](4,6) circle (0.1);
+    \draw (6.1,2) node[right]{$A$} (4,6.1) node[above]{$B$};
+    \draw[thick] (6,3) arc (90:145:0.5);
+    \draw (6.1,3.4) node[left]{$\theta$};
+    %%Free_body_diagram1
+    \draw[very thick, olive, -Stealth] (6,2) to (6,4);
+    \draw[very thick, olive, -Stealth] (4,6) to (6,6);
+    \draw 
+    (5,6) node[above]{$Y$}
+    (6,3) node[right]{$X$};
+    %center_of_mass_and_Instant centre_of_rotation
+    \draw[dashed, purple!40!gray] (6,3.764) arc(270:180:2.236);
+    \draw[dashed, green!40!gray] (6,1.528) arc(270:180:4.472);
+    \draw[dashed, green!40!gray] (4,6) to (4,2) to (6,2);
+    \draw[fill=green!40!gray] (4,2) circle (0.1);
+    \draw[fill=purple!40!gray] (5,4) circle (0.1);
+    \draw
+    (4,2) node[below]{$K_1$}
+    (4.8,4) node[below]{$G_1$};
+\end{tikzpicture}
+\end{minipage}
+% \hspace{0.05\textwidth}
+\begin{minipage}{0.4\textwidth}
+\centering
+\begin{tikzpicture}[scale=0.8]
+    %%Khung vuông
+    \draw[thick] (0,0) rectangle (6,6);
+    \%%Các thanh
+    \draw[fill=yellow, very thick] (3.7,5.8) rectangle (4.3,6.2);
+    \draw[fill=yellow, very thick] (-0.2,3.7) rectangle (0.2,4.3);
+    \draw[ultra thick] (4,6) to (0,4);
+    \filldraw[color=black, fill=white, ultra thick](4,6) circle (0.1);
+    \filldraw[color=black, fill=white, ultra thick](0,4) circle (0.1);
+    \draw (4,6.1) node[above]{$B$} (-0.1,4) node[left]{$C$};
+    %%Free_body_diagram2
+    \draw[very thick, olive, -Stealth] (4,6) to (2,6);
+    \draw (3,6) node[above]{$Y$};
+    %center_of_mass_and_Instant centre_of_rotation
+    \draw[dashed, purple!40!gray] (0,3.764) arc(270:360:2.236);
+    \draw[dashed, green!40!gray] (0,1.528) arc(270:360:4.472);
+    \draw[dashed, green!40!gray] (4,6) to (4,4) to (0,4);
+    \draw[fill=green!40!gray] (4,4) circle (0.1);
+    \draw[fill=purple!40!gray] (2,5) circle (0.1);
+    \draw
+    (4.2,4) node[below]{$K_2$}
+    (2.2,5) node[below]{$G_2$};
+\end{tikzpicture}
+\end{minipage}
+\\ \vspace{0.5cm} 
+Hình 3: Sơ đồ vật thể tự do, quỹ đạo của khối tâm và tâm quay tức thời với từng vật.
+\end{center}
+
+Do khối tâm của thanh $AB$ và thanh $BC$ đều cách tâm quay tức thời một khoảng không đổi $l/2$ nên ta dễ dàng viết hai phương trình biến thiên momen động lượng tâm quay tức thời đối với từng thanh lần lượt là:
+
+*Thanh $BC$:
+\begin{equation} \label{eq16_rectangle_collision}
+    \dfrac{1}{3} m l^2 \dot{\varphi} = Y l \sin(\varphi).
+\end{equation}
+*Thanh $AB$:
+\begin{equation} \label{eq17_rectangle_collision}
+    \dfrac{1}{3} m l^2 \dot{\theta} = -Y l \cos(\theta) + X l \sin (\theta).
+\end{equation}
+Từ đó ta tìm lại được phương trình (\ref{eq13_rectangle_collision}).
+
+% \textbf{Cách 3:} Định lý Noether. (Sẽ cập nhật sau)
+
+\end{enumerate}
+
+\textbf{Biểu điểm}
+\begin{center}
+\begin{tabular}{|>{\centering\arraybackslash}m{1cm}|>{\raggedright\arraybackslash}m{14cm}| >{\centering\arraybackslash}m{1cm}|}
+    \hline
+    \textbf{Phần} & \textbf{Nội dung} & \textbf{Điểm} \\
+    \hline
+    \textbf{1a} & Tìm $v_B$ & $0.25$ \\
+    \cline{2-3}
+    & Tìm $\dot{\phi}$ & $0.25$ \\
+    \cline{2-3}
+    & Tìm $v_c$ & $0.50$ \\
+    \hline
+    \textbf{1b} & Viết $\dot{\theta}$ theo $v$ (\ref{eq1_rectangle_collision}) & $0.25$ \\
+    \cline{2-3} 
+    & Liên hệ $a$ theo $\dot{\theta}$ và $\ddot{\theta}$ (\ref{eq2_rectangle_collision}) & $0.25$ \\
+    \cline{2-3}
+    & Liên hệ $a_B$ theo $\dot{\theta}$ và $\ddot{\theta}$ (\ref{eq3_rectangle_collision}) & $0.25$ \\
+    \cline{2-3}
+    & Tìm $a_B$ theo $a$ và $v$ (\ref{eq4_rectangle_collision}) & $0.25$ \\
+    \hline
+    \textbf{2} & Tìm được động năng (\ref{eq8_rectangle_collision}) & $0.50$ \\
+    \cline{2-3}
+    & Viết phương trình bảo toàn năng lượng trước và sau va chạm (\ref{eq9_rectangle_collision}) & $0.50$ \\
+    \cline{2-3}
+    & Viết được biểu thức biến thiên động lượng suy rộng (\ref{eq13_rectangle_collision}) & $0.50$ \\
+    \cline{2-3}
+    & Tính $\dot{\theta}_0$ (\ref{eq15_rectangle_collision}) & $0.50$ \\
+    \hline
+\end{tabular}
+\end{center}
+

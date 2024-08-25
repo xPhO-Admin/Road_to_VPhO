@@ -1,0 +1,106 @@
+\begin{enumerate} 
+    \item  \textbf{Hiện tượng phách}\\
+    \begin{enumerate}
+        \item Hàm sóng liên kết hai trạng thái:
+        \begin{equation} \label{eq1_neutrino_oscillation}
+            A_{\text{tot}}(t)=A_1(t)+A_2(t)=A\left(e^{-i\omega_1 t}-e^{-i\omega_2 t}\right).
+        \end{equation}
+        Môđun phức bình phương của hàm sóng liên kết:
+        \begin{equation} \label{eq2_neutrino_oscillation}
+        \begin{split}
+            |A_{\text{tot}}(t)|^2&=A^2\left(e^{-i\omega_1 t}-e^{-i\omega_2 t}\right)\left(e^{i\omega_1 t}-e^{i\omega_2 t}\right) \\ 
+            &= A^2\left(2-e^{i(\omega_1-\omega_2) t}-e^{-i(\omega_1-\omega_2) t}\right) \\ 
+            &=A^2\left[2-2\cos\left((\omega_1-\omega_2) t\right)\right] \\ 
+            &=4A^2 \sin^2 \left(\dfrac{\omega_1-\omega_2}{2}t\right).
+        \end{split}   
+        \end{equation}
+    \item Dựa trên lý thuyết về sóng vật chất của de Broglie, liên hệ giữa tần số góc và năng lượng của hạt:
+    \begin{equation} \label{eq3_neutrino_oscillation}
+        E=\hbar \omega .
+    \end{equation}
+    Môđun phức bình phương của hàm sóng từ phương trình (2) viết lại thành:
+    \begin{equation} \label{eq4_neutrino_oscillation}
+        |A_{\text{tot}}(t)|^2 =4A^2 \sin^2 \left(\dfrac{E_1-E_2}{2\hbar}t\right).
+    \end{equation}
+    \end{enumerate}
+    \item \textbf{Độ dài dao động của neutrino}\\
+Tại thời điểm $t$ chùm hạt neutrino bay đến vị trí $x$:
+\begin{equation} \label{eq5_neutrino_oscillation}
+    x=ct.
+\end{equation}
+Từ đề bài ta suy ra:
+\begin{equation} \label{eq6_neutrino_oscillation}
+    \dfrac{E_m-E_n}{2\hbar}t=\dfrac{x}{L_0}=\dfrac{ct}{L_0}.
+\end{equation}
+Độ dài dao động của neutrino:
+\begin{equation} \label{eq7_neutrino_oscillation}
+    L_0=\dfrac{2\hbar c}{E_m-E_n}.
+\end{equation}
+\item \textbf{Thí nghiệm KamLAND}\\
+Tại thời điểm $t$, hạt $\overline{\nu_e}$ bay đến vị trí $x$, do số hạt $\overline{\nu_e}$ còn $20\%$ so với ban đầu nên tỉ lệ hạt $\overline{\nu_e}$ đã biến đổi thành hạt khác (giả sử hạt $\nu_\alpha$ nào đó) so với ban đầu là:
+\begin{equation} \label{eq8_neutrino_oscillation}
+    P_{\overline{\nu_e} \rightarrow \nu_\alpha}=1-0.2=0.8.
+\end{equation}
+Mặt khác, từ biểu thức tỉ lệ số hạt bị biến đổi ở đề bài, ta suy ra:
+\begin{equation} \label{eq9_neutrino_oscillation}
+    P_{\overline{\nu_e} \rightarrow \nu_\alpha}=\sin^2(2\theta)\sin^2\left(\dfrac{x}{L_0}\right).
+\end{equation}
+Từ phương trình (\ref{eq7_neutrino_oscillation}), phương trình (\ref{eq9_neutrino_oscillation}) có thể viết lại thành:
+\begin{equation} \label{eq10_neutrino_oscillation}
+    \dfrac{x}{2\hbar c}(E_m-E_n)=\arcsin \left(\dfrac{\sqrt{P_{\overline{\nu_e} \rightarrow \nu_\alpha}}}{\sin (2\theta)}\right).
+\end{equation}
+Ta sẽ biến đổi lại phương trình (\ref{eq10_neutrino_oscillation}) để xuất hiện hiệu số bình phương khối lượng $\Delta m^2$. Năng lượng của từng trạng thái $E_m$ và $E_n$ biểu diễn theo thuyết tương đối hẹp như sau:
+\begin{align}
+    \label{eq11_neutrino_oscillation}
+    E_m&=\sqrt{p^2c^2+m_m^2c^4} \approx pc, \\
+    \label{eq12_neutrino_oscillation}
+    E_n&=\sqrt{p^2c^2+m_n^2c^4} \approx pc. 
+\end{align}
+Hiệu $E_m-E_n$ gần đúng đến bậc nhất của khối lượng bình phương:
+\begin{align}
+    E_m-E_n&=\sqrt{p^2c^2+m_m^2c^4}-\sqrt{p^2c^2+m_n^2c^4} \approx pc\left(1+\dfrac{m_m^2c^4}{2p^2c^2}-1-\dfrac{m_n^2c^4}{2p^2c^2}\right) \nonumber \\
+    \label{eq13_neutrino_oscillation}
+    &= \dfrac{(m_m^2-m_n^2)c^4}{2pc} = \dfrac{\Delta m^2 c^4}{2E}.
+\end{align}
+    Từ phương trình (\ref{eq10_neutrino_oscillation}) và phương trình (\ref{eq13_neutrino_oscillation}), ta suy ra biểu thức của hiệu số bình phương khối lượng theo các tham số đã biết:
+    \begin{equation} \label{eq14_neutrino_oscillation}
+        \dfrac{x\Delta m^2 c^4}{4\hbar c E} =\arcsin \left(\dfrac{\sqrt{P_{\overline{\nu_e} \rightarrow \nu_\alpha}}}{\sin (2\theta)}\right) \Rightarrow 
+        \Delta m^2 = \dfrac{4\hbar E}{c^3x}\arcsin \left(\dfrac{\sqrt{P_{\overline{\nu_e} \rightarrow \nu_\alpha}}}{\sin (2\theta)}\right).
+    \end{equation}
+    Thay số từ đề bài: $\Delta m^2 \approx 2.05\times 10^{-5} \ \si{(eV)^2/c^4}$.\\ \\
+    \textit{Theo Mô hình Chuẩn, hạt neutrino không mang khối lượng, tuy nhiên để kiểm chứng điều này, lý thuyết về dao động neutrino đã chỉ ra hiện tượng dao động neutrino chỉ xảy ra khi hạt neutrino mang khối lượng. Sau đó là một loạt các thí nghiệm kiểm chứng, cho đến nay, hiện tượng dao động neutrino cũng có ý nghĩa là hạt neutrino mang khối lượng đã được thừa nhận rộng rãi nhờ một loại các thí nghiệm huyền thoại đã được thực hiện có thể kể đến là thí nghiệm NOMAD của CERN, thí nghiệm Super Kamiokande tại Nhật Bản, thí nghiệm Homestake, thí nghiệm SAGE, thí nghiệm SNO, thí nghiệm KamLAND,... Bài tập trên chỉ ra, nếu hiệu số bình phương khối lượng $\Delta m^2$ bằng 0 thì hạt neutrino không mang khối lượng và hiện tượng dao động neutrino sẽ không xảy ra.}
+\end{enumerate}
+
+\textbf{Biểu điểm}
+\begin{center}
+\begin{tabular}{|>{\centering\arraybackslash}m{1cm}|>{\raggedright\arraybackslash}m{14cm}| >{\centering\arraybackslash}m{1cm}|}
+    \hline
+    \textbf{Phần} & \textbf{Nội dung} & \textbf{Điểm} \\
+    \hline
+    \textbf{1a} & Viết được module phức bình phương của hàm sóng liên kết hai trạng thái (\ref{eq2_neutrino_oscillation}) & $1.00$ \\
+    \hline 
+    \textbf{1b} & Viết được liên hệ năng lượng và tần số của hạt theo lý thuyết của de Broglie & $0.50$ \\
+    \cline{2-3}
+    &  Viết được module phức bình phương của hàm sóng liên kết hai trạng thái (\ref{eq4_neutrino_oscillation}) & $0.50$ \\
+    \hline 
+    \textbf{2} & Viết biểu thức độ dài dao động neutrino (\ref{eq7_neutrino_oscillation}) & $1.00$ \\
+    \hline 
+    \textbf{3} & Viết được tỉ lệ hạt $\overline{\nu_e}$ biến đổi thành hạt $\nu_{\alpha}$ (\ref{eq8_neutrino_oscillation}) & $1.00$ \\
+    \cline{2-3}
+    &  Viết liên hệ giữa độ dài dao động neutrino và tỉ lệ hạt $\overline{\nu_e}$ bị biến đổi (\ref{eq10_neutrino_oscillation}) & $0.50$ \\
+    \cline{2-3}
+    &  Gần đúng và viết được liên hệ giữa $\Delta m^2$ và hiệu $E_m-E_n$ (\ref{eq13_neutrino_oscillation}) & $2.00$ \\
+    \cline{2-3}
+    &  Viết được biểu thức hiệu số bình phương khối lượng $\Delta m^2$ (\ref{eq14_neutrino_oscillation}) & $1.00$ \\
+    \cline{2-3}
+    &  Thay số & $0.50$ \\
+    \hline
+\end{tabular}
+\end{center}
+
+%% Reference %%
+\bibliographystyle{plain}
+\begin{thebibliography}{}
+\bibitem{egorov2019} Vadim O. Egorov, Igor P. Volobuev (2019), \textit{Coherence length of neutrino oscillations in a quantum field-theoretical approach}, Physical Review D, Volume 100, Issue 3.
+\bibitem{mitsui2003} Tadao Mitsui, KamLAND collaboration (2003), \textit{KamLAND experiment}, Nuclear Physics B - Proceedings Supplements, Volume 117, Page 13-17.
+\end{thebibliography}

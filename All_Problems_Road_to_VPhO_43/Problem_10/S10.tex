@@ -1,0 +1,115 @@
+\begin{enumerate}[label=\textbf{\arabic*,}] 
+        \item
+        Vi phân diện tích quét của đường nối giữa Trái Đất và Mặt Trời:
+        \begin{equation} \label{eq1_Earth_eccentricity}
+            dS = \frac{1}{2} r^2 d\phi \Rightarrow\frac{dS}{dt} = \frac{1}{2} r^2 \Dot{\phi}.
+        \end{equation}
+        Moment động lượng của Trái Đất quanh Mặt trời:
+        \begin{equation} \label{eq2_Earth_eccentricity}
+            L_E = m_E r v_\phi = m_E r^2 \Dot{\phi} .
+        \end{equation}
+        Từ đó ta suy ra:
+        \begin{equation} \label{eq3_Earth_eccentricity}
+            \frac{dS}{dt} = \frac{L_E}{2m_E}.
+        \end{equation}
+        Do lực hấp dẫn là lực xuyên tâm, momen động lượng của Trái Đất là hằng số, và đại lượng \(dS/dt\) không đổi. Từ đây ta có thể suy ra định luật 2 Kepler.
+        \item 
+        \begin{enumerate}[label=\textbf{\alph*,}]\itemsep0em
+        \item Từ định luật 2 Kepler, ta suy được: 
+        \begin{equation} \label{eq4_Earth_eccentricity}
+            \frac{S_{1 \rightarrow 2}}{t_{1 \rightarrow 2}} = \frac{\pi ab}{T},
+        \end{equation}
+        trong đó, $b=a \sqrt{1-\varepsilon^2}$ là bán trục nhỏ của quỹ đạo ellipse. Phần diện tích trái đất quét qua khi đi từ 1 đến 2
+        \begin{equation} \label{eq5_Earth_eccentricity}
+            S_{1 \rightarrow 2} = \int_{\phi_1}^{\phi_2} \frac{1}{2} r^2 d\phi = \int_{\phi_1}^{\phi_2} \frac{1}{2} \left[ \dfrac{a \left( 1 - \varepsilon^2 \right)^2}{1 - \varepsilon \cos \phi} \right]^2 d \phi.
+        \end{equation}
+        Thay trở lại biểu thức trên, ta tìm được hằng số $A$ như sau
+        \begin{equation} \label{eq6_Earth_eccentricity}
+            A = \frac{T (1 - \varepsilon^2)^{\frac{3}{2}}}{2 \pi}.
+        \end{equation}
+        \item Với $\varepsilon \ll 1$, ta khai triển nhỏ số hạng chứa $\varepsilon$:
+        \begin{equation} \label{eq7_Earth_eccentricity}
+            \dfrac{1}{\left( 1 - \varepsilon \cos \phi \right)^2} \approx 1 + 2 \varepsilon \cos \phi.
+        \end{equation}
+        Thay vào biểu thức thời gian di chuyển giữa hai vị trí của trái đất và lấy tích phân, ta thu được
+        \begin{equation} \label{eq8_Earth_eccentricity}
+            t_{1 \rightarrow 2} \approx A[(\phi_2 - \phi_1) + 2\varepsilon(\sin{\phi_2} - \sin{\phi_1})].
+        \end{equation}
+        \item Do mỗi sự kiện nối tiếp nhau có góc lệch khi ngắm từ phía trái đất gần đúng là $\pi/2$ nên
+        \begin{align}
+        & t_{V E \rightarrow S S} \sim A\left[\pi / 2+2 \varepsilon\left(\cos \phi_{V E}-\sin \phi_{V E}\right)\right], \\
+        & t_{S S \rightarrow A E} \sim A\left[\pi / 2-2 \varepsilon\left(\sin \phi_{V E}+\cos \phi_{V E}\right)\right], \\
+        & t_{A E \rightarrow W S} \sim A\left[\pi / 2-2 \varepsilon\left(\cos \phi_{V E}-\sin \phi_{V E}\right)\right], \\
+        & t_{W S \rightarrow V E} \sim A\left[\pi / 2+2 \varepsilon\left(\sin \phi_{V E}+\cos \phi_{V E}\right)\right] .
+        \end{align}
+        Từ 4 phương trình trên, ta tìm được góc $\phi_{VE}$
+        \begin{equation} \label{eq13_Earth_eccentricity}
+            \tan \phi_{V E}=\frac{\left(1-\tau_{1}\right)}{\left(1+\tau_{1}\right)},
+        \end{equation}
+        trong đó
+        \begin{equation} \label{eq14_Earth_eccentricity}
+            \tau_{1}=\left(\frac{t_{V E \rightarrow S S}-t_{A E \rightarrow W S}}{t_{W S \rightarrow V E}-t_{S S \rightarrow A E}}\right)=\left(\frac{\cos \phi_{V E}-\sin \phi_{V E}}{\cos \phi_{V E}+\sin \phi_{V E}}\right).
+        \end{equation}
+        Từ bảng số liệu, $\tau_1 \approx -3/4$ và $\varepsilon \approx 4.57 \si{Rad}$.
+        Lấy
+        \begin{equation} \label{eq15_Earth_eccentricity}
+            \tau_{2}=\frac{t_{V E \rightarrow S S}}{t_{A E \rightarrow W S}} = \dfrac{\pi / 2+2 \varepsilon\left(\cos \phi_{V E}-\sin \phi_{V E}\right)}{\pi / 2-2 \varepsilon\left(\cos \phi_{V E}-\sin \phi_{V E}\right)}.
+        \end{equation}
+        Ta tìm được
+        \begin{equation} \label{eq16_Earth_eccentricity}
+            \varepsilon \sim \frac{\pi\left(\tau_{2}-1\right)}{4\left(1+\tau_{2}\right)\left(\cos \phi_{V E}-\sin \phi_{V E}\right)} \approx 0.0152.
+        \end{equation}
+        % (Tham khảo bạn Quân Bảo) 
+        Từ 4 phương trình trên, ta thu được hai phương trình: 
+        \begin{align}
+            & \frac{t_{V E \rightarrow S S}}{t_{A E \rightarrow W S}} = \frac{A\left[\pi / 2+2 \varepsilon\left(\cos \phi_{V E}-\sin \phi_{V E}\right)\right]}{A\left[\pi / 2-2 \varepsilon\left(\cos \phi_{V E}-\sin \phi_{V E}\right)\right]}, \\
+            & \frac{t_{W S \rightarrow V E}}{t_{S S \rightarrow A E}} = \frac{A\left[\pi / 2+2 \varepsilon\left(\cos \phi_{V E}+\sin \phi_{V E}\right)\right]}{A\left[\pi / 2-2 \varepsilon\left(\cos \phi_{V E}+\sin \phi_{V E}\right)\right]}. \\
+        \end{align}
+        Chuyển vế và rút gọn, ta thu được:
+        \begin{align}
+             & \varepsilon\left(\cos \phi_{V E}-\sin \phi_{V E}\right) =  \frac{\pi \left(t_{V E \rightarrow S S} -t_{A E \rightarrow W S}\right)}{4\left(t_{V E \rightarrow S S} + t_{A E \rightarrow W S}\right)} = a ,\\
+             & \varepsilon\left(\cos \phi_{V E}+\sin \phi_{V E}\right) =  \frac{\pi \left(t_{W S \rightarrow V E} -t_{S S \rightarrow A E}\right)}{4\left(t_{W S \rightarrow V E} + t_{S S \rightarrow A E}\right)} = b.
+        \end{align}
+        Ta rút ra được $\varepsilon \cos \phi_{V E} = (a+b)/2, \varepsilon \sin \phi_{V E} = (a-b)/2$. Cuối cùng,
+        \begin{equation} \label{eq22_Earth_eccentricity}
+            \varepsilon = \left(\left(\frac{a+b}{2}\right)^2 + \left(\frac{a-b}{2}\right)^2 \right)^{1/2} \approx 0.0166
+        \end{equation}
+    \end{enumerate}
+\end{enumerate}
+\textit{Theo số liệu của USNO, tâm sai của trái đất là $\varepsilon = 0.0167$, tức là phép đánh giá thô của chúng ta đã có những hiệu quả nhất định trong việc thiết lập mô hình tính toán tâm sai của trái đất.}
+
+\textit{Lưu ý: Việc khai triển làm xuất hiện các số hạng $\varepsilon$ bậc cao hơn 1 có thể gây ra sai số khá lớn và các đáp án đó sẽ không được chấp nhận.}
+
+\textbf{Biểu điểm}
+\begin{center}
+\begin{tabular}{|>{\centering\arraybackslash}m{1cm}|>{\raggedright\arraybackslash}m{14cm}| >{\centering\arraybackslash}m{1cm}|}
+    \hline
+    \textbf{Phần} & \textbf{Nội dung} & \textbf{Điểm} \\
+    \hline
+    \textbf{1} & Viết biểu thức diện tích quét (\ref{eq1_Earth_eccentricity}) & $0.25$ \\
+    \cline{2-3}
+    & Viết phương trình bảo toàn momen động lượng (\ref{eq2_Earth_eccentricity}) & $0.50$ \\
+    \cline{2-3}
+    & Suy ra định luật 2 Kepler (\ref{eq3_Earth_eccentricity}) & $0.25$ \\
+    \hline
+    \textbf{2a} & Áp dụng định luật 2 Kepler (\ref{eq4_Earth_eccentricity}) & $0.25$ \\
+    \cline{2-3}
+    & Viết biểu thức diện tích quét & $0.50$ \\
+    \cline{2-3}
+    & Đối chiếu kết quả và tìm $a$ & $0.25$ \\
+    \hline
+    \textbf{2b} & Khai triển nhỏ số hạng $\varepsilon$ bậc 1 (\ref{eq7_Earth_eccentricity}) & $0.50$ \\
+    \cline{2-3}
+    & Lấy tích phân và thu được biểu thức thời gian giữa các sự kiện (\ref{eq8_Earth_eccentricity}) & $0.50$ \\
+    \hline
+    \textbf{2c} & Từ bảng số liệu xác định $\phi_{VE}$ (\ref{eq13_Earth_eccentricity}) & $0.50$ \\
+    \cline{2-3}
+    & Tính được giá trị $\varepsilon$ với một phương pháp đúng sai lệch dưới $20\%$ (\ref{eq16_Earth_eccentricity}) & $0.50$ \\
+    \hline
+\end{tabular}
+\end{center}
+
+\bibliographystyle{plain}
+\begin{thebibliography}{}
+\bibitem{10.1119/5.0127980} B. Cameron Reed. Eccentricity and orientation of Earth’s orbit from equinox and solstice times. \textit{American Journal of Physics}, 91(4):324–326, 04 2023.
+\end{thebibliography}

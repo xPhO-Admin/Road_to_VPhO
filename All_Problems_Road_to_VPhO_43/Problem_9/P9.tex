@@ -1,0 +1,76 @@
+\textbf{Bức xạ vùng xa}
+
+Trong truyền sóng điện từ không dây, "trường xa" thường được hiểu là trường điện từ ở vị trí xa nguồn phát $r$ hơn nhiều lần bước sóng điện từ $\lambda$. Khi khảo sát ảnh hưởng của trường điện từ tại vùng không gian này, hiện tượng cảm ứng điện từ chiếm ưu thế hoàn toàn so với điện từ trường như trong các mô hình tĩnh điện (định luật Coulomb) hay từ dừng (định luật Bio-Savart-Laplace).
+
+\begin{center}
+\begin{minipage}{\textwidth}
+\centering
+\begin{tikzpicture}[scale=0.8]
+    %%Decartes_coordinate
+    \draw[-Stealth] (0,0) to (0,5);
+    \draw[-Stealth] (0,0) to (5,0);
+    \draw[-Stealth] (0,0) to (-4,-3);
+    \draw[fill=black] (0,0) circle (0.05);
+    \draw 
+    (4.5,0) node[above]{$y$}
+    (0,4.5) node[left]{$z$}
+    (-3.6,-2.6) node[left]{$x$};
+    %%Sphere_coordinate
+    \draw (0,0) circle (4);
+    \draw (0,4) arc(90:-90:2 and 4);
+    \draw[dashed] (0,4) arc(90:270:2 and 4);
+    \draw (-4,0) arc(180:360:4 and 2);
+    \draw[dashed] (4,0) arc(0:180:4 and 2);
+    %%projection
+    \draw[fill=black] (1.4,2.85) circle (0.05);
+    \draw (0,0) to (1.4,2.85) to (1.4,-1.4) to (0,0);
+    \draw[dashed] (1.4,-1.4) to (1.75,-1.75);
+    \draw[-Stealth] (-0.8,-0.6) arc(-130:-45:1);
+    \draw[-Stealth] (0,1) arc(90:63:1);
+    \draw 
+    (-0.3,-1.2) node{$\phi$}
+    (0.25,1.4) node{$\theta$}
+    (0.9,1.2) node{$r$};
+    %%unit vector
+    \draw[-Stealth] (1.4,2.85) to (2,4.1);
+    \draw[-Stealth] (1.4,2.85) to (2,1.7);
+    \draw[-Stealth] (1.4,2.85) to (2.5,3.3);
+    \draw
+    (2.2,2.8) node{$\hat{\phi}$}
+    (2.1,2.2) node{$\hat{\theta}$}
+    (1.5,4) node{$\hat{r}$};
+    %%antenna
+    \draw[ultra thick, -Stealth] (0,-0.5) to (0,0.5);
+    \draw (-0.6,0.1) node{$I,\delta$};
+\end{tikzpicture}
+\end{minipage} \\
+\vspace{2mm} 
+Hình 1: Hệ tọa độ cầu và vị trí của dây dẫn.
+\end{center}
+
+Theo đó, một đoạn dây dẫn vô cùng ngắn có chiều dài $\delta \ll \lambda$ có dòng điện xoay chiều $I = I_0 \cos \omega t$ chạy qua và tích điện hai đầu dây như một lưỡng cực điện sẽ giống như một nguồn phát sóng điện từ có dạng
+\begin{equation*}
+    \Vec{E} = - \omega \mu \dfrac{I_0 \delta}{4 \pi r} \sin \left( \omega t - \dfrac{2 \pi r}{\lambda} \right) \sin \theta \hat{\theta}.
+\end{equation*}
+Và cường độ từ trường
+\begin{equation*}
+    \Vec{H} = - \omega \sqrt{\mu \varepsilon} \dfrac{I_0 \delta}{4 \pi r} \sin \left( \omega t - \dfrac{2 \pi r}{\lambda} \right) \sin \theta \hat{\phi}.
+\end{equation*}
+
+Năng lượng bức xạ của sóng điện từ qua một đơn vị diện tích trong một đơn vị thời gian được biểu diễn qua vector Poynting theo biểu thức
+\begin{equation*}
+    \Vec{S} = \Vec{E} \times \Vec{H}.
+\end{equation*}
+
+\begin{enumerate}
+    \item Xét một đoạn dây thẳng có độ dài $l_1 \ll \lambda$ có dòng $I=I_0 \cos \omega t$. 
+    \begin{enumerate}
+        \item Hãy tìm công suất bức xạ trung bình $P$ của đoạn dây.
+        \item Công suất phát xạ sóng điện từ của đoạn dây tiêu hao năng lượng tương đương một thành phần điện trở $R_r$. Hãy xác định điện trở $R_r$.
+    \end{enumerate}
+    \item Xét một đoạn dây thẳng có độ dài $l_2$ so sánh được với $\lambda$ và có dòng điện $I=I_0 \cos \omega t$ chạy qua. Xét các điểm cùng cách tâm đoạn dây thẳng một khoảng $r$, tìm tỷ số cường độ sóng truyền theo phương hợp với dây một góc $\theta$ và cường độ sóng truyền theo phương $\theta=\pi/2$.
+\end{enumerate}
+
+\begin{flushright}
+    (Biên soạn bởi Log)
+\end{flushright}

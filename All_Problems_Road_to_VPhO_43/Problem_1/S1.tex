@@ -1,0 +1,110 @@
+\begin{enumerate}
+\item 
+\begin{enumerate}[label=\textbf{\alph*,}]\itemsep0em
+    \item Độ biến dạng lò xo bên trái hạt thứ $n$ là $(u_n-u_{n-1})$ và độ biến dạng lò xo bên phải hạt thứ $n$ là $(u_{n+1}-u_n)$. Như vậy phương trình lực - gia tốc trên hạt $m$ là
+    \begin{equation*}
+        m \ddot{u}_n = - k (u_n-u_{n-1}) + k (u_{n+1}-u_n).
+    \end{equation*}
+    Từ đây, ta tìm được phương trình sai phân
+    \begin{equation} \label{eq1_negative_mass}
+        \ddot{u}_n = - \dfrac{k}{m} (2u_n-u_{n+1}-u_{n-1}).
+    \end{equation}
+    \item Thay nghiệm đề bài cho vào phương trình (\ref{eq1_negative_mass}) và triệt tiêu $A \cos (\omega t)$ ở hai vế ta được:
+    \begin{equation*}
+        -\omega^2 \sin \left( \dfrac{\omega L}{v} n \right) = -\dfrac{k}{m} \left[ 2 \sin \left( \dfrac{\omega L}{v} n \right) - \sin \left( \dfrac{\omega L}{v} (n+1) \right) - \sin \left( \dfrac{\omega L}{v} (n-1) \right) \right].
+    \end{equation*}
+    Giải phương trình trên, ta có
+    \begin{equation} \label{eq2_negative_mass}
+        v = \dfrac{\omega L}{ \arccos \left[ 1 - \dfrac{m\omega^2}{2k} \right]}.
+    \end{equation}
+    \item Với $L$ rất nhỏ so với $v/\omega$, từ (\ref{eq2_negative_mass}), ta có $1 - \dfrac{m\omega^2}{2k} = \cos \left( \dfrac{\omega L}{v} \right) \approx 1 - \dfrac{\omega^2 L^2}{2v^2}$. Như vậy, 
+    \begin{equation} \label{eq3_negative_mass}
+        v = L \sqrt{\dfrac{k}{m}}.
+    \end{equation}
+    Trong vật liệu ta đang xét tới, có thể thấy suất khối lượng riêng $\rho=m/(L \Delta S)$ và suất Young $E=k/\Delta S$. Thay các đại lượng trên vào phương trình (\ref{eq3_negative_mass}), ta được:
+    \begin{equation} \label{eq4_negative_mass}
+        v = L \sqrt{\dfrac{k}{m}} = \sqrt{\dfrac{k 
+        L /\Delta S}{m/(L \Delta S)}} = \sqrt{\dfrac{E}{\rho}}.
+    \end{equation}
+\end{enumerate}
+\item Gọi ly độ của $m_2$ là $\xi$. Phương trình lực gia tốc lên hai hạt lần lượt là:
+
+*Hạt $m_1$:
+\begin{equation} \label{eq5_negative_mass}
+    m_1 \ddot{u} = -k_2 ( u - \xi) + F.
+\end{equation}
+*Hạt $m_2$:
+\begin{equation} \label{eq6_negative_mass}
+    m_2 \ddot{\xi} = - k_2 (\xi - u).
+\end{equation}
+Ở chế độ xác lập cưỡng bức, gia tốc $\ddot{u}=-\omega^2 u$ và $\ddot{\xi} = -\omega^2 \xi$. Thay các gia tốc này vào phương trình (\ref{eq3_negative_mass}) và (\ref{eq4_negative_mass}), ta được
+\begin{equation} \label{eq7_negative_mass}
+    - m_1 \omega^2 u = -k_2 (u-\xi) + F
+\end{equation}
+và
+\begin{equation} \label{eq8_negative_mass}
+    - m_2 \omega^2 \xi = -k_2 (\xi-u).
+\end{equation}
+Giải hệ phương trình trên, ta được:
+\begin{equation} \label{eq9_negative_mass}
+    u = \dfrac{F}{ \left( m_1 + \dfrac{m_2}{1 - \dfrac{m_2 \omega^2}{k_2}} \right) \omega^2}.
+\end{equation}
+Và ta tìm được khối lượng hiệu dụng của mạch là
+\begin{equation} \label{eq10_negative_mass}
+    m_{eff} = m_1 + \dfrac{m_2}{1 - \dfrac{m_2 \omega^2}{k_2}}.
+\end{equation}
+Như vậy, khối lượng hiệu dụng $m_{eff}$ sẽ âm khi tần số $\omega$ thỏa mãn
+\begin{equation} \label{eq11_negative_mass}
+    \sqrt{\dfrac{k_2}{m_2}} < \omega < \sqrt{\dfrac{k_2}{m_2} \left( 1 + \dfrac{m_2}{m_1} \right)}.
+\end{equation}
+\end{enumerate}
+
+\textbf{Biểu điểm}
+\begin{center}
+\begin{tabular}{|>{\centering\arraybackslash}m{1cm}|>{\raggedright\arraybackslash}m{14cm}| >{\centering\arraybackslash}m{1cm}|}
+    \hline
+    \textbf{Phần} & \textbf{Nội dung} & \textbf{Điểm} \\
+    \hline
+    \textbf{1a} & Xác định độ biến dạng mỗi lò xo & $0.25$ \\
+    \cline{2-3}
+    & Viết phương trình lực gia tốc và dẫn ra phương trình sai phân (\ref{eq1_negative_mass}) & $0.25$ \\
+    \hline
+    \textbf{1b} & Thay các nghiệm đề bài cho vào biểu thức & $0.25$ \\
+    \cline{2-3} 
+    & Tìm vận tốc $v$ theo $m$, $k$, $L$ và $\omega$ (\ref{eq2_negative_mass}) & $0.25$ \\
+    \hline
+    \textbf{1c} & Khai triển nhỏ hàm $\cos$ khi $L$ nhỏ & $0.25$ \\
+    \cline{2-3}
+    & Chỉ ra với $L$ nhỏ thì $v$ không phụ thuộc vào $\omega$ (\ref{eq3_negative_mass}) & $0.25$ \\
+    \cline{2-3}
+    & Xác định khối lượng riêng $\rho$ suất Young $E$ theo $m$, $k$, $L$, $\Delta S$ & $0.25$ \\
+    \cline{2-3}
+    & Chứng minh $v=\sqrt{E/\rho}$ (\ref{eq4_negative_mass}) & $0.25$ \\
+    \hline
+    \textbf{2} & Viết phương trình lực gia tốc cho hạt 1 (\ref{eq5_negative_mass}) & $0.25$ \\
+    \cline{2-3}
+    & Viết phương trình lực gia tốc cho hạt 2 (\ref{eq6_negative_mass}) & $0.25$ \\
+    \cline{2-3}
+    & Thay các gia tốc ở chế độ xác lập vào, dẫn ra phương trình (\ref{eq7_negative_mass}) & $0.25$ \\
+    \cline{2-3}
+    & Dẫn ra phương trình (\ref{eq8_negative_mass}) & $0.25$ \\ 
+    \cline{2-3}
+    & Xác định biểu thức $u$ theo $F$ (\ref{eq9_negative_mass}) & $0.25$ \\
+    \cline{2-3} 
+    & Tìm được biểu thức của $m_{eff}$ (\ref{eq10_negative_mass}) & $0.25$ \\
+    \cline{2-3}
+    & Xác định giới hạn dưới để $m_{eff}$ âm (\ref{eq11_negative_mass}) & $0.25$ \\
+    \cline{2-3}
+    & Xác định giới hạn trên để $m_{eff}$ âm (\ref{eq11_negative_mass}) & $0.25$ \\
+    \hline
+\end{tabular}
+\end{center}
+
+%% Reference %%
+\bibliographystyle{plain}
+\begin{thebibliography}{}
+\bibitem{PFIEV_song} Jean Marie Brebéc, P.F.I.E.V Sóng.
+\bibitem{huang2009} H.H. Huang, C.T. Sun, G.L. Huang, \textit{On the negative effective mass density in acoustic metamaterials}, International Journal of Engineering Science, Volume 47, Issue 4, 2009, Pages 610-617.
+\end{thebibliography}
+
+

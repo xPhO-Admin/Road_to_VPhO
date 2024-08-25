@@ -1,0 +1,115 @@
+Để đơn giản, trong bài toán này, ta sẽ sử dụng hệ tọa độ Gauss với $4 \pi \varepsilon_0 = 1$.
+\begin{enumerate}
+    \item 
+    \begin{enumerate}[label=\textbf{\alph*,}]\itemsep0em
+        \item Điện thế tại điểm $(\rho,z)$ gây ra bởi sợi dây:
+    \begin{equation} \label{eq1_ellipsoid_conductor}
+        \phi = \int_{-L}^{L} \dfrac{1}{\sqrt{\rho^2+(z-l)^2}} \dfrac{Q}{2L} dl = \dfrac{Q}{2L} \left[ \sinh^{-1}\left(\dfrac{z+L}{\rho}\right)-\sinh^{-1}\left(\dfrac{z-L}{\rho}\right) \right].
+    \end{equation}
+    \item 
+    Từ đây, ta thu được phương trình mặt đẳng thế hình Ellipse tròn xoay $ \left( \dfrac{z}{a} \right)^2 + \left( \dfrac{\rho}{b} \right)^2 = 1$ với hai bán trục của Ellipse lần lượt là $a = L \coth \left( \dfrac{L \phi}{Q} \right)$ và $b = \dfrac{L}{ \sinh \left( \dfrac{L \phi}{Q} \right)}$. \footnote{Xem thêm các biến đổi chi tiết ở cuối lời giải.} \\
+    \end{enumerate}
+    \item
+    \begin{enumerate}[label=\textbf{\alph*,}]\itemsep0em
+        \item Điện trường do một thanh thẳng có độ dài $2L=2\sqrt{a^2-b^2}$ tích điện $Q$ phân bố đều gây ra hoàn toàn mô tả chính xác điện trường vùng không gian bên ngoài ellipsoid dẫn trong bài toán. Thật vậy, nó thỏa mãn toàn bộ các phương trình về điện trường tĩnh, cũng như thỏa mãn điều kiện biên về mặt đẳng thế của vật dẫn. Thay $L=\sqrt{a^2-b^2}$ vào kết quả phần \textbf{1.} ta tìm được điện dung của ellipsoid dẫn
+        \begin{equation} \label{eq2_ellipsoid_conductor}
+            C=\dfrac{Q}{\phi} = \dfrac{\sqrt{a^2-b^2}}{ \cosh^{-1} \left( \dfrac{a}{b} \right)}.
+        \end{equation}
+        \item Mật độ điện mặt của vật dẫn bằng với độ lớn của vector cảm ứng điện trường tại bề mặt, hay cũng chính bằng vector cường độ điện trường trong trường hợp này
+        \begin{equation} \label{eq3_ellipsoid_conductor}
+            \sigma = \dfrac{1}{4\pi} \left| \Vec{E} \right| = \dfrac{1}{4\pi} \left| - \nabla \phi \right| = \dfrac{Q}{4 \pi ab^2} \left( \dfrac{z^2}{a^4} + \dfrac{\rho^2}{b^4} \right)^{-1}.
+        \end{equation}
+    \end{enumerate}
+\end{enumerate}
+
+\textbf{ \textit{Các bước biến đổi chi tiết cho phần 1b.}}
+    \begin{align*}
+        & \phi = \dfrac{Q}{2L} \left[ \sinh^{-1}\left(\dfrac{z+L}{\rho}\right)-\sinh^{-1}\left(\dfrac{z-L}{\rho}\right) \right]. \\
+        & \Rightarrow \sinh^{-1}\left(\dfrac{z-L}{\rho}\right) + \dfrac{2L\phi}{Q}
+        = \sinh^{-1}\left(\dfrac{L+z}{\rho}\right) \\
+        & \Rightarrow \sinh\left(\dfrac{2L\phi}{Q}\right)\sqrt{1+\left(\dfrac{z-L}{\rho}\right)^2}+\cosh\left(\dfrac{2L\phi}{Q}\right)\dfrac{z-L}{\rho} = \dfrac{z+L}{\rho} \\
+        & \Rightarrow \dfrac{z\left[1-\cosh\left(\dfrac{2L\phi}{Q}\right)\right]+L\left[1+\cosh\left(\dfrac{2L\phi}{Q}\right)\right]}{\rho} = \sinh\left(\dfrac{2L\phi}{Q}\right)\sqrt{1+\left(\dfrac{z-L}{\rho}\right)^2}  \\
+        & \Rightarrow \dfrac{\rho^2\sinh^2\left(\dfrac{2L\phi}{Q}\right)}{2L^2\left[1+\cosh\left(\dfrac{2L\phi}{Q}\right)\right]}+\dfrac{z^2\left[\cosh\left(\dfrac{2L\phi}{Q}\right)-1\right]}{L^2\left[\cosh\left(\dfrac{2L\phi}{Q}\right)+1\right]} = 1 \\
+        & \Rightarrow \dfrac{\rho^2}{L^2}\sinh^2\left(\dfrac{L\phi}{Q}\right)+\dfrac{z^2}{L^2}\tanh^2\left(\dfrac{L\phi}{Q}\right) = 1.
+    \end{align*}
+
+\textbf{ \textit{Một số cách làm khác để chứng minh mặt đẳng thế là ellipsoid:}}
+
+\textit{+Cách 1:} Định nghĩa quỹ tích
+
+Từ hàm điện thế vô hướng xác định được ở phần 1, ta có thể viết lại:
+
+\begin{equation} \label{eq4_ellipsoid_conductor}
+    \phi = \dfrac{Q}{2L} \ln \left[ \dfrac{\sqrt{(L+z)^2 +\rho^2} + \sqrt{(L-z)^2 + \rho^2} + 2L}{\sqrt{(L+z)^2 + \rho^2} + \sqrt{(L-z)^2 + \rho^2} - 2L} \right].
+\end{equation}
+Tức là mặt đẳng thế thỏa mãn phương trình mặt:
+\begin{equation} \label{eq5_ellipsoid_conductor}
+    \sqrt{(L+z)^2 + \rho^2} + \sqrt{(L-z)^2 + \rho^2} = 2 L \coth \left( \dfrac{L \phi}{Q} \right).
+\end{equation}
+Đây là quỹ tích của mặt ellipsoid có hai tiêu điểm nằng tại hai đầu dây tích điện và bán trục lớn $a= L \coth \left( \dfrac{L \phi}{Q} \right)$. Tâm sai của ellipse này theo đó là $e=\coth \left( \dfrac{L \phi}{Q} \right)$, tức là bán trục nhỏ $b= a \sqrt{1-e^2} = \dfrac{L}{ \sinh \left( \dfrac{L \phi}{Q} \right)}$.
+
+\textit{+Cách 2:} Sử dụng tính chất phản chiếu của ellipse: \\
+Xét một điểm $M$ bất kỳ trong không gian nằm cách đường thẳng chứa dây điện tích một đoạn $\rho$, $N$ là một điểm nằm trên dây tích điện $AB$ sao cho $MN$ là tia phân giác $\angle AMB$.
+
+\begin{center}
+\input{Problem_3/ellipse}
+\end{center}
+
+% \begin{center}
+% \begin{tikzpicture}
+%     \draw[dashed, thick] (0,0) ellipse (4 and 2);
+%     \draw[ultra thick] (-2,0) to (2,0);
+%     \draw (-2,0) to (1.5,1.85) to (2,0);
+%     \draw (1.5,1.85) to (0.6,0);
+%     \draw[dashed] (1.5,1.85) to (1.5,0);
+%     \draw (1.5,0.2) to (1.3,0.2) to (1.3,0);
+% \end{tikzpicture}
+% \end{center}
+
+Với $\theta$ là góc hợp bởi đường nối từ một điểm trên dây và $MN$, vi phân độ dài một đoạn dây tích điện $dl=\rho d\theta /[\cos^2(\theta+\alpha)]$.
+Ta tính điện trường của thanh $AB$ theo phương vuông góc $MN$. 
+\begin{equation} \label{eq6_ellipsoid_conductor}
+    dE_{\perp}= \dfrac{(Q/2L)dl}{r^2} \sin \theta = \dfrac{Q}{2L} \dfrac{ \rho d\theta \sin\theta}{\cos^2(\theta+\alpha) r^2}= \dfrac{Q}{2L} \dfrac{ \sin\theta d\theta}{\rho} \Rightarrow E_{\perp}=\dfrac{Q}{2L\rho}\int_{-\theta_0}^{\theta_0}\sin\theta\mathrm d\theta=0.
+\end{equation}
+Như vậy, thành phần hình chiếu của điện trường lên phương vuông góc $MN$ bằng $0$, tức là điện trường tổng hợp tại $M$ chỉ có thành phần dọc theo tia phân giác $MN$. \\
+Do mặt đẳng thể vuông góc với điện trường nên mặt đẳng thế ở đây là một mặt có pháp tuyến chia đôi góc tạo bởi hai tia nối từ điểm đến hai đầu dây tích điện. Ta biết rằng có một bề mặt cho ta tính chất này đó là mặt ellipsoid tròn xoay có các tiêu điểm nằm ở các đầu dây tích điện \cite{doi:10.4169/math.mag.87.4.276}. Một cách không quá chặt chẽ, ta tin tưởng vào định lý duy nhất nghiệm của trường điện từ và trường hợp cụ thể mà ta tìm được chính là kết quả của bài toán.
+
+\textbf{Biểu điểm}
+\begin{center}
+\begin{tabular}{|>{\centering\arraybackslash}m{1cm}|>{\raggedright\arraybackslash}m{14cm}| >{\centering\arraybackslash}m{1cm}|}
+    \hline
+    \textbf{Phần} & \textbf{Nội dung} & \textbf{Điểm} \\
+    \hline
+    \textbf{1a} & Viết đúng thế năng do một đoạn dây $dl$ gây ra & $0.25$ \\
+    \cline{2-3}
+    & Lấy đúng cận tích phân & $0.25$ \\
+    \cline{2-3}
+    & Tìm được nguyên hàm của biểu thức & $0.25$ \\
+    \cline{2-3} 
+    & Tính được điện thế $\phi$ (\ref{eq1_ellipsoid_conductor}) & $0.25$ \\
+    \hline
+    \textbf{1b} & Viết đúng dạng phương trình mặt đẳng thế ellipsoid & $0.50$ \\
+    \cline{2-3}
+    & Tính được bán trục lớn $a$ & $0.25$ \\
+    \cline{2-3}
+    & Tính được bán trục nhỏ $b$  & $0.25$ \\
+    \hline
+    \textbf{2a} & Tìm được độ dài ảnh điện dây theo hai bán trục & $0.50$ \\
+    \cline{2-3}
+    & Tìm được điện dung của ellipsoid dẫn (\ref{eq2_ellipsoid_conductor}) & $0.50$ \\
+    \hline
+    \textbf{2b} & Viết phương trình điện trường theo điện thế & $0.50$ \\
+    \cline{2-3}
+    & Áp dụng định luật Gauss để tìm mật độ điện mặt (\ref{eq3_ellipsoid_conductor}) & $0.50$ \\ 
+    \hline
+\end{tabular}
+\end{center}
+
+%% Reference %%
+\bibliographystyle{plain}
+\begin{thebibliography}{}
+\bibitem{Landau} L.D. Landau, J.S. Bell, M.J. Kearsley, L.P. Pitaevskii, E.M. Lifshitz, and J.B. Sykes. \textit{Electrodynamics of Continuous Media}. COURSE OF THEORETICAL PHYSICS. Elsevier Science, 2013.
+\bibitem{Smythe} W.R. Smythe. \textit{Static and Dynamic Electricity}. International Series in Physics - McGraw-Hill. McGraw-Hill, 1939.
+\bibitem{doi:10.4169/math.mag.87.4.276} Stephan Berendonk. Proving the reflective property of an ellipse. \textit{Mathematics Magazine}, 87(4):276–279,
+2014.
+\end{thebibliography}

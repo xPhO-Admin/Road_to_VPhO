@@ -1,0 +1,107 @@
+\begin{enumerate}[label= \alph*)]
+    \item Xét một vùng không gian thể tính $V$, năng lượng của photon nằm trong đó là
+    \begin{equation} \label{eq1_GZK_limit}
+        \Bar{E}= \int_{0}^{\infty}\frac{3E}{e^{\beta E}-1}\frac{d^3 \Vec{p}}{(2\pi \hbar)^3}V.
+    \end{equation}
+    Trong đó hệ số 3 tính đến số phân cực của photon và $\beta = 1/(k_B T)$. Thay $d^3\Vec{p}= 4\pi p^2dp = 4\pi E^2dE/c^3$ và đổi biến $x= \beta E$, ta thu được:
+    \begin{equation} \label{eq2_GZK_limit}
+        \Bar{E}= \frac{3V}{2\pi^2c^3}(k_BT)^4\int_{0}^{\infty}\frac{x^3dx}{e^{x}-1}=\frac{3V}{2\pi^2c^3}(k_BT)^4\frac{\pi^4}{15}.
+    \end{equation}
+    Tương tự, ta tính được số lượng photon nằm trong vùng không gian thể tính $V$ là
+    \begin{equation} \label{eq3_GZK_limit}
+        N = \int_{0}^{\infty}\frac{3}{e^{\beta E}-1}\frac{d^3 \Vec{p}}{(2\pi \hbar)^3}V=  \frac{3V}{2\pi^2c^3}(k_BT)^3\int_{0}^{\infty}\frac{x^2dx}{e^{x}-1}= \frac{3V}{2\pi^2c^3}(k_BT)^3\times 2.40
+    \end{equation}
+    Năng lượng trung bình của một hạt photon là:
+    \begin{equation} \label{eq4_GZK_limit}
+        \epsilon= \frac{\Bar{E}}{N}= \frac{\pi^4}{15\times 2.40}k_BT\approx 6.35 \times 10^{-4} \si{eV}.
+    \end{equation}
+    \item Chọn hệ đơn vị với $c=1$. Khi đó, động lượng của photon là $p_{\gamma}=\epsilon$. \\
+    Gọi năng lượng của proton trước va chạm là $\Tilde{E}$, động lượng của proton này theo đó là $\Tilde{p} = \sqrt{\Tilde{E}^2 - m_p^2}$. \\
+    Trường hợp giới hạn dưới của năng lượng proton bay đến để phản ứng xảy ra là khi sau va chạm, các hạt mới chuyển động như một hạt, hạt đó có khối lượng nghỉ là $m_{\pi}+m_p$. % \footnote{Phân tích chi tiết ở cuối lời giải.}\\
+    Quá trình va chạm có thể xem là bảo toàn năng xung lượng, tổng năng lượng sau va chạm bằng tổng năng lượng trước va chạm, tổng động lượng sau va chạm bằng tổng động lượng trước va chạm. Tức là lúc này, áp dụng bất biến năng-xung lượng, ta thu được:
+    \begin{equation} \label{eq5_GZK_limit}
+        \left( \Tilde{E} + \epsilon \right)^2 - \left( \sqrt{\Tilde{E}^2 - m_p^2} + \epsilon \right)^2 = \left( m_{\pi} + m_p \right)^2.
+    \end{equation}
+    Từ đây, khai triển các biểu thức, chuyển vế và triệt tiêu căn bậc hai, ta dễ dàng tìm được năng lượng $\Tilde{E}$ cần thiết để phản ứng xảy ra là
+    \begin{equation} \label{eq6_GZK_limit}
+        \Tilde{E} = \frac{m_{\pi} \left( m_{\pi} + 2 m_p \right)}{4\epsilon}+\frac{m_p^2 \epsilon}{m_{\pi} \left( m_{\pi} + 2 m_p \right)}\approx \frac{m_{\pi} \left( m_{\pi} + 2 m_p \right)}{4p_{\gamma}} \approx 1.07 \times 10^{14}\si{MeV}.
+    \end{equation}
+    \textit{Ngoài cách làm này, bạn có thể chọn biến giải là động lượng $\Tilde{p}$ của Proton trước phản ứng. Với cách chọn biến đó, bạn sẽ tránh được các bước khai triển bình phương của tổng và căn bậc 2, song bạn sẽ phải giải hệ phương trình bậc nhất tuyến tính. Nhìn chung, cả hai cách làm đều không quá khác biệt.}
+    \item Sau phản ứng, vận tốc hai hạt là như nhau nên tỷ số năng lượng của hai hạt bằng tỷ số khối lượng nghỉ của hai hạt, tức là
+    \begin{equation} \label{eq7_GZK_limit}
+        \dfrac{E_p}{E_{\pi}} = \dfrac{m_p}{m_{\pi}}.
+    \end{equation}
+    Kết hợp với phương trình bảo toàn năng lượng
+    \begin{equation} \label{eq8_GZK_limit}
+        E_p + E_{\pi} = \Tilde{E} + \epsilon,
+    \end{equation}
+    ta tìm được năng lượng của proton sau phản ứng là
+    \begin{equation} \label{eq9_GZK_limit}
+        E_p = \dfrac{m_p}{m_p+m_{\pi}} (E + \epsilon) \approx 0.93\times 10^{14}\si{MeV}.
+    \end{equation}
+    Ta nhận thấy các proton bị giảm tốc đáng kể sau quá trình phản ứng do đó giới hạn $E_i\sim 10^{20}\si{ eV} $ được coi như là giới hạn của mức năng lượng của tia vũ trụ.
+\end{enumerate}
+
+% \vspace{3mm}
+
+% \textbf{ \textit{Năng lượng tối thiểu của một hạt để xảy ra phản ứng hạt nhân ứng với trường hợp nào?}}
+
+% Xét va chạm của một hạt năng lượng $\Tilde{E}$ và động lượng $\Tilde{p}=\sqrt{\Tilde{E}^2 - \Tilde{m}^2}$ bay đến va chạm với một hệ hạt khác có năng lượng tổng cộng là $E_0$ và động lượng tổng cộng là $p_0$, vector động lượng tổng hợp này hợp với hướng của hạt ta đang khảo sát một góc $\theta$. Sản phẩm của phản ứng này là một hệ các hạt có khối lượng nghỉ lần lượt là $m_1, m_2,..., m_n$ và tổng của chúng là $M$.
+
+% Theo bất biến năng-xung lượng:
+% \begin{equation}
+%     \left( \Tilde{E} + E_0 \right)^2 - \left( \Tilde{p}^2 + p_0^2 + 2 p_0 \Tilde{p} \cos \theta \right) = E_{rest}^2 \ge  M^2,
+% \end{equation}
+% Trong đó, $E_{rest}^2$ là năng lượng của hệ trong hệ quy chiếu động lượng của hệ bằng 0. Từ đây, chi tiết các bước biến đổi như sau:
+% \begin{align*}
+%     &\left( \Tilde{E} + E_0 \right)^2 - \left( \Tilde{p}^2 + p_0^2 + 2 p_0 \Tilde{p} \cos \theta \right) \ge  M^2 \\
+%     \Rightarrow &\left( \Tilde{E}^2 + E_0^2 + 2 E_0 \Tilde{E} \right) - \left[ \left( \Tilde{E}^2 - \Tilde{m}^2 \right) + p_0^2 + 2 p_0 \sqrt{\Tilde{E}^2 - \Tilde{m}^2} \cos \theta \right] \ge  M^2 \\
+%     \Rightarrow & \sqrt{\Tilde{E}^2 - \Tilde{m}^2} \cos \theta \le - \dfrac{M^2 - \Tilde{m}^2 - E_0^2 +p_0^2}{2 p_0} + \dfrac{E_0}{p_0} \Tilde{E} \\
+%     % \Rightarrow & \left[ \left( \dfrac{E_0}{p_0} \right)^2 - \cos^2 \theta \right] \Tilde{E}^2 - 2 \left[ \left( \dfrac{E_0}{p_0} \right) \left( \dfrac{M^2 - \Tilde{m}^2 - E_0^2 +p_0^2}{2 p_0} \right) \right] \Tilde{E} + \left[ \left( \dfrac{M^2 - \Tilde{m}^2 - E_0^2 +p_0^2}{2 p_0} \right)^2 + \Tilde{m}^2 \cos \theta \right] \ge 0.
+%     \Rightarrow & a \Tilde{E}^2 + 2 b' \Tilde{E} + c \ge 0,
+% \end{align*}
+% Trong đó, 
+% \begin{align*}
+%     a &= \left( \dfrac{E_0}{p_0} \right)^2 - \cos^2 \theta, \\
+%     b' &= - \left( \dfrac{E_0}{p_0} \right) \left( \dfrac{M^2 - \Tilde{m}^2 - E_0^2 +p_0^2}{2 p_0} \right), \\
+%     c &= \left( \dfrac{M^2 - \Tilde{m}^2 - E_0^2 +p_0^2}{2 p_0} \right)^2 + \Tilde{m}^2 \cos \theta.
+% \end{align*}
+% Bỏ qua trường hợp năng lượng cần nhỏ hơn một giá trị vì trường hợp này vi phạm điều kiện trước khi bình phương 2 vế trong các biến đổi trên, ta thu được điều kiện:
+% \begin{equation}
+%     \Tilde{E} \ge \dfrac{ \left( \dfrac{E_0}{p_0} \right) \left( \dfrac{M^2 - \Tilde{m}^2 - E_0^2 +p_0^2}{2 p_0} \right) + \cos \theta \sqrt{ \left( \dfrac{M^2 - \Tilde{m}^2 - E_0^2 +p_0^2}{2 p_0} \right)^2 - \left( \dfrac{E_0}{p_0} \right)^2 \Tilde{m}^2 + \Tilde{m}^2 \cos^2 \theta } }{ \left( \dfrac{E_0}{p_0} \right)^2 - \cos^2 \theta }.
+% \end{equation}
+% Từ đây, ta có thể thấy năng lượng nhỏ nhất để phản ứng xảy ra là khi sau phản ứng, các hạt chuyển động như một hạt (để năng lượng nghỉ bằng $M$) và tổng hợp động lượng ban đầu của nhóm hạt có hướng trùng với hướng của hạt tới ($\theta=0$).
+
+\textbf{Biểu điểm}
+\begin{center}
+\begin{tabular}{|>{\centering\arraybackslash}m{1cm}|>{\raggedright\arraybackslash}m{14cm}| >{\centering\arraybackslash}m{1cm}|}
+    \hline
+    \textbf{Phần} & \textbf{Nội dung} & \textbf{Điểm} \\
+    \hline
+    \textbf{1} & Viết biểu thức phân bố Bose-Einstein trong không gian 3 chiều (\ref{eq1_GZK_limit}) & $0.50$ \\
+    \cline{2-3}
+    & Xác định mật độ năng lượng trung bình của photon (\ref{eq2_GZK_limit}) & $1.00$ \\
+    \cline{2-3}
+    & Xác định mật độ hạt trung bình của photon (\ref{eq3_GZK_limit}) & $1.00$ \\
+    \cline{2-3}
+    & Tính năng lượng trung bình của một photon & $0.50$ \\
+    \hline
+    \textbf{2} & Xác định mối liên hệ về năng xung lượng đối với từng hạt & $1.00$ \\
+    \cline{2-3}
+    & Phát biểu về bảo toàn năng lượng và động lượng & $1.00$ \\
+    \cline{2-3}
+    & Viết phương trình bất biến năng-xung lượng (\ref{eq5_GZK_limit}) & $1.00$ \\
+    \cline{2-3}
+    & Tính năng lượng cần thiết của proton để xảy ra va chạm (\ref{eq6_GZK_limit}) & $1.00$ \\
+    \hline
+    \textbf{3} & Tính năng lượng proton sau va chạm (\ref{eq9_GZK_limit}) & $1.00$ \\
+    \hline
+\end{tabular}
+\end{center}
+
+%% Reference %%
+\bibliographystyle{plain}
+\begin{thebibliography}{}
+\bibitem{CosmicRays} \href{https://apc.u-paris.fr/~semikoz/MEPHI_2019_seminar1_Cosmic_Rays.pdf}{https://apc.u-paris.fr/~semikoz/MEPHI\_2019\_seminar1\_Cosmic\_Rays.pdf}
+\bibitem{GZKcutoff} \href{https://www.hep.shef.ac.uk/edaw/PHY206/Site/2012_course_files/phy206rlec5.pdf}{https://www.hep.shef.ac.uk/edaw/PHY206/Site/2012\_course\_files/phy206rlec5.pdf}
+\end{thebibliography}

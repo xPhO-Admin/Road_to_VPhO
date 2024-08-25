@@ -1,0 +1,57 @@
+\textbf{Ellipsoid dẫn}
+
+\begin{enumerate}
+    \item Một dây thẳng tích điện đều có điện tích $Q$ dài $2L$. Chọn hệ tọa độ trụ như hình 1.
+    \begin{enumerate}[label=\textbf{\alph*,}]\itemsep0em
+    \item Tính điện thế dây gây ra tại một điểm bất kỳ trong không gian không nằm trên sợi dây.
+    \item Viết phương trình mặt đẳng thế có điện thế $\phi$ gây ra bởi dây.
+    \end{enumerate}
+    \item Một vật dẫn hình khối tạo bởi việc quay hình ellipse có bán trục lớn là $a$ và bán trục nhỏ là $b$ quanh trục chứa bán trục lớn của nó (hình 2).
+    \begin{enumerate}[label=\textbf{\alph*,}]\itemsep0em
+    \item Hãy tìm điện dung của khối ellipsoid tròn xoay này.
+    \item Tìm mật độ điện mặt $\sigma$ của khối ellipsoid tròn xoay khi nó được tích điện tích $Q$.
+    \end{enumerate}
+\end{enumerate}
+
+\begin{center}
+\begin{minipage}{0.4\textwidth}
+\begin{tikzpicture}[scale=1.2]
+    \draw[fill=lightgray] (-2,-0.03) rectangle (2,0.03);
+    \draw[-Stealth] (0,0) to (3,0);
+    \draw[-Stealth] (0,0) to (0,2);
+    \filldraw[color=black, fill=black, ultra thick] (0,0) circle (0.05);
+    \draw (-0.2,0) node[below]{$O$} (0,1.8) node[left]{$\rho$} (2.8,0) node[below]{$z$};
+    \draw[dashed] 
+    (2,0) to (2,-0.5)
+    (-2,0) to (-2,-0.5);
+    \draw[Stealth-Stealth] (-2,-0.5) to (2,-0.5);
+    \draw (0,-0.5) node[below]{$2L$} (-1.5,0) node[above]{$Q$};
+    \filldraw[color=black, fill=black, ultra thick] (1,1.6) circle (0.05);
+    \draw (1,1.6) node[right]{$(\rho,z)$};
+    \draw (0,-2.2) node{\textbf{(a)}};
+\end{tikzpicture}
+\end{minipage}
+\begin{minipage}{0.4\textwidth}
+\begin{tikzpicture}[scale=1.2]
+    \draw[shading=axis, left color=darkgray, right color=lightgray!80, shading angle=135, anchor=north] (0,0) ellipse (2.5 and 1);
+    \draw[-Stealth] (0,0) to (3,0);
+    \draw[-Stealth] (0,0) to (0,2);
+    \filldraw[color=black, fill=black, ultra thick] (0,0) circle (0.05);
+    \draw (-0.2,0) node[below]{$O$} (0,1.8) node[left]{$\rho$} (2.8,0) node[below]{$z$};
+    \draw[dashed] 
+    (-2.5,0) to (-2.5,-1.5)
+    (2.5,0) to (2.5,-1.5)
+    (0,1) to (-3,1)
+    (0,-1) to (-3,-1);
+    \draw[Stealth-Stealth] (-2.5,-1.5) to (2.5,-1.5);
+    \draw[Stealth-Stealth] (-3,1) to (-3,-1);
+    \draw (-3,0) node[left]{$2b$} (0,-1.5) node[below]{$2a$};
+    \draw (0,-2.2) node{\textbf{(b)}};
+\end{tikzpicture}
+\end{minipage} \\
+Hình 1: \textbf{(a)} Thanh tích điện đều trong hệ tọa độ trụ. \textbf{(b)} Vật dẫn ellipsoid.
+\end{center}
+
+\begin{flushright}
+    (Biên soạn bởi Log và Pềct)
+\end{flushright}

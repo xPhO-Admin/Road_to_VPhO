@@ -1,0 +1,174 @@
+1. Ta có thể vẽ lại mạch tương đương như sau
+\begin{center}
+\begin{circuitikz}[american]\draw
+    (0,-3) node[ground] {} to [R,l_={$R_\text{in}$}] ++(0,3) to [R,l_={$R_1$}] ++(-3,0) to [V,l_={$v_s$}] ++(0,-3) to [short,-o]++(10,0)
+    (-0.5,0) node[above right]{$\text{I}$} to [short]++ (0,1) to [R,l={$R_f$},right]++(6.5,0) to [short]++(0,-1) to [R,l_={$R_\text{out}$}] (3.5,0)
+    (6,0) node[above right]{$\text{O}$} to [short,-o]++(1,0)  node[right,yshift=-1.6cm]{$v_\text{O}$}
+    (3.5,0) to [cV,l=$A(v_2-v_1)$] ++ (0,-3)
+    
+;\end{circuitikz}
+\end{center}
+Tại nút I, theo KCL ta có
+\begin{equation}
+    \dfrac{v_s-v_\text{I}}{R_1}= \dfrac{v_\text{I}}{R_\text{in}}+\dfrac{v_\text{I}-v_\text{O}}{R_f} .
+    \label{kcli}
+\end{equation}
+Tại nút O, theo KCL ta có
+\begin{equation}
+    \dfrac{v_\text{I}-v_\text{O}}{R_f}=\dfrac{v_\text{O}-A(v_2-v_1)}{R_\text{out}}
+    \label{kclo} .
+\end{equation}
+Do đầu vào dương của OPAMP nối đất nên $v_2=0$.
+Giải hệ phương trình \eqref{kcli} và \eqref{kclo} ta được 
+
+\begin{equation}
+    \dfrac{v_\text{O}}{v_s} = -\dfrac{AR_fR_\text{in}-R_\text{in}R_\text{out}  }{R_1R_f+R_1R_\text{in}+AR_1R_\text{in}+R_fR_\text{in}+R_1R_\text{out}+R_\text{in}R_\text{out}}
+    \approx -2 .
+\end{equation}
+2. Áp dụng các thông số của OPAMP lý tưởng $R_\text{in} \to \infty$, $R_\text{out}\to 0$ và $A\to \infty$, ta được
+\begin{equation}
+    \dfrac{v_\text{o}}{v_s}=-\dfrac{R_f}{R_1} .
+\end{equation}
+
+3. Phân tích mạch tương tự như ý 1, ta được
+\begin{equation}
+    v_\text{sum}=-\left(\dfrac{R_f}{R_1}v_1+\dfrac{R_f}{R_2}v_2+\dfrac{R_f}{R_3}v_3\right) ,
+\end{equation}
+\begin{equation}
+    v_\text{int}=-\dfrac{1}{RC}\int  v_s dt .
+\end{equation}
+\begin{equation}
+    v_\text{ni}= \left( 1+\dfrac{R_f}{R} \right) v_s
+\end{equation}
+4. Bằng cách kết hợp 2 mạch tích phân và 1 mạch đảo. Ta được một cách mắc mạch như sau
+
+\begin{center}
+\begin{circuitikz}[american,scale=0.8,font=\footnotesize]
+\ctikzset{bipoles/length=11mm}\draw
+(0,0) node[op amp] (opamp1) {}
+%Positive input connect to ground
+ (opamp1.+) to [short] ++ (-0.5,0) to [short] ++(0,-0.5) node[ground]{} 
+ %Negative input 1 connects with external source
+ (opamp1.-) to [short] ++(-6,0) to[R,l_={$R_1$}] ++(0,-2)to [V, l_=$-d(\si{V})$] ++(0,-2) to node[ground]{} ++(0,0)
+ %Negative input 3 connects with d/dt v_0
+ (opamp1.-) to [short] ++(-3,0) to[R,l_={$R_3$}] ++(0,-3)to  [short] ++(5.35,0) to (opamp1.out)
+ %Negative input 2 connects with v_0
+(opamp1.-) to [short] ++(-4.5,0) to[R,l_={$R_2$}] ++(0,-6)to  [short] ++(15.3,0) 
+ 
+ %out=d\dt v_0
+ (opamp1.out) to [short] ++(0.62,0) node[above] {$\dfrac{dx}{dt}$}
+ %negative feedback
+ (opamp1.-) to [short] ++(0,1) to [C,l={$C_1$}] ++(2.37,0) to (opamp1.out)
+ %initial condition for v'_0
+ (opamp1.-) to [short] ++(0,3) to [V,invert,l=e\si{(V)}]++(1.2,0) to [opening switch,l={}] ++(1.2,0) to (opamp1.out)
+ %Second integrator
+ (6,-0.5) node[op amp] (opamp2) {}
+ (opamp1.out) to [R,l=$R_4$] (opamp2.-)
+ %positive input to ground
+ (opamp2.+) to [short] ++ (-0.5,0) to [short] ++(0,-0.5) node[ground]{}
+ %
+ (opamp2.-) to [short] ++(0,1) to [C,l={$C_2$}] ++(2.37,0) to (opamp2.out)
+ %
+ (opamp2.-) to [short] ++(0,3) to [V,l=f\si{(V)}]++(1.2,0) to [opening switch,l={}] ++(1.2,0) to (opamp2.out)
+ %
+ (8.35,-4) node[op amp] (opamp3){}
+ (opamp2.out) to [R,l=$R_5$] (opamp3.-)
+ (opamp2.out) node[above right]{$-x$} 
+ %
+ (opamp2.out) to [short]++(2.4,0) to [R ,l={$R_6$}] (opamp3.out) to [short,-*]++(0.3,0) node[right]{$x$}
+ (opamp3.out) to [short] ++(0,-1.5)
+ (opamp3.+) to ++(-0.5,0) node[ground]{}
+ 
+;\end{circuitikz}
+\end{center}
+Giải thích mạch
+
+Xét phương trình vi phân ban đầu
+\begin{equation}
+    \begin{split}
+        &a\dfrac{d^2x}{dt^2}+b\dfrac{dx}{dt}+cx=d\\
+        &\Longrightarrow \dfrac{d^2x}{dt^2}=\dfrac{1}{a}\left(d-cx-b\dfrac{dx}{dt}\right)\\
+        &\Longrightarrow \dfrac{dx}{dt}=- \int_0^{t}\dfrac{1}{a}\left(-d+cx+b\dfrac{dx}{dt}\right) + \dot{x}(0) .
+    \end{split}
+\end{equation}
+
+Từ phương trình trên, để lấy được điện áp $\dot{x}(t)$, ta cần một mạch tích phân với đầu vào điện thế $-d$, điện thế $x(t)$ và điện thế $\dot{x}(t)$, cùng với một điện thế $\dot{x}(0)=e$ đặt vào đầu ra của OPAMP thứ nhất.
+
+Tiếp theo, để có được $x(t)$
+
+\begin{equation}
+    -x(t)=+\int_0^t \dot{x}(t)dt - x(0) .
+\end{equation}
+
+Do đó ta dùng một mạch tích phân nữa với đầu vào là điện thế $\dot{x}(t)$, ở đầu ra của mạch này, ta được điện thế $-x(t)$. Do $x(0)=f(\si{V})$ nên ta cần đặt một điện thế có giá trị $-f(\si{V})$ ở đầu ra của OPAMP thứ 2.
+
+Cuối cùng, ta dùng một mạch đảo để đổi dấu điện áp đầu vào $-x(t)$.
+
+Từ các phương trình, ta cần phải chọn các linh kiện thoả mãn
+\begin{equation}
+        R_1C_1=a, R_2C_1=\dfrac{a}{c}, R_3C_1=\dfrac{a}{b}, R_4C_2=1, R_6=R_5 .
+\end{equation}
+5. Đây là một cách mắc mạch phổ biến để tạo ra một "điện trở âm":
+\begin{center}
+\begin{circuitikz}[american]\draw
+(0,0) node[op amp] (opamp) {}
+ (opamp.+) to [short] ++ (-1.5,0) to [V,l=$v_\text{in}$,i<=$i_\text{in}$] ++(0,-2) node[ground]{} 
+ (opamp.-) to [R,l_={$R_1$},i>={$i_1$}] ++(-3,0) to [short] ++(0,-3) to [short]++(1.5,0) 
+ (opamp.-) to [short] ++(0,1) to [R,l={$R_f$},i<=$i_f$] ++(2.4,0) to  (opamp.out) node[right]{O}
+ (opamp.-) node[above left]{N}
+ (opamp.+) node[above]{I}
+ (opamp.+) to [short] ++(0,-1) to [R,l=$R_2$,i>={$i_2$}] ++(2.39,0) to [short] (opamp.out)
+ ;\end{circuitikz}
+\end{center}
+Do OPAMP lý tưởng nên $v_\text{I}=v_\text{N}=v_\text{in}$.
+
+Tại N ta có
+\begin{equation}
+    i_f=i_1 \Longrightarrow \dfrac{v_\text{O}-v_\text{in}}{R_f}=\dfrac{v_\text{in}}{R_1}\Longrightarrow v_\text{O}=v_\text{in} (1+\dfrac{R_f}{R_1}) .
+\end{equation}
+
+Tại I ta có:
+\begin{equation}
+    i_\text{in}=i_2=\dfrac{v_\text{in}-v_\text{O}}{R_2} .
+\end{equation}
+
+Từ 2 phương trình trên ta được
+\begin{equation}
+    R_\text{in}=\dfrac{v_\text{in}}{i_\text{in}}=-\dfrac{R_1R_2}{R_f} .
+\end{equation}
+\textbf{Biểu điểm}
+\begin{center}
+\begin{tabular}{|>{\centering\arraybackslash}m{1cm}|>{\raggedright\arraybackslash}m{14cm}| >{\centering\arraybackslash}m{1cm}|}
+    \hline
+    \textbf{Phần} & \textbf{Nội dung} & \textbf{Điểm} \\
+    \hline
+    \textbf{1} & Vẽ được mạch tương đương & $0.50$ \\
+    \cline{2-3}
+    & Viết các phương trình Krichhoff và giải ra được độ lợi & $0.25$ \\
+    \hline
+    \textbf{2} & Dẫn ra được công thức độ lợi cho OPAMP lý tưởng & $0.25$ \\
+    \hline
+    \textbf{3} & Giải được mạch khuếch đại không đảo & $0.25$ \\
+    \cline{2-3}
+    & Giải được mạch tích phân & $0.50$ \\
+    \cline{2-3}
+    & Giải được mạch cộng & $0.25$ \\
+    \hline
+    \textbf{4} & Vẽ được mạch để giải phương trình vi phân & $0.50$ \\
+    \cline{2-3}
+    & Giải thích và biện luận đúng các tham số của mạch  & $0.50$ \\
+    \hline
+    \textbf{5}
+    & Vẽ được mạch điện trở âm  & $0.50$ \\
+    \cline{2-3}
+    & Biện luận và tính giá trị của điện trở & $0.50$ \\ 
+    
+    \hline
+\end{tabular}
+\end{center}
+\bibliographystyle{plain}
+\begin{thebibliography}{}
+\bibitem[]{YKLim} Yong-Kyu Lim, Problems and Solutions on Electromagnetism 
+\bibitem[]{floyd1992electronic} T.L. Floyd. Electronic Devices. Merrill’s international series in electrical and electronics technology.
+Merrill, 1992.
+\end{thebibliography}

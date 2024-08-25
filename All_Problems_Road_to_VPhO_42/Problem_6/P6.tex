@@ -1,0 +1,74 @@
+Một chiếc khung có bao gồm 5 thanh cứng đồng chất khối lượng $m$ vài có chiều dài $l$ được nối với sàn và nối với nhau bằng các chốt tạo thành lục giác với các cạnh bằng nhau và nằm đối xứng 2 bên (như hình vẽ). Xem rằng không có các ma sát tại các chốt nối. Gọi góc $\alpha$ là góc tạo bởi một thanh ở bên với mặt phẳng nằm ngang. Gia tốc trọng trường là $g$.
+
+\vspace{-3mm}
+\begin{center}
+\begin{minipage}{0.4\textwidth}
+\hspace{0.15\textwidth}
+    \begin{tikzpicture}
+        %Sàn
+        \draw (-2.5,0)--(2.5,0);
+        \multiput(-2.5,0)(0.1,0){51}{\line(1,-3){0.12}}
+        %Thanh
+        \draw[very thick] (-1,0)--(-2,1.7)--(-1,3.4)--(1,3.4)--(2,1.7)--(1,0);
+        %Khớp nối
+        \filldraw[color=black, fill=ColorOr, ultra thick](-1,0) circle (0.1);
+        \filldraw[color=black, fill=ColorOr, ultra thick](1,0) circle (0.1);
+        \filldraw[color=black, fill=ColorOr, ultra thick](-2,1.7) circle (0.1);
+        \filldraw[color=black, fill=ColorOr, ultra thick](2,1.7) circle (0.1);
+        \filldraw[color=black, fill=ColorOr, ultra thick](-1,3.4) circle (0.1);
+        \filldraw[color=black, fill=ColorOr, ultra thick](1,3.4) circle (0.1);
+        %Ký hiệu
+        \draw[->] (2.2,3.3)--(2.2,2.3);
+        \draw (2.3,2.8) node[right]{$\vec{g}$};
+        \draw (-1.2,0.3) arc (120:180:0.3);
+        \draw (-1.8,0.2) node[right]{$\alpha$};
+        \draw[thick,->] (0,3.4)--(0,4.4);
+        \draw (0.1,3.9) node[right]{$\vec{F}$};
+        \filldraw[color=white, fill=white, ultra thick](0,4.3) circle (0.1);
+        \draw[<->] (-2.3,0)--(-2.3,3.4);
+        \draw (-2.3,1.7) node[left]{$x$};
+        \draw[thick,->] (0,3.4)--(0,4.4);
+        \draw (0.1,3.9) node[right]{$\vec{F}$};
+    \end{tikzpicture}
+\end{minipage}    
+\hspace{0.1\textwidth}
+\begin{minipage}{0.4\textwidth}
+    \begin{tikzpicture}
+        %Sàn
+        \draw (-2.5,0)--(2.5,0);
+        \multiput(-2.5,0)(0.1,0){51}{\line(1,-3){0.12}}
+        %Thanh
+        \draw[very thick] (-1,0)--(-2,1.7)--(-1,3.4)--(1,3.4)--(2,1.7)--(1,0);
+        %Khớp nối
+        \filldraw[color=black, fill=ColorOr, ultra thick](-1,0) circle (0.1);
+        \filldraw[color=black, fill=ColorOr, ultra thick](1,0) circle (0.1);
+        \filldraw[color=black, fill=ColorOr, ultra thick](-2,1.7) circle (0.1);
+        \filldraw[color=black, fill=ColorOr, ultra thick](2,1.7) circle (0.1);
+        \filldraw[color=black, fill=ColorOr, ultra thick](-1,3.4) circle (0.1);
+        \filldraw[color=black, fill=ColorOr, ultra thick](1,3.4) circle (0.1);
+        %Ký hiệu
+        \draw (-1.2,0.3) arc (120:180:0.3);
+        \draw (-2.0,0.2) node[right]{$\alpha$};
+        \filldraw[color=black, fill=gray, ultra thick](0,4.3) circle (0.1);
+        \draw[thick,->] (0,4.3)--(0,3.5);
+        \draw (0.1,4) node[right]{$\vec{v}_0$};
+    \end{tikzpicture}
+\end{minipage}    
+\end{center}
+
+\noindent \textbf{1.} Ta đặt vào tâm của thanh ở giữa một lực $F$ theo phương thẳng đừng hướng từ dưới lên trên. Xác định gia tốc góc các thanh $\ddot{\alpha}$ ở bên tại thời điểm cơ hệ đang đứng yên tạm thời ($\dot{\alpha}=0$) theo $m$, $g$, $F$ và $\alpha$. 
+
+\noindent \textbf{2.} Xét trường hợp lực $F$ đặt vào giữa thanh ở giữa theo phương từ dưới lên trên và độ lớn có dạng $F=k(x_0-x)$ với $x$ là khoảng cách từ sàn tới độ cao của thanh ở giữa, $k$ và $x_0$ là các hằng số. Tại vị trí góc $\alpha=\alpha_0$, hệ khung đạt trạng thái cân bằng bền.
+\begin{enumerate}[label=\textbf{\alph*,}]\itemsep0em
+    \item Tìm hằng số $x_0$ theo $l$, $m$, $g$, $k$ và $\alpha_0$.
+    \item Tính chu kỳ dao động nhỏ của hệ quanh vị trí cân bằng bền theo $l$, $m$, $g$, $k$ và $\alpha_0$.
+\end{enumerate}
+\noindent \textbf{3.} Bỏ qua lực $F$ đặt vào hệ ở các phần trước. Tại thời điểm $\alpha=\alpha_1$ và $\dot{\alpha}=0$, một vật nhỏ có khối lượng $M$ có vận tốc $v_0$ theo phương thẳng đứng chiều từ trên xuống dưới đập vào tâm thanh ở giữa. Xem rằng va chạm này là va chạm hoàn toàn đàn hồi và thời gian va chạm vô cùng ngắn sao cho tọa độ của các vật thay đổi không đáng kể trong quá trình va chạm.
+\begin{enumerate}[label=\textbf{\alph*,}]\itemsep0em
+    \item Tính vận tốc góc $\dot{\alpha}$ của các thanh ở hai bên ngay sau va chạm.
+    \item Tính vận tốc $v$ của vật nhỏ ngay sau va chạm.
+\end{enumerate}
+
+\begin{flushright}
+    (Biên soạn bởi Log)
+\end{flushright}

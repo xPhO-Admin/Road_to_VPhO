@@ -1,0 +1,107 @@
+%Bổ sung lệnh vẽ lò xo
+\usetikzlibrary{patterns,snakes}
+\tikzstyle{spring}=[line width=0.8,blue!7!black!80,snake=coil,segment amplitude=5,segment length=5,line cap=round]
+
+\textbf{Khối lượng âm...}
+
+% Vào đầu thế kỷ XXI, một số nghiên cứu mới về một loại vật liệu nhân tạo được tạo bởi các cấu trúc tuần hoàn như những mạng tinh thể được gọi là \textit{metamaterial} đã mang tới một số tính chất kỳ lạ mà vật liệu tự nhiên không thể có được. Trong đó, ở lĩnh vực cơ học, loại siêu vật liệu này cho phép ta thu được "khối lượng hiệu dụng âm", "hệ số Poisson âm", "suất Young âm",... tạo ra nhiều tiềm năng ứng dụng cho các phòng cách âm hoàn hảo, siêu thấu kính,... Trong bài toán này, ta sẽ khảo sát mô hình "khối lượng trong khối lượng" (mass-in-mass model) và hiện tượng khối lượng âm của loại vật liệu này.
+Ở thế giới bình thường của chúng ta, khối lượng âm là điều không tưởng. Trong một số mô hình truyền sóng cơ học, khối lượng hiệu dụng của các thành phần trong mạng tinh thể nhân tạo có thể âm và đưa đến những tính chất thú vị. Một trong những mô hình đơn giản hóa và tiêu biểu của khối lượng hiệu dụng âm là mô hình "khối lượng trong khối lượng" (mass-in-mass model).
+
+\begin{enumerate}
+\item \textbf{Mô hình mạng nguyên tử tinh thể và sóng đàn hồi.} \\
+Xét một mạng tinh thể một chiều gồm các hạt khối lượng $m$ đặt cách đều nhau một khoảng $L$ như hình \ref{fig1_negative_mass}. Xem như mỗi hạt "nguyên tử" trong mạng chỉ tương tác với hai hạt liền kề nó và tương tác này tương đương với một lò xo độ cứng $k$, độ dài tự nhiên $L$. Với hạt thứ $n$ trong mạng tinh thể, vị trí cân bằng của hạt này là tại $x_n=nL$. Ta ký hiệu li độ của hạt thứ $n$ này so với vị trí cân bằng là $u_n$.
+
+\begin{center}
+\begin{tikzpicture}
+    \draw[spring] (0.3,0)--++(1.4,0);
+    \draw[spring] (2.3,0)--++(1.4,0);
+    \draw[spring] (4.3,0)--++(1.4,0);
+    \draw[spring] (6.3,0)--++(1.4,0);
+    \draw[spring] (8.3,0)--++(1.4,0);
+    \draw[spring] (10.3,0)--++(1.4,0);
+    \draw[dashed] (-0.3,0)--(0.3,0) (11.7,0)--(12.3,0);
+    \filldraw[color=black, fill=gray, ultra thick](2,0) circle (0.3);
+    \filldraw[color=black, fill=gray, ultra thick](4,0) circle (0.3);
+    \filldraw[color=black, fill=gray, ultra thick](6,0) circle (0.3);
+    \filldraw[color=black, fill=gray, ultra thick](8,0) circle (0.3);
+    \filldraw[color=black, fill=gray, ultra thick](10,0) circle (0.3);
+    % \draw (2,0.5) node[above]{$n-2$} (4,0.5) node[above]{$n-1$} (6,0.5) node[above]{$n$} (8,0.5) node[above]{$n+1$} (10,0.5) node[above]{$n+2$};
+    \draw (2,-1) node[below]{$(n-2)L$} (4,-1) node[below]{$(n-1)L$} (6,-1) node[below]{$nL$} (8,-1) node[below]{$(n+1)L$} (10,-1) node[below]{$(n+2)L$};
+    \draw[-Stealth] (-1,-1)--(13,-1);
+    \draw (2,-1.1)--(2,-0.9) (4,-1.1)--(4,-0.9) (6,-1.1)--(6,-0.9) (8,-1.1)--(8,-0.9) (10,-1.1)--(10,-0.9);
+    \filldraw[color=black, fill=black, ultra thick](-0.5,-1) circle (0.05);
+    \draw (-0.5,-0.9) node[above]{$O$} (12.5,-0.9) node[above]{$x$};
+    \draw (2,0.8)--(2,1.2) (4,0.8)--(4,1.2) (6,0.8)--(6,1.2) (8,0.8)--(8,1.2) (10,0.8)--(10,1.2);
+    \draw[->] (2,1)--(2.7,1);
+    \draw[->] (4,1)--(4.7,1);
+    \draw[->] (6,1)--(6.7,1);
+    \draw[->] (8,1)--(8.7,1);
+    \draw[->] (10,1)--(10.7,1);
+    \draw (2.4,1) node[above]{$u_{n-2}$} (4.4,1) node[above]{$u_{n-1}$} (6.4,1) node[above]{$u_n$} (8.4,1) node[above]{$u_{n+1}$} (10.4,1) node[above]{$u_{n+2}$};
+\end{tikzpicture} \\
+\vspace{3mm}
+Hình 1: Mô hình mạng tinh thể.
+\label{fig1_negative_mass}
+\end{center}
+
+    \begin{enumerate}[label=\textbf{\alph*,}]\itemsep0em
+        \item Chứng minh rằng, li độ và gia tốc của các hạt trong mạng tinh thể tuân theo phương trình sai phân sau:
+        $$ \ddot{u}_n = -\dfrac{k}{m} \left( 2 u_n - u_{n+1} - u_{n-1} \right).$$
+        \item Với một sóng kích thích có tần số cương bức $\omega$ tác động lên mạng tinh thể, chọn gốc tọa độ $n=0$ và gốc thời gian $t=0$ phù hợp, ta có thể tìm nghiệm của hệ phương trình sai phân trên có thể được tìm dưới dạng
+        $$ u_n = A \sin \left( \dfrac{\omega}{v} x_n \right) \cos ( \omega t ),$$
+        trong đó $A$ là biên độ và là một hằng số, $v$ là vận tốc truyền sóng trong mạng tinh thể. Tìm vận tốc truyền sóng $v$ theo $\omega$, $m$, $k$ và $L$ trong mô hình này.
+        \item Chỉ ra rằng: Với $L$ vô cùng bé so với các đại lượng khác cùng thứ nguyên, môi trường truyền sóng gần như liên tục, vận tốc truyền sóng sẽ không phụ thuộc vào $\omega$. Xem rằng trung bình mỗi mạng tinh thể dọc trong vật liệu được mô tả như trên nằm trong một vùng diện tích $\Delta S$ trên mặt cắt ngang. Tìm vận tốc truyền sóng này theo khối lượng riêng $\rho$ và suất Young $E$ của vật liệu.
+    \end{enumerate}
+\item \textbf{Mô hình "khối lượng trong khối lượng" và hiện tượng "khối lượng âm"} \\
+Để cải tiến mô hình mạng tinh thể và thu được những tính chất thú vị, ta thay thế "hạt nguyên tử" trên thành một hạt kiểu mới, gồm một hạt khối lượng $m_1$ nối với một hạt $m_2$ (với $m_2<m_1$) bằng một lò xo có độ cứng $k_2$ như hình \ref{fig2_negative_mass}. 
+
+\begin{center}
+\begin{minipage}{0.4\textwidth}
+\centering
+\begin{tikzpicture}
+    \filldraw[color=black, fill=gray, ultra thick](0,0) circle (1.5);
+    \filldraw[color=black, fill=white, ultra thick](0,0) circle (1.3);
+    \draw[spring] (-1.3,0)--++(1.8,0);
+    \filldraw[color=black, fill=gray, ultra thick](0.7,0) circle (0.2);
+    \draw (-0.3,0.2) node[above]{$k_2$} (0.7,0.2) node[above]{$m_2$} (-1.3,1.2) node[above]{$m_1$};
+    \draw[thick,-Stealth] (-2,-2.5)--(2,-2.5);
+    \draw (0,-2.5) node[above]{$F=F_0 \cos (\omega t)$};
+\end{tikzpicture}
+\end{minipage}
+% \hspace{0.1\textwidth}
+\begin{minipage}{0.4\textwidth}
+\centering
+\begin{tikzpicture}
+    \filldraw[color=black, fill=gray, ultra thick](0,0) circle (1.5);
+    % \filldraw[color=black, fill=white, ultra thick](0,0) circle (1.3);
+    % \draw[spring] (-1.3,0)--++(1.8,0);
+    % \filldraw[color=black, fill=gray, ultra thick](0.7,0) circle (0.2);
+    % \draw (-0.3,0.2) node[above]{$k_2$} (0.7,0.2) node[above]{$m_2$} (-1.3,1.2) node[above]{$m_1$};
+    \draw (-1.3,1.2) node[above]{$m_{eff}$};
+    \draw[thick,-Stealth] (-2,-2.5)--(2,-2.5);
+    \draw (0,-2.5) node[above]{$F=F_0 \cos (\omega t)$};
+\end{tikzpicture}
+\end{minipage}
+\\
+\vspace{5mm}
+Hình 2: Một cơ hệ (hình bên trái) được tương đương như một hạt "nguyên tử" mới trong mạng tinh thể (hình bên phải).
+\label{fig2_negative_mass}
+\end{center}
+
+Khảo sát độc lập một hạt mới này, ta xem lực mà các hạt khác xung quanh tác dụng lên hạt khối lượng $m_1$ như một lực cưỡng bức điều hòa $F$ với tần số cưỡng bức $\omega$. Do chịu ảnh hưởng bởi lực tác động trên, hạt $m_1$ bị cưỡng bức và dao động dưới tần số $\omega$, li độ của $m_1$ khi đó có thể viết dưới dạng
+$$u = -\dfrac{F}{m_{eff} \omega^2}.$$
+Với $m_{eff}$ được gọi là khối lượng hiệu dụng của cơ hệ.
+Xác định khối lượng hiệu dụng của hạt mới $m_{eff}$ theo $m_1$, $m_2$, $k_2$ và $\omega$.
+Với những giá trị nào của tần số $\omega$ thì khối lượng hiệu dụng $m_{eff}$ âm? 
+
+    % \begin{enumerate}[label=\textbf{\alph*,}]\itemsep0em
+    %     \item Xác định khối lượng hiệu dụng của hạt mới $m_{eff}$ theo $m_1$, $m_2$, $\omega_0$ và $\omega$.
+    %     \item Vẽ phác đồ thị $m_{eff}$ theo tần số kích thích $\omega$. Với những giá trị nào của tần số $\omega$ thì khối lượng hiệu dụng âm? 
+    % \end{enumerate}
+\end{enumerate}
+
+\textit{Ghi chú: Trong bài toán này, ta xem như các lực ma sát và các tổn thất năng lượng là rất nhỏ để đưa vào tính toán, song nó vẫn tồn tại để các dao động tự do nhanh chóng bị tắt.}
+
+\begin{flushright}
+    (Biên soạn bởi Log và $\tau \hbar \alpha \chi$)
+\end{flushright}

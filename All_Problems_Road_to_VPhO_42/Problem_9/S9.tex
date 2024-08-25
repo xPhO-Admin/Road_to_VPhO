@@ -1,0 +1,94 @@
+\textbf{a.} Ta nhận thấy rằng cường độ của các tia ló liên tiếp nhau hơn kém nhau $R^2$ lần, do đó biên độ sóng hơn kém nhau $R$ lần.
+
+Hiệu quang trình của hai tia ló liên tiếp là: $\displaystyle \Delta = 2e \sqrt{n^2 - \sin^2 \theta}$.
+
+Từ đó ta tìm được độ lệch pha của hai tia ló liên tiếp là: $\displaystyle \delta = \frac{2\pi}{\lambda} \delta = \frac{4 \pi e}{\lambda} \sqrt{n^2 - \sin^2 \theta}$.
+
+Dao động tổng hợp của sóng ánh sáng tại vị trí $\theta$ trên màn E là:
+\begin{align}
+    A(r,t) &= A_0 \cos \left(\omega t - \frac{2\pi}{\lambda} r\right) + A_0 R\cos \left(\omega t - \frac{2\pi}{\lambda} r- \delta\right)\\
+    &+ A_0 R^2 \cos \left(\omega t - \frac{2\pi}{\lambda} r- 2\delta\right) + \ldots\\ 
+    &= \sum_{n=0}^\infty A_0 R^n \cos \left(\omega t - \frac{2\pi}{\lambda} r- n\delta\right). \label{41}
+\end{align}
+
+Tách hàm lượng giác thành hai phần tử thời gian và độ lệch pha, ta có
+\begin{align}
+    A(r,t) &= A_0 \left[\cos \left(\omega t - \frac{2\pi}{\lambda} r\right) \sum_{n=0}^\infty R^n \cos (n\delta) + \sin \left(\omega t - \frac{2\pi}{\lambda} r\right) \sum_{n=0}^\infty R^n \sin(n\delta) \right]\\
+    &= \frac{A_0}{1 + R^2 - 2R \cos \delta} \left[ \cos \left(\omega t - \frac{2\pi}{\lambda} r\right) (1 - R\cos \delta) + R\sin \left(\omega t - \frac{2\pi}{\lambda} r\right) \sin \delta\right]. \label{42}
+\end{align}
+
+Cường độ ánh sáng tại vị trí cần tỉ lệ thuận với giá trị trung bình của bình phương biên độ sóng, tức là
+\begin{align}
+    I(\theta) &\propto \langle A(r,t)^2 \rangle =  \frac{A_0^2}{2} \frac{1}{1 + R^2 - 2R\cos \delta} \label{43}\\
+    &\propto \frac{A_0^2}{2} \frac{1}{1 + R^2 -2R \left(1 - 2 \sin^2 \dfrac{\delta}{2} \right)}\\
+    &\propto \frac{I(0)}{1 + \dfrac{4R}{(1-R)^2} \sin^2 \dfrac{\delta}{2}}.\label{44}
+\end{align}
+
+\textit{*Cách giải khác:} Ta có thể sử dụng phương pháp số phức trong bài toán này, cụ thể là ta đặt biên độ sóng từ tia thứ $n+1$ lúc này là $A = A_0 e^{i(\omega t - k r + n \delta)}$.
+
+Khi đó biên độ tổng hợp của sóng tại vị trí màn là
+\begin{align}
+    A(r.t) &= A_0 e^{i (\omega t - kr)} \left(1 + R e^{i\delta} + R^2 e^{2i \delta} + R^3 e^{3i \delta} \ldots \right)\\
+    &= A_0 e^{i (\omega t - kr)} \frac{1}{1 - R e^{i \delta}}
+\end{align}
+
+Cường độ sáng tại vị trí xét sẽ tỉ lệ thuận với tích của $A$ và liên hợp phức của nó $\Bar{A}$:
+\begin{align}
+    I \propto A \cdot \Bar{A} = \frac{A_0^2}{1 + R^2 - 2 R\cos \delta}.
+\end{align}
+
+
+
+Từ đó ta tìm được $\displaystyle a = \frac{4R}{(1-R)^2}$ và $\displaystyle \Phi = \delta = \frac{4 \pi e}{\lambda} \sqrt{n^2 - \sin^2 \theta}$.
+\vspace{1mm}
+
+\textbf{b.} Để tìm khoảng vân, ta cần tìm các vị trí cực đại liên tiếp, khi $\displaystyle \frac{\delta}{2} = k \pi$ với $k \in \mathbb{Z}$.
+
+Ta có $y = f \sin \theta$ là toạ độ của điểm giao thoa với chùm tia ló góc $\theta$. Khi đó tại vị trí $\theta \approx 0$, ta có
+\begin{align}
+    k = \frac{2ne}{\lambda}  \sqrt{1 - \frac{\sin^2 \theta}{n^2}} \approx \frac{2ne}{\lambda} \left( 1 - \frac{y^2}{2 n^2 f^2} \right). \label{45}
+\end{align}
+
+Tại $y =0$ thì $\displaystyle k_0 =  \frac{2ne}{\lambda}$, tại $y = i$ ($i$ là khoảng vân) thì $k = k_0 -1$. Khi đó ta tìm được khoảng vân là
+\begin{align}
+    i = f\sqrt{\frac{n\lambda}{e}}.\label{46}
+\end{align}
+
+
+\vspace{1.5mm}
+
+\textbf{c.} Ta tìm được khoảng giá trị của $I(\theta)$ là 
+\begin{align}
+    I_{\text{max}} &= I_0, \\
+    I_{\text{min}} &= \frac{I_0}{1 + a}.
+\end{align}
+
+Từ đó ta tìm được độ tương phản giao thoa trên màn
+\begin{align}
+    \Gamma = \frac{a}{a+2} = \frac{2R}{1+R^2}.
+\end{align}
+
+ \textbf{Biểu điểm} 
+\begin{center}
+\begin{tabular}{|>{\centering\arraybackslash}m{1cm}|>{\raggedright\arraybackslash}m{14cm}| >{\centering\arraybackslash}m{1cm}|}
+    \hline
+    \textbf{Phần} & \textbf{Nội dung} & \textbf{Điểm} \\
+    \hline
+    \textbf{a} & Tìm được độ lệch pha $\delta$ & 0.50\\   
+    \cline{2-3}
+    &  Viết được biên độ tổng hợp trên màn tại $\theta$ (\ref{41}) & 0.50\\
+    \cline{2-3}
+    & Khai triển tổng chuỗi biên độ (\ref{42}) & 0.50\\
+    \cline{2-3}
+    & Nhận ra $I \propto \langle A^2 \rangle$ (\ref{43}) & 0.50\\
+    \cline{2-3}
+    & Viết được hàm $I$ và tìm được $a$ và $\Phi$ (\ref{44}) & 0.50\\
+    \hline
+    \textbf{b} & Tìm được $k$ (\ref{45}) & 0.50\\
+    \cline{2-3}
+    & Tìm được khoảng vân $i$ (\ref{46}) & 0.50\\
+    \hline
+    \textbf{c} & Biểu diễn đúng $\Gamma$ theo $R$ & 0.50 \\
+    \hline
+\end{tabular}
+\end{center}

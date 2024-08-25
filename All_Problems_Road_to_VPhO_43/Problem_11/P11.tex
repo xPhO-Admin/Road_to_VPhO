@@ -1,0 +1,62 @@
+\textbf{Chảy}
+
+\begin{enumerate}
+    \item \textbf{Dòng chảy tầng và định luật Hagen-Poiseuille.} \\
+    Định luật Hagen-Poiseuille phát biểu rằng với một dòng chảy không nén và có hệ số nhớt đồng nhất đẳng hướng ở chế độ dừng, thông lượng chất lưu chảy qua một mặt cắt ống sẽ tỷ lệ với chênh lệch áp suất hai đầu ống. \\
+    Xét một ống nước thẳng dài có tiết diện ống hình ellipse với độ dài hai bán trục lần lượt là $a$ và $b$. Có một dòng chảy không nén có độ nhớt là $\mu$. Với chênh lệch áp suất hai đầu ống là $\Delta p$ và ống dài $L$, ta có thể đặt $G=\Delta p/L$ là chênh lệch áp suất trên mỗi đơn vị độ dài ống. Ở chế độ chảy dừng ổn định, dòng chảy là dòng chảy tầng, xem rằng các tầng nước có cùng vận tốc nằm theo một đường ellipse trên mặt cắt, hãy tìm phân bố vận tốc theo tọa độ tại các lớp nước và tìm thông lượng nước $Q$ chảy qua một mặt cắt ống trong một đơn vị thời gian theo $G$, $\mu$, $a$ và $b$.
+    \item \textbf{Dòng chảy Bernoulli không dừng.} \\
+    Một bình nước hình trụ được cấp nước vào sao cho giữ nguyên mực nước cao $h$ so với đáy. Ở gần đáy bình, có một ống nước nằm ngang dài $L$ tiết diện rất nhỏ so với bình xả nước từ bình ra ngoài. Gia tốc trọng trường là $g$. Xem rằng nước trong bình không bị nén. Bỏ qua các ma sát, tổn thất năng lượng ở các đoạn ống, hiệu ứng co hẹp đường ống,... Ban đầu, đầu xả nước bị bịt và toàn bộ nước đứng yên. Tại thời điểm $t=0$, đầu xả nước của ống được mở và nước bắt đầu chảy từ ống ra ngoài. Hãy tìm vận tốc chảy của nước trong ống theo thời gian.
+\end{enumerate}
+
+\begin{center}
+\begin{minipage}{0.55\textwidth}
+    \begin{tikzpicture}[scale=0.8]
+        \draw[fill=lightgray, lightgray, ultra thick] (0,0) rectangle (6,4);
+        \draw[fill=lightgray, lightgray] (0,2) ellipse (0.5 and 2);
+        \draw[ultra thick] (6,0) arc(270:90:0.5cm and 2cm);
+        \draw[ultra thick] (6,0) arc(-90:90:0.5cm and 2cm);
+        \draw[ultra thick] (0,0) arc(270:90:0.5cm and 2cm);
+        \draw[fill=lightgray, ultra thick] (6,2) ellipse (0.5 and 2);
+        \draw[ultra thick]
+        (0,0) to (6,0)
+        (0,4) to (6,4);
+        \draw[fill=white, ultra thick] (6,2) ellipse (0.3 and 1.6);
+        \draw[dashed] (8,0) rectangle (10,4);
+        \draw[dashed] 
+        (6,0) to (8,0)
+        (6,4) to (8,4);
+        \draw[ultra thick] (9,0) arc(270:90:1cm and 2cm);
+        \draw[ultra thick] (9,0) arc(-90:90:1cm and 2cm);
+        \draw[fill=lightgray, ultra thick] (9,2) ellipse (1 and 2);
+        \draw[fill=white, ultra thick] (9,2) ellipse (0.7 and 1.6);
+        \draw[Stealth-Stealth] (7.7,0.4) to (7.7,3.6);
+        \draw (7.7,2) node[left]{$2a$};
+        \draw[Stealth-Stealth] (8.3,-0.3) to (9.7,-0.3);
+        \draw (9,-0.3) node[below]{$2b$};
+        \draw (5,-1.5) node{Hình 1: Ống trụ có mặt cắt hình ellipse.};
+    \end{tikzpicture}
+\end{minipage}
+\begin{minipage}{0.35\textwidth}
+    \begin{tikzpicture}[scale=0.8]
+        \draw[fill=blue!30, blue!30] (0,0) to (3,0) to (3,0.1) to (6.5,0.1) to (6.5,0.5) to (3,0.5) to (3,3.6) to (0,3.6) to (0,3.6);
+        \draw[ultra thick] (0,4) to (0,0) to (3,0) to (3,0.1) to (6.5,0.1)
+        (6.5,0.5) to (3,0.5) to (3,4);
+        \draw[dashed] 
+        (0,0) to (-0.5,0)
+        (0,3.6) to (-0.5,3.6);
+        \draw[Stealth-Stealth] (-0.5,0) to (-0.5,3.6);
+        \draw (-0.5,1.8) node[left]{$h$};
+        \draw[dashed] (6.5,0.5) to (6.5,1);
+        \draw[Stealth-Stealth] (3,1) to (6.5,1);
+        \draw (4.75,1) node[above]{$L$};
+
+        \draw[-Stealth] (5,3.5) to (5,2.5);
+        \draw (5,3) node[right]{$g$};
+        \draw (3,-1.5) node{Hình 2: Bình nước hình trụ có ống dài.};
+    \end{tikzpicture}
+\end{minipage}
+\end{center}
+
+\begin{flushright}
+    (Biên soạn bởi Log)
+\end{flushright}

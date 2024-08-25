@@ -1,0 +1,119 @@
+\begin{enumerate}[label = \textbf{\arabic*.}]\itemsep0em 
+        \item Công suất bức xạ trên một đơn vị diện tích tại khoảng cách \(d_{S-E}\) là: \\
+        \begin{equation} \label{eq1_greenhouse_effect}
+            F = \frac{L}{4\pi d_{S-E}^2}.
+        \end{equation}
+        Ta nhận thấy diện tích thu bức xạ hiệu dụng của Trái Đất là \(\pi R_e^2\) và diện tích phát xạ là \(4 \pi R_e^2\) (\(R_e\) là bán kính Trái Đất). Áp dụng định luật Stefan-Boltzmann cho vật đen tuyệt đối và cân bằng nhiệt, ta thu được:
+        \begin{equation} \label{eq2_greenhouse_effect}
+            F \pi R_e^2 = \sigma 4 \pi R_e^2 T_0^4 \Rightarrow T_0 = \sqrt[4]{\dfrac{F}{4 \sigma}} = \sqrt[4]{\frac{L}{16 \pi \sigma d_{S-E}^2}} = 278.36 \ \si{K}.
+        \end{equation}
+        \item Công suất bức xạ từ Mặt Trời tới Trái Đất trung bình trên một đơn vị diện tích bề mặt Trái Đất là:
+        \begin{equation} \label{eq3_greenhouse_effect}
+            F_{avg} = F\frac{\pi R_e^2}{4 \pi R_e^2} = \frac{F}{4} = \frac{L}{16 \pi d_{S-E}^2}.
+        \end{equation}
+        % Ta có sơ đồ như sau, tham khảo từ \textbf{Fig. 7-12} sách \textit{Introduction to Atmospheric Chemistry}, D. Jacob: 
+\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+\begin{center}
+\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+%uncomment if require: \path (0,300); %set diagram left start at 0, and has height of 300
+
+%Straight Lines [id:da017040213830761708] 
+\draw    (50,251) -- (520,251) ;
+%Straight Lines [id:da39350620490124144] 
+\draw    (50,111) -- (521,111) ;
+%Straight Lines [id:da5746750899334658] 
+\draw    (285.5,111) -- (285.02,54.67) ;
+\draw [shift={(285,52.67)}, rotate = 89.51] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+%Straight Lines [id:da42230087156008556] 
+\draw    (285.5,111) -- (285.98,157.67) ;
+\draw [shift={(286,159.67)}, rotate = 269.41] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+%Straight Lines [id:da9183624557930194] 
+\draw    (169,21.33) -- (169.99,256.33) ;
+\draw [shift={(170,258.33)}, rotate = 269.76] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+%Straight Lines [id:da5136183708350828] 
+\draw    (180,251.33) -- (179.01,19.33) ;
+\draw [shift={(179,17.33)}, rotate = 89.76] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+%Straight Lines [id:da012398922733801054] 
+\draw    (451,251.33) -- (451,188.33) ;
+\draw [shift={(451,186.33)}, rotate = 90] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+%Straight Lines [id:da8922550794799347] 
+\draw    (450,100.33) -- (450,48.33) ;
+\draw [shift={(450,46.33)}, rotate = 90] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+
+% Text Node
+\draw (539.14,240.85) node [anchor=north west][inner sep=0.75pt]  [rotate=-0.9] [align=left] {$\displaystyle T_{s}$};
+% Text Node
+\draw (529,100) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle T_{a}$};
+% Text Node
+\draw (299,74) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle \varepsilon _{a} \sigma T_{a}^{4}$};
+% Text Node
+\draw (298,120) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle \varepsilon _{a} \sigma T_{a}^{4}$};
+% Text Node
+\draw (122,137) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle F_{avg}$};
+% Text Node
+\draw (183,138.83) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle \alpha F_{avg}$};
+% Text Node
+\draw (463,218) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle \sigma T_{s}^{4}$};
+% Text Node
+\draw (456,64) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle ( 1-\varepsilon _{a}) \sigma T_{s}^{4}$};
+\end{tikzpicture} \\
+\vspace{3mm}
+Hình 1: Sơ đồ nhận nhiệt và bức xạ của trái đất và khí quyển. \cite{Jacob}
+\end{center}
+        Xét cân bằng nhiệt của lớp khí quyển, ta thu được phương trình đầu tiên:
+        \begin{equation} \label{eq4_greenhouse_effect}
+            2\varepsilon_a \sigma T_a^4 = \varepsilon_a \sigma T_s^4.
+        \end{equation}
+        Xét cân bằng nhiệt của cả hệ mặt đất và khí quyển, ta thu được phương trình thứ hai:
+        \begin{equation} \label{eq5_greenhouse_effect}
+            F_{avg}(1-\alpha) = (1-\varepsilon_a)\sigma T_s^4 + \varepsilon_a \sigma T_a^4.
+        \end{equation}
+        Giải phương trình (\ref{eq4_greenhouse_effect}) và (\ref{eq5_greenhouse_effect}), ta thu được:
+        \begin{align} \label{eq6_greenhouse_effect}
+            T_s &= \sqrt[4]{\frac{L(1-\alpha)}{8\pi \sigma d^2_{S-E}(2-\varepsilon_a)}} = 290 \ \si{K},\\
+        \label{eq7_greenhouse_effect}
+            T_a &= \sqrt[4]{\frac{L(1-\alpha)}{16\pi \sigma d^2_{S-E}(2-\varepsilon_a)}} = 243 \ \si{K}.
+        \end{align}
+        \item Thay (\ref{eq4_greenhouse_effect}) xuống (\ref{eq5_greenhouse_effect}), ta được:
+        \begin{equation} \label{eq8_greenhouse_effect}
+            \frac{2 F_{avg}(1-\alpha)}{\sigma} = (2 - \varepsilon_a) T_s^4.
+        \end{equation}
+        Vì vế trái không đổi khi \(T_s ,\ \varepsilon_a\) thay đổi, lấy ln rồi vi phân hai vế để vế trái bằng $0$, ta thu được:
+        \begin{equation} \label{eq9_greenhouse_effect}
+            -\frac{\Delta \varepsilon_a}{2-\varepsilon_a} + \frac{4 \Delta T_s}{T_s} = 0 \Rightarrow \Delta T_s = \frac{T_s}{4(2-\varepsilon_a)} \Delta \varepsilon_a,
+        \end{equation}
+        cho nên
+        \begin{equation} \label{eq10_greenhouse_effect}
+        k = \frac{T_s}{4(2-\varepsilon_a)}. % \approx 61.2.
+        \end{equation}
+    \end{enumerate}
+\textit{Nhận xét: Một điều thú vị có thể rút ra từ ý \textbf{2} là bề mặt Trái Đất hấp thụ lượng bức xạ từ khí quyển gần như tương đương so với bức xạ từ Mặt Trời!}
+\vspace{5mm}
+
+\textbf{Biểu điểm}
+\begin{center}
+\begin{tabular}{|>{\centering\arraybackslash}m{1cm}|>{\raggedright\arraybackslash}m{14cm}| >{\centering\arraybackslash}m{1cm}|}
+    \hline
+    \textbf{1} & Tính công suất bức xạ trên một đơn vị $F$ (\ref{eq1_greenhouse_effect}) & $0.50$ \\
+    \cline{2-3}
+    & Áp dụng định luật Stefan-Boltzmann và tính nhiệt độ trái đất $T_0$ (\ref{eq2_greenhouse_effect}) & $0.50$ \\
+    \hline
+    \textbf{2} & Viết phương trình cân bằng nhiệt đối với khí quyển (\ref{eq4_greenhouse_effect}) & $0.75$ \\
+    \cline{2-3}
+    & Viết phương trình cân bằng nhiệt đối với hệ trái đất và khí quyển (\ref{eq5_greenhouse_effect}) & $0.75$ \\
+    \cline{2-3}
+    & Giải hệ phương trình và tính nhiệt độ trái đất và khí quyển (\ref{eq6_greenhouse_effect}) \& (\ref{eq7_greenhouse_effect}) & $0.50$ \\
+    \hline
+    \textbf{3} & Viết biểu thức liên hệ giữa $\varepsilon_a$ và $T_S$ (\ref{eq8_greenhouse_effect}) & $0.50$ \\
+    \cline{2-3}
+    & Tính $k$ (\ref{eq10_greenhouse_effect}) & $0.50$ \\
+    \hline
+\end{tabular}
+\end{center}
+
+%% Reference %%
+\bibliographystyle{plain}
+\begin{thebibliography}{}
+\bibitem{Jacob} Jacob, D (1999). \textit{Introduction to Atmospheric Chemistry}. Princeton University Press.
+\bibitem{Randall} Randall, D.A. (2012). \textit{Atmosphere, Clouds and Climate}. Princeton University Press.
+\end{thebibliography}
