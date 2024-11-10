@@ -1,0 +1,63 @@
+\documentclass{standalone}
+
+\usepackage[OT1]{fontenc}
+\renewcommand*\familydefault{\sfdefault}
+\usepackage{helvet,sfmath}
+\usepackage{siunitx}
+
+\usepackage{tikz}
+\usepackage{circuitikz}
+
+\definecolor{BlueDefault}{rgb}{0.2,0.2,0.7}
+\definecolor{Conductor}{RGB}{177,162,202}
+\definecolor{Note}{RGB}{86,39,255}
+
+\begin{document}
+
+\begin{circuitikz}[scale=0.9]
+    %% Background
+    \draw[draw=none] (-8,-6) to (8,-6) to (8,6) to (-8,6) to (-8,-6);
+    
+    %% Medium
+    \draw[thick, dashed] (-5,6) to (-5,-6);
+    \draw[draw=none,fill opacity=0.8, left color = Conductor!100, right color = Conductor!20] (-5,-6) to (8,-6) to (8,6) to (-5,6) to (-5,-6);
+    % \draw[very thick, dashed] (-8,0) to (8,0);
+    \draw[Note, Stealth-Stealth] (-8,-5.25) to (-5,-5.25);
+    \draw[Note, Stealth-Stealth] (8,-5.25) to (-5,-5.25);
+    \draw
+    (-6.5,-5.6) node{\(\mu_0\)}
+    (1.5,-5.6) node{\(\mu, \rho\)}
+    ;
+    \draw[Note, thick, -Stealth] (-5,0) to (-1,0);
+    \draw (-1.5,0.3) node{\(z\)};
+    
+    %% Equivalent infinite circuit
+    \draw (-7.5,5.25) node{\textbf{(A)}};
+    \draw (-7,4.5) to[inductor, l=\(L_0\), o-] (-5,4.5) to[inductor, l=\(\Delta L\)] (-3.5,4.5) to[resistor, l=\(\Delta G\)] (-3.5,1.5)
+    (-3.5,4.5) to[inductor, l=\(\Delta L\)] (-2,4.5) to[resistor, l=\(\Delta G\)] (-2,1.5)
+    (-2,4.5) to[inductor, l=\(\Delta L\)] (-0.5,4.5) to[resistor, l=\(\Delta G\)] (-0.5,1.5)
+    (-0.5,4.5) to[inductor, l=\(\Delta L\)] (1,4.5) to[resistor, l=\(\Delta G\)] (1,1.5)
+    (1,4.5) to[inductor, l=\(\Delta L\)] (2.5,4.5) to[resistor, l=\(\Delta G\)] (2.5,1.5)
+    (4,4.5) to[inductor, l=\(\Delta L\)] (5.5,4.5) to[resistor, l=\(\Delta G\)] (5.5,1.5) to (4,1.5)
+    (-7,1.5) to[short, o-] (2.5,1.5)
+    ;
+    \draw[dashed] 
+    (2.5,4.5) to (4,4.5)
+    (2.5,1.5) to (4,1.5)
+    (5.5,4.5) to (7,4.5)
+    (5.5,1.5) to (7,1.5)
+    ;
+    \draw (-7,3) node{\(Z\)};
+    \draw[Note, ->] (-6.5,3) to (-5.5,3);
+    
+
+    %% Total Equivalent circuit
+    \draw (-7.5,-0.75) node{\textbf{(B)}};
+    \draw (-7,-1.5) to[inductor, l=\(L_0\), o-] (-5,-1.5) to[inductor, l=\(L\)] (-3.5,-1.5) to[resistor, l=\(R\)] (-3.5,-4.5) to[short, -o] (-7,-4.5)
+    ;
+    \draw (-7,-3) node{\(Z\)};
+    \draw[Note, ->] (-6.5,-3) to (-5.5,-3);
+\end{circuitikz}
+
+\end{document}
+

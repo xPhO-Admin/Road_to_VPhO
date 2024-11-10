@@ -1,0 +1,77 @@
+\documentclass{standalone}
+
+\usepackage[OT1]{fontenc}
+\renewcommand*\familydefault{\sfdefault}
+\usepackage{helvet,sfmath}
+\usepackage{siunitx}
+
+\usepackage{tikz}
+\usetikzlibrary{arrows,calc,patterns}
+% \usetikzlibrary{intersections, calc, arrows.meta}
+\usepackage{tikz,tkz-euclide}
+
+\definecolor{square}{RGB}{177,162,202}
+
+\begin{document}
+
+\begin{tikzpicture}[scale=0.3]
+    %% Background
+    \draw[draw=none] (-12,-12) to (-12,12) to (12,12) to (12,-12) to (-12,-12);
+    %% Auxetic structure
+    \foreach \angle in {60}
+    {
+        \foreach \x in {-1,1}
+        {
+            \foreach \y in {-1,1}
+            {
+                \draw[ultra thick, fill=square] 
+                ( 0, {4*\y*sin(\angle/2)} )
+                to ( {4*\x*sin(\angle/2)}, {4*\y*sin(\angle/2) + 4*\y*cos(\angle/2)} )
+                to ( {4*\x*sin(\angle/2) + 4*\x*cos(\angle/2)}, {4*\y*cos(\angle/2)} )
+                to ( {4*\x*cos(\angle/2)}, 0)
+                to ( 0, {4*\y*sin(\angle/2)} )
+                ;
+                \draw[ultra thick, fill=square] 
+                ( 0, {4*\y*sin(\angle/2) + 2*4*\y*cos(\angle/2) } )
+                to ( {4*\x*sin(\angle/2)}, {4*\y*sin(\angle/2) + 4*\y*cos(\angle/2)} )
+                to ( {4*\x*sin(\angle/2) + 4*\x*cos(\angle/2)}, {2*4*\y*sin(\angle/2) + 4*\y*cos(\angle/2)} )
+                to ( {4*\x*cos(\angle/2)}, {2*4*\y*sin(\angle/2) + 2*4*\y*cos(\angle/2)})
+                to ( 0, {4*\y*sin(\angle/2) + 2*4*\y*cos(\angle/2)} )
+                ;
+                \draw[ultra thick, fill=square] 
+                ( {2*4*\x*sin(\angle/2) + 2*4*\x*cos(\angle/2)}, {4*\y*sin(\angle/2)} )
+                to ( {4*\x*sin(\angle/2) + 2*4*\x*cos(\angle/2)}, {4*\y*sin(\angle/2) + 4*\y*cos(\angle/2)} )
+                to ( {4*\x*sin(\angle/2) + 4*\x*cos(\angle/2)}, {4*\y*cos(\angle/2)} )
+                to ( {2*4*\x*sin(\angle/2) + 4*\x*cos(\angle/2)}, 0)
+                to ( {2*4*\x*sin(\angle/2) + 2*4*\x*cos(\angle/2)}, {4*\y*sin(\angle/2)} )
+                ;
+                \draw[ultra thick, fill=square] 
+                ( {2*4*\x*sin(\angle/2) + 2*4*\x*cos(\angle/2)}, {4*\y*sin(\angle/2) + 2*4*\y*cos(\angle/2)} )
+                to ( {4*\x*sin(\angle/2) + 2*4*\x*cos(\angle/2)}, {4*\y*sin(\angle/2) + 4*\y*cos(\angle/2)} )
+                to ( {4*\x*sin(\angle/2) + 4*\x*cos(\angle/2)}, {2*4*\y*sin(\angle/2) + 4*\y*cos(\angle/2)} )
+                to ( {2*4*\x*sin(\angle/2) + 4*\x*cos(\angle/2)}, {2*4*\y*sin(\angle/2) + 2*4*\y*cos(\angle/2)})
+                to ( {2*4*\x*sin(\angle/2) + 2*4*\x*cos(\angle/2)}, {4*\y*sin(\angle/2) + 2*4*\y*cos(\angle/2)} )
+                ;
+            }
+        }
+    %% Note parameters    
+    \draw[dashed] (0,0)
+    to (0, {2*4*sin(\angle/2) + 2*4*cos(\angle/2)} )
+    to ( {2*4*sin(\angle/2) + 2*4*cos(\angle/2)} , {2*4*sin(\angle/2) + 2*4*cos(\angle/2)} )
+    to ( {2*4*sin(\angle/2) + 2*4*cos(\angle/2)} , 0 )
+    to (0,0)
+    ;
+    \draw[Stealth-Stealth] (0, {2*4*sin(\angle/2) + 2*4*cos(\angle/2)} )
+    to ( {2*4*sin(\angle/2) + 2*4*cos(\angle/2)} , {2*4*sin(\angle/2) + 2*4*cos(\angle/2)} );
+    \draw[Stealth-Stealth] ( {2*4*sin(\angle/2) + 2*4*cos(\angle/2)} , {2*4*sin(\angle/2) + 2*4*cos(\angle/2)} )
+    to ( {2*4*sin(\angle/2) + 2*4*cos(\angle/2)} , 0 );
+    \draw[Stealth-Stealth] (3.8,6.46) arc(30:-30:2);
+    \draw 
+    ( {4*sin(\angle/2) + 4*cos(\angle/2)}, 11.6) node{\(L_x\)}
+    ( 11.6, {4*sin(\angle/2) + 4*cos(\angle/2)}) node{\(L_y\)}
+    (4.8,5.6) node{\(\theta\)}
+    ;
+    }
+\end{tikzpicture}
+
+\end{document}
